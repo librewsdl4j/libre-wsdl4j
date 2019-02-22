@@ -15,6 +15,8 @@ License: Common Public License 1.0
  [![Build Status](https://travis-ci.org/librewsdl4j/libre-wsdl4j.svg?branch=master)](https://travis-ci.org/librewsdl4j/libre-wsdl4j)
  [![Code Quality: Java](https://img.shields.io/lgtm/grade/java/g/librewsdl4j/libre-wsdl4j.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/librewsdl4j/libre-wsdl4j/)
  
+ 
+ "WSDL, that's an anchronym i haven't heard in almost ten years." - comment on the Internet.
 
 ## Changes:
 * Modified PopulatedExtensionRegistry, so that external HTTP requests 
