@@ -3,6 +3,7 @@
 A fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL.
 
  [![Build Status](https://travis-ci.org/librewsdl4j/libre-wsdl4j.svg?branch=master)](https://travis-ci.org/librewsdl4j/libre-wsdl4j)
+ [![Code Quality: Java](https://img.shields.io/lgtm/grade/java/g/librewsdl4j/libre-wsdl4j.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/librewsdl4j/libre-wsdl4j/context:javascript)
 
 Pull requests welcome!
 
