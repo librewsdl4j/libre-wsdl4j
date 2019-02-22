@@ -2,6 +2,8 @@
 
 A fork of WSDL4J 1.6.3, with Tripletex specific changes.
 
+ [![Build Status](https://travis-ci.org/librewsdl4j/libre-wsdl4j.svg?branch=master)](https://travis-ci.org/librewsdl4j/libre-wsdl4j)
+
 Source code downloaded from:  https://sourceforge.net/projects/wsdl4j/
 
 License: Common Public License 1.0 
