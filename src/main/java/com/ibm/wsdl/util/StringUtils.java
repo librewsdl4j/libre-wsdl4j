@@ -127,8 +127,7 @@ public class StringUtils
     catch (MalformedURLException e)
     {
       File tempFile = new File(spec);
-      if (contextURL == null ||
-          (contextURL != null && tempFile.isAbsolute()))
+      if (contextURL == null || tempFile.isAbsolute())
       {
         return tempFile.toURL();
       }
