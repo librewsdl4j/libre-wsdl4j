@@ -1,6 +1,6 @@
 # libre-wsdl4j - A fork of WSDL4J 1.6.3.
 
-Libre-wsdl4j is a fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL. Many software projects still depends on WSL4j, so the idea is that libre-wsdl4j should be an actively maintained version of this software.
+Libre-wsdl4j is a fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL. Many software projects still depends on WSL4j, so the idea is that libre-wsdl4j should be an actively maintained version of this software on GitHub.
 
 Pull requests welcome! The last release of the original WSDL4J was in Feb, 2013.
 
