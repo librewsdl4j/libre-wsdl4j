@@ -1,8 +1,11 @@
 # libre-wsdl4j (A fork of WSDL4J 1.6.3) 
 
-A fork of WSDL4J 1.6.3, with Tripletex specific changes.
+A fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL.
 
  [![Build Status](https://travis-ci.org/librewsdl4j/libre-wsdl4j.svg?branch=master)](https://travis-ci.org/librewsdl4j/libre-wsdl4j)
+
+Pull requests welcome!
+
 
 Source code downloaded from:  https://sourceforge.net/projects/wsdl4j/
 
