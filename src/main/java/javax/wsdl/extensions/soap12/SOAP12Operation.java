@@ -18,38 +18,38 @@ public interface SOAP12Operation extends ExtensibilityElement,
    * @param soapActionURI the desired value of the SOAP
    * action header for this operation.
    */
-  public void setSoapActionURI(String soapActionURI);
+  void setSoapActionURI(String soapActionURI);
 
   /**
    * Get the value of the SOAP action attribute.
    *
    * @return the SOAP action attribute's value
    */
-  public String getSoapActionURI();
+  String getSoapActionURI();
   
   /**
    * Specify whether the SOAP Action is required for this operation.
    *
    * @param soapActionRequired true if the SOAP Action is required, otherwise false.
    */
-  public void setSoapActionRequired(Boolean soapActionRequired);
+  void setSoapActionRequired(Boolean soapActionRequired);
 
   /**
    * Indicates whether the SOAP Action is required for this operation.
    *
    * @return true if the SOAP action is required, otherwise false.
    */
-  public Boolean getSoapActionRequired();
+  Boolean getSoapActionRequired();
 
   /**
    * Set the style for this SOAP operation.
    *
    * @param style the desired style
    */
-  public void setStyle(String style);
+  void setStyle(String style);
 
   /**
    * Get the style for this SOAP operation.
    */
-  public String getStyle();
+  String getStyle();
 }

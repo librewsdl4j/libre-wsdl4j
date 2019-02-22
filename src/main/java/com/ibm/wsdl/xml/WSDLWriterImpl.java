@@ -5,6 +5,7 @@
 package com.ibm.wsdl.xml;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import javax.xml.namespace.*;
 import javax.xml.parsers.*;
@@ -1084,16 +1085,7 @@ public class WSDLWriterImpl implements WSDLWriter
   {
     Writer writer = null;
 
-    try
-    {
-      writer = new OutputStreamWriter(sink, "UTF8");
-    }
-    catch (UnsupportedEncodingException e)
-    {
-      e.printStackTrace();
-
-      writer = new OutputStreamWriter(sink);
-    }
+    writer = new OutputStreamWriter(sink, StandardCharsets.UTF_8);
 
     writeWSDL(wsdlDef, writer);
   }

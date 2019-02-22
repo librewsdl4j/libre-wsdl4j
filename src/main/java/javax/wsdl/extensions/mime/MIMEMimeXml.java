@@ -16,10 +16,10 @@ public interface MIMEMimeXml extends ExtensibilityElement, java.io.Serializable
    *
    * @param part the desired part
    */
-  public void setPart(String part);
+  void setPart(String part);
 
   /**
    * Get the part for this MIME mimeXml.
    */
-  public String getPart();
+  String getPart();
 }

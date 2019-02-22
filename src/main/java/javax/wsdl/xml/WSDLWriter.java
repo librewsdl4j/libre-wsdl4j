@@ -33,7 +33,7 @@ public interface WSDLWriter
    * @throws IllegalArgumentException if the feature name is not recognized.
    * @see #getFeature(String)
    */
-  public void setFeature(String name, boolean value)
+  void setFeature(String name, boolean value)
     throws IllegalArgumentException;
 
   /**
@@ -44,12 +44,12 @@ public interface WSDLWriter
    * @throws IllegalArgumentException if the feature name is not recognized.
    * @see #setFeature(String, boolean)
    */
-  public boolean getFeature(String name) throws IllegalArgumentException;
+  boolean getFeature(String name) throws IllegalArgumentException;
 
   /**
    * Return a document generated from the specified WSDL model.
    */
-  public Document getDocument(Definition wsdlDef) throws WSDLException;
+  Document getDocument(Definition wsdlDef) throws WSDLException;
 
   /**
    * Write the specified WSDL definition to the specified Writer.
@@ -57,7 +57,7 @@ public interface WSDLWriter
    * @param wsdlDef the WSDL definition to be written.
    * @param sink the Writer to write the xml to.
    */
-  public void writeWSDL(Definition wsdlDef, Writer sink)
+  void writeWSDL(Definition wsdlDef, Writer sink)
     throws WSDLException;
 
   /**
@@ -66,6 +66,6 @@ public interface WSDLWriter
    * @param wsdlDef the WSDL definition to be written.
    * @param sink the OutputStream to write the xml to.
    */
-  public void writeWSDL(Definition wsdlDef, OutputStream sink)
+  void writeWSDL(Definition wsdlDef, OutputStream sink)
     throws WSDLException;
 }

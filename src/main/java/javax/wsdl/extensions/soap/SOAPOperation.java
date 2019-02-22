@@ -23,24 +23,24 @@ public interface SOAPOperation extends ExtensibilityElement,
 	 * @param soapActionURI the desired value of the SOAP
 	 * action header for this operation.
 	 */
-	public void setSoapActionURI(String soapActionURI);
+    void setSoapActionURI(String soapActionURI);
 
 	/**
 	 * Get the value of the SOAP action attribute.
    *
 	 * @return the SOAP action attribute's value
 	 */
-	public String getSoapActionURI();
+    String getSoapActionURI();
 
   /**
    * Set the style for this SOAP operation.
    *
    * @param style the desired style
    */
-  public void setStyle(String style);
+  void setStyle(String style);
 
   /**
    * Get the style for this SOAP operation.
    */
-  public String getStyle();
+  String getStyle();
 }

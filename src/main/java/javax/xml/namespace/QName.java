@@ -160,13 +160,9 @@ public class QName implements Serializable
       return false;
     }
 
-    if ((namespaceURI == ((QName)obj).namespaceURI)
-        && (localPart == ((QName)obj).localPart))
-    {
-      return true;
-    }
+    return (namespaceURI == ((QName) obj).namespaceURI)
+            && (localPart == ((QName) obj).localPart);
 
-    return false;
   }
 
   /**

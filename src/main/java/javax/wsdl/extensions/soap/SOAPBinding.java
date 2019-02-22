@@ -16,12 +16,12 @@ public interface SOAPBinding extends ExtensibilityElement, java.io.Serializable
    *
    * @param style the desired style
    */
-  public void setStyle(String style);
+  void setStyle(String style);
 
   /**
    * Get the style for this SOAP binding.
    */
-  public String getStyle();
+  String getStyle();
 
   /**
    * Set the SOAP transport URI to be used for communicating 
@@ -30,12 +30,12 @@ public interface SOAPBinding extends ExtensibilityElement, java.io.Serializable
    * @param transportURI the URI describing the transport 
    * to be used
    */
-  public void setTransportURI(String transportURI);
+  void setTransportURI(String transportURI);
 
   /**
    * Get the transport URI to be used with this binding.
    *
    * @return the transport URI to be used
    */
-  public String getTransportURI();
+  String getTransportURI();
 }

@@ -22,21 +22,21 @@ public interface PortType extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setQName(QName name);
+  void setQName(QName name);
 
   /**
    * Get the name of this port type.
    *
    * @return the port type name
    */
-  public QName getQName();
+  QName getQName();
 
   /**
    * Add an operation to this port type.
    *
    * @param operation the operation to be added
    */
-  public void addOperation(Operation operation);
+  void addOperation(Operation operation);
 
   /**
    * Get the specified operation. Note that operation names can
@@ -71,14 +71,14 @@ public interface PortType extends WSDLElement
    * 
    * @throws IllegalArgumentException if duplicate operations are found.
    */
-  public Operation getOperation(String name,
-                                String inputName,
-                                String outputName);
+  Operation getOperation(String name,
+                         String inputName,
+                         String outputName);
   
   /**
    * Get all the operations defined here.
    */
-  public List getOperations();
+  List getOperations();
 
   /**
    * Remove the specified operation. Note that operation names can
@@ -103,11 +103,11 @@ public interface PortType extends WSDLElement
    * 
    * @see #getOperation(String, String, String) 
    */
-  public Operation removeOperation(String name,
-                                   String inputName,
-                                   String outputName);
+  Operation removeOperation(String name,
+                            String inputName,
+                            String outputName);
 
-  public void setUndefined(boolean isUndefined);
+  void setUndefined(boolean isUndefined);
 
-  public boolean isUndefined();
+  boolean isUndefined();
 }

@@ -20,7 +20,7 @@ public interface ElementExtensible {
      *
      * @param extElement the extensibility element to be added
      */
-    public void addExtensibilityElement(ExtensibilityElement extElement);
+    void addExtensibilityElement(ExtensibilityElement extElement);
     
     /**
      * Remove an extensibility element.
@@ -28,12 +28,12 @@ public interface ElementExtensible {
      * @param extElement the extensibility element to be removed
      * @return the extensibility element which was removed
      */
-    public ExtensibilityElement removeExtensibilityElement(ExtensibilityElement extElement);
+    ExtensibilityElement removeExtensibilityElement(ExtensibilityElement extElement);
 
     /**
      * Get all the extensibility elements defined here.
      */
-    public List getExtensibilityElements();
+    List getExtensibilityElements();
 
 
 }

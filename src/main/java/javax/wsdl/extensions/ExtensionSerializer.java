@@ -32,11 +32,11 @@ public interface ExtensionSerializer
    * encountered in
    * @param extReg the ExtensionRegistry to use (if needed again)
    */
-  public void marshall(Class parentType,
-                       QName elementType,
-                       ExtensibilityElement extension,
-                       PrintWriter pw,
-                       Definition def,
-                       ExtensionRegistry extReg)
+  void marshall(Class parentType,
+                QName elementType,
+                ExtensibilityElement extension,
+                PrintWriter pw,
+                Definition def,
+                ExtensionRegistry extReg)
                          throws WSDLException;
 }

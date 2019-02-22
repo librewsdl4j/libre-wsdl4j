@@ -22,35 +22,35 @@ public interface Binding extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setQName(QName name);
+  void setQName(QName name);
 
   /**
    * Get the name of this binding.
    *
    * @return the binding name
    */
-  public QName getQName();
+  QName getQName();
 
   /**
    * Set the port type this is a binding for.
    *
    * @param portType the port type associated with this binding
    */
-  public void setPortType(PortType portType);
+  void setPortType(PortType portType);
 
   /**
    * Get the port type this is a binding for.
    *
    * @return the associated port type
    */
-  public PortType getPortType();
+  PortType getPortType();
 
   /**
    * Add an operation binding to binding.
    *
    * @param bindingOperation the operation binding to be added
    */
-  public void addBindingOperation(BindingOperation bindingOperation);
+  void addBindingOperation(BindingOperation bindingOperation);
   
   /**
    * Get the specified operation binding. Note that operation names can
@@ -85,14 +85,14 @@ public interface Binding extends WSDLElement
    * 
    * @throws IllegalArgumentException if duplicate operations are found.
    */
-  public BindingOperation getBindingOperation(String name,
-                                              String inputName,
-                                              String outputName);
+  BindingOperation getBindingOperation(String name,
+                                       String inputName,
+                                       String outputName);
 
   /**
    * Get all the operation bindings defined here.
    */
-  public List getBindingOperations();
+  List getBindingOperations();
 
   /**
    * Remove the specified operation binding. Note that operation names can
@@ -117,11 +117,11 @@ public interface Binding extends WSDLElement
    * 
    * @see #getBindingOperation(String, String, String) 
    */
-  public BindingOperation removeBindingOperation(String name,
-                                                 String inputName,
-                                                 String outputName);
+  BindingOperation removeBindingOperation(String name,
+                                          String inputName,
+                                          String outputName);
 
-  public void setUndefined(boolean isUndefined);
+  void setUndefined(boolean isUndefined);
 
-  public boolean isUndefined();
+  boolean isUndefined();
 }

@@ -31,21 +31,21 @@ public interface Schema extends ExtensibilityElement, Serializable
      *
      * @return a map of lists of schema imports
      */
-    public Map getImports();
+    Map getImports();
     
     /**
      * Create a new schema import
      *
      * @return the newly created schema import
      */
-    public SchemaImport createImport();
+    SchemaImport createImport();
     
     /**
      * Add an import to this LightWeightSchema
      *
      * @param importSchema the import to be added
      */
-    public void addImport(SchemaImport importSchema);
+    void addImport(SchemaImport importSchema);
     
     /**
      * Get a list containing all of the includes defined here.
@@ -53,21 +53,21 @@ public interface Schema extends ExtensibilityElement, Serializable
      * 
      * @return a list of schema references.
      */
-    public List getIncludes();
+    List getIncludes();
     
     /**
      * Create a new schema reference to represent an include.
      *
      * @return the newly created SchemaReference
      */
-    public SchemaReference createInclude();
+    SchemaReference createInclude();
     
     /**
      * Add an include to this LightWeightSchema
      *
      * @param includeSchema The include to be added, represented as a SchemaReference
      */
-    public void addInclude(SchemaReference includeSchema);
+    void addInclude(SchemaReference includeSchema);
     
     /**
      * Get a list containing all of the redefines defined here.
@@ -75,35 +75,35 @@ public interface Schema extends ExtensibilityElement, Serializable
      * 
      * @return a list of schema references.
      */
-    public List getRedefines();
+    List getRedefines();
     
     /**
      * Create a new schema reference to represent a redefine.
      *
      * @return the newly created SchemaReference
      */
-    public SchemaReference createRedefine();
+    SchemaReference createRedefine();
     
     /**
      * Add a redefine to this LightWeightSchema
      *
      * @param redefineSchema The redefine to be added, represented as a SchemaReference
      */
-    public void addRedefine(SchemaReference redefineSchema);
+    void addRedefine(SchemaReference redefineSchema);
     
     /**
      * Set the DOM Element that represents this schema element.
      *
      * @param element the DOM element representing this schema
      */
-    public void setElement(Element element);
+    void setElement(Element element);
 
     /**
      * Get the DOM Element that represents this schema element.
      *
      * @return the DOM element representing this schema
      */
-    public Element getElement();
+    Element getElement();
     
     /**
      * Set the document base URI of this schema definition. Can be used to
@@ -112,13 +112,13 @@ public interface Schema extends ExtensibilityElement, Serializable
      *
      * @param documentBaseURI the document base URI of this schema
      */
-    public void setDocumentBaseURI(String documentBaseURI);
+    void setDocumentBaseURI(String documentBaseURI);
 
     /**
      * Get the document base URI of this schema
      *
      * @return the document base URI
      */
-    public String getDocumentBaseURI();
+    String getDocumentBaseURI();
 
 }

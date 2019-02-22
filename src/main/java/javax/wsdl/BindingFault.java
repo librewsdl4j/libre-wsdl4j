@@ -19,13 +19,13 @@ public interface BindingFault extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setName(String name);
+  void setName(String name);
 
   /**
    * Get the name of this fault binding.
    *
    * @return the fault binding name
    */
-  public String getName();
+  String getName();
 
 }

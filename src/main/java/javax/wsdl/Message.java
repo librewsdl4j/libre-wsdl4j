@@ -21,21 +21,21 @@ public interface Message extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setQName(QName name);
+  void setQName(QName name);
 
   /**
    * Get the name of this message.
    *
    * @return the message name
    */
-  public QName getQName();
+  QName getQName();
 
   /**
    * Add a part to this message.
    *
    * @param part the part to be added
    */
-  public void addPart(Part part);
+  void addPart(Part part);
 
   /**
    * Get the specified part.
@@ -44,7 +44,7 @@ public interface Message extends WSDLElement
    * @return the corresponding part, or null if there wasn't
    * any matching part
    */
-  public Part getPart(String name);
+  Part getPart(String name);
 
   /**
    * Remove the specified part.
@@ -52,12 +52,12 @@ public interface Message extends WSDLElement
    * @param name the name of the part to be removed.
    * @return the part which was removed
    */
-  public Part removePart(String name);
+  Part removePart(String name);
 
   /**
    * Get all the parts defined here.
    */
-  public Map getParts();
+  Map getParts();
 
   /**
    * Get an ordered list of parts as specified by the partOrder
@@ -68,9 +68,9 @@ public interface Message extends WSDLElement
    * returned in the order in which they were added to the message.
    * @return the list of parts
    */
-  public List getOrderedParts(List partOrder);
+  List getOrderedParts(List partOrder);
 
-  public void setUndefined(boolean isUndefined);
+  void setUndefined(boolean isUndefined);
 
-  public boolean isUndefined();
+  boolean isUndefined();
 }

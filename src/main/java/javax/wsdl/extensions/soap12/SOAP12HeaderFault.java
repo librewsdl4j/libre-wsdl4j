@@ -18,58 +18,58 @@ public interface SOAP12HeaderFault extends ExtensibilityElement,
    *
    * @param message the desired message
    */
-  public void setMessage(QName message);
+  void setMessage(QName message);
 
   /**
    * Get the message for this SOAP header fault.
    */
-  public QName getMessage();
+  QName getMessage();
 
   /**
    * Set the part for this SOAP header fault.
    *
    * @param part the desired part
    */
-  public void setPart(String part);
+  void setPart(String part);
 
   /**
    * Get the part for this SOAP header fault.
    */
-  public String getPart();
+  String getPart();
 
   /**
    * Set the use for this SOAP header fault.
    *
    * @param use the desired use
    */
-  public void setUse(String use);
+  void setUse(String use);
 
   /**
    * Get the use for this SOAP header fault.
    */
-  public String getUse();
+  String getUse();
 
   /**
    * Set the encodingStyle for this SOAP header fault.
    *
    * @param encodingStyle the desired encodingStyle
    */
-  public void setEncodingStyle(String encodingStyle);
+  void setEncodingStyle(String encodingStyle);
 
   /**
    * Get the encodingStyle for this SOAP header fault.
    */
-  public String getEncodingStyle();
+  String getEncodingStyle();
 
   /**
    * Set the namespace URI for this SOAP header fault.
    *
    * @param namespaceURI the desired namespace URI
    */
-  public void setNamespaceURI(String namespaceURI);
+  void setNamespaceURI(String namespaceURI);
 
   /**
    * Get the namespace URI for this SOAP header fault.
    */
-  public String getNamespaceURI();
+  String getNamespaceURI();
 }

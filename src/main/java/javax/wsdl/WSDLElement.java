@@ -21,12 +21,12 @@ public interface WSDLElement extends java.io.Serializable,
    *
    * @param docEl the documentation element
    */
-  public void setDocumentationElement(Element docEl);
+  void setDocumentationElement(Element docEl);
 
   /**
    * Get the documentation element.
    *
    * @return the documentation element
    */
-  public Element getDocumentationElement();
+  Element getDocumentationElement();
 }

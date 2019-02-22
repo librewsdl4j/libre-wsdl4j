@@ -54,7 +54,7 @@ public interface WSDLReader
    * @throws IllegalArgumentException if the feature name is not recognized.
    * @see #getFeature(String)
    */
-  public void setFeature(String name, boolean value)
+  void setFeature(String name, boolean value)
     throws IllegalArgumentException;
 
   /**
@@ -65,7 +65,7 @@ public interface WSDLReader
    * @throws IllegalArgumentException if the feature name is not recognized.
    * @see #setFeature(String, boolean)
    */
-  public boolean getFeature(String name) throws IllegalArgumentException;
+  boolean getFeature(String name) throws IllegalArgumentException;
 
   /**
    * Set the extension registry to be used when reading
@@ -78,13 +78,13 @@ public interface WSDLReader
    * @param extReg the extension registry to use for new
    * definitions
    */
-  public void setExtensionRegistry(ExtensionRegistry extReg);
+  void setExtensionRegistry(ExtensionRegistry extReg);
 
   /**
    * Get the extension registry, if one was set. Default is
    * null.
    */
-  public ExtensionRegistry getExtensionRegistry();
+  ExtensionRegistry getExtensionRegistry();
 
   /**
    * Set a different factory implementation to use for
@@ -101,13 +101,13 @@ public interface WSDLReader
    * is invoked on an implementation which does not
    * support it.
    */
-  public void setFactoryImplName(String factoryImplName)
+  void setFactoryImplName(String factoryImplName)
     throws UnsupportedOperationException;
 
   /**
    * Get the factoryImplName, if one was set. Default is null.
    */
-  public String getFactoryImplName();
+  String getFactoryImplName();
 
   /**
    * Read the WSDL document accessible via the specified
@@ -117,7 +117,7 @@ public interface WSDLReader
    * WSDL XML definition.
    * @return the definition.
    */
-  public Definition readWSDL(String wsdlURI) throws WSDLException;
+  Definition readWSDL(String wsdlURI) throws WSDLException;
 
   /**
    * Read the WSDL document accessible via the specified
@@ -130,7 +130,7 @@ public interface WSDLReader
    * WSDL XML definition.
    * @return the definition.
    */
-  public Definition readWSDL(String contextURI, String wsdlURI)
+  Definition readWSDL(String contextURI, String wsdlURI)
     throws WSDLException;
 
   /**
@@ -144,8 +144,8 @@ public interface WSDLReader
    * @param definitionsElement the &lt;wsdl:definitions&gt; element
    * @return the definition described by the element.
    */
-  public Definition readWSDL(String documentBaseURI,
-                             Element definitionsElement)
+  Definition readWSDL(String documentBaseURI,
+                      Element definitionsElement)
                                throws WSDLException;
   
   /**
@@ -160,8 +160,8 @@ public interface WSDLReader
    * @param definitionsElement the &lt;wsdl:definitions&gt; element
    * @return the definition described by the element.
    */
-  public Definition readWSDL(WSDLLocator locator,
-                             Element definitionsElement)
+  Definition readWSDL(WSDLLocator locator,
+                      Element definitionsElement)
                                throws WSDLException;
 
   /**
@@ -175,7 +175,7 @@ public interface WSDLReader
    * document obeying the WSDL schema.
    * @return the definition described in the document.
    */
-  public Definition readWSDL(String documentBaseURI, Document wsdlDocument)
+  Definition readWSDL(String documentBaseURI, Document wsdlDocument)
     throws WSDLException;
 
   /**
@@ -190,7 +190,7 @@ public interface WSDLReader
    * @return the definition described in the document pointed to
    * by the InputSource.
    */
-  public Definition readWSDL(String documentBaseURI, InputSource inputSource)
+  Definition readWSDL(String documentBaseURI, InputSource inputSource)
     throws WSDLException;
 
   /**
@@ -200,5 +200,5 @@ public interface WSDLReader
    * pointing to the wsdl file.
    * @return the definition described in the document
    */
-  public Definition readWSDL(WSDLLocator locator) throws WSDLException;
+  Definition readWSDL(WSDLLocator locator) throws WSDLException;
 }

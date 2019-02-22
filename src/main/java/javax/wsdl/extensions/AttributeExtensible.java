@@ -16,11 +16,11 @@ import javax.xml.namespace.*;
  */
 public interface AttributeExtensible
 {
-  public static final int NO_DECLARED_TYPE = -1;
-  public static final int STRING_TYPE = 0;
-  public static final int QNAME_TYPE = 1;
-  public static final int LIST_OF_STRINGS_TYPE = 2;
-  public static final int LIST_OF_QNAMES_TYPE = 3;
+  int NO_DECLARED_TYPE = -1;
+  int STRING_TYPE = 0;
+  int QNAME_TYPE = 1;
+  int LIST_OF_STRINGS_TYPE = 2;
+  int LIST_OF_QNAMES_TYPE = 3;
 
   /**
    * Set an extension attribute on this element. Pass in a null value to remove
@@ -35,7 +35,7 @@ public interface AttributeExtensible
    * @see ExtensionRegistry#registerExtensionAttributeType
    * @see ExtensionRegistry#queryExtensionAttributeType
    */
-  public void setExtensionAttribute(QName name, Object value);
+  void setExtensionAttribute(QName name, Object value);
 
   /**
    * Retrieve an extension attribute from this element. If the extension
@@ -52,7 +52,7 @@ public interface AttributeExtensible
    * @see ExtensionRegistry#registerExtensionAttributeType
    * @see ExtensionRegistry#queryExtensionAttributeType
    */
-  public Object getExtensionAttribute(QName name);
+  Object getExtensionAttribute(QName name);
 
   /**
    * Get the map containing all the extension attributes defined
@@ -66,7 +66,7 @@ public interface AttributeExtensible
    * @see ExtensionRegistry#registerExtensionAttributeType
    * @see ExtensionRegistry#queryExtensionAttributeType
    */
-  public Map getExtensionAttributes();
+  Map getExtensionAttributes();
 
   /**
    * Get the list of local attribute names defined for this element in
@@ -74,5 +74,5 @@ public interface AttributeExtensible
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames();
+  List getNativeAttributeNames();
 }

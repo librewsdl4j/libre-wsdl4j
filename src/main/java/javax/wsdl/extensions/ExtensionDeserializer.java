@@ -34,10 +34,10 @@ public interface ExtensionDeserializer
    * encountered in
    * @param extReg the ExtensionRegistry to use (if needed again)
    */
-  public ExtensibilityElement unmarshall(Class parentType,
-                                         QName elementType,
-                                         Element el,
-                                         Definition def,
-                                         ExtensionRegistry extReg)
+  ExtensibilityElement unmarshall(Class parentType,
+                                  QName elementType,
+                                  Element el,
+                                  Definition def,
+                                  ExtensionRegistry extReg)
                                            throws WSDLException;
 }

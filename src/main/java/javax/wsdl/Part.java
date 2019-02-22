@@ -21,20 +21,20 @@ public interface Part extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setName(String name);
+  void setName(String name);
 
   /**
    * Get the name of this part.
    *
    * @return the part name
    */
-  public String getName();
+  String getName();
 
-  public void setElementName(QName elementName);
+  void setElementName(QName elementName);
 
-  public QName getElementName();
+  QName getElementName();
 
-  public void setTypeName(QName typeName);
+  void setTypeName(QName typeName);
 
-  public QName getTypeName();
+  QName getTypeName();
 }

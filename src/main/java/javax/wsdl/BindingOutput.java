@@ -19,13 +19,13 @@ public interface BindingOutput extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setName(String name);
+  void setName(String name);
 
   /**
    * Get the name of this output binding.
    *
    * @return the output binding name
    */
-  public String getName();
+  String getName();
 
 }

@@ -16,10 +16,10 @@ public interface HTTPBinding extends ExtensibilityElement, java.io.Serializable
    *
    * @param verb the desired verb
    */
-  public void setVerb(String verb);
+  void setVerb(String verb);
 
   /**
    * Get the verb for this HTTP binding.
    */
-  public String getVerb();
+  String getVerb();
 }

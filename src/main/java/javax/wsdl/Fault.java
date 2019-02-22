@@ -17,16 +17,16 @@ public interface Fault extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setName(String name);
+  void setName(String name);
 
   /**
    * Get the name of this fault message.
    *
    * @return the fault message name
    */
-  public String getName();
+  String getName();
 
-  public void setMessage(Message message);
+  void setMessage(Message message);
 
-  public Message getMessage();
+  Message getMessage();
 }

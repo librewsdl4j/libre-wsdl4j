@@ -16,46 +16,46 @@ public interface SOAP12Fault extends ExtensibilityElement, java.io.Serializable
    *
    * @param name the desired name
    */
-  public void setName(String name);
+  void setName(String name);
 
   /**
    * Get the name for this SOAP fault.
    */
-  public String getName();
+  String getName();
 
   /**
    * Set the use for this SOAP fault.
    *
    * @param use the desired use
    */
-  public void setUse(String use);
+  void setUse(String use);
 
   /**
    * Get the use for this SOAP fault.
    */
-  public String getUse();
+  String getUse();
 
   /**
    * Set the encodingStyle for this SOAP fault.
    *
    * @param encodingStyle the desired encodingStyle
    */
-  public void setEncodingStyle(String encodingStyle);
+  void setEncodingStyle(String encodingStyle);
 
   /**
    * Get the encodingStyle for this SOAP fault.
    */
-  public String getEncodingStyle();
+  String getEncodingStyle();
 
   /**
    * Set the namespace URI for this SOAP fault.
    *
    * @param namespaceURI the desired namespace URI
    */
-  public void setNamespaceURI(String namespaceURI);
+  void setNamespaceURI(String namespaceURI);
 
   /**
    * Get the namespace URI for this SOAP fault.
    */
-  public String getNamespaceURI();
+  String getNamespaceURI();
 }

@@ -19,24 +19,24 @@ public interface ExtensibilityElement
    *
    * @param elementType the type
    */
-  public void setElementType(QName elementType);
+  void setElementType(QName elementType);
 
   /**
    * Get the type of this extensibility element.
    *
    * @return the extensibility element's type
    */
-  public QName getElementType();
+  QName getElementType();
 
   /**
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
-  public void setRequired(Boolean required);
+  void setRequired(Boolean required);
 
   /**
    * Get whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
-  public Boolean getRequired();
+  Boolean getRequired();
 }

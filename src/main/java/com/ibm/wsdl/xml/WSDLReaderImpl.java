@@ -38,13 +38,13 @@ public class WSDLReaderImpl implements WSDLReader
 {
   // Used for determining the style of operations.
   private static final List STYLE_ONE_WAY =
-    Arrays.asList(new String[]{Constants.ELEM_INPUT});
+    Arrays.asList(Constants.ELEM_INPUT);
   private static final List STYLE_REQUEST_RESPONSE =
-    Arrays.asList(new String[]{Constants.ELEM_INPUT, Constants.ELEM_OUTPUT});
+    Arrays.asList(Constants.ELEM_INPUT, Constants.ELEM_OUTPUT);
   private static final List STYLE_SOLICIT_RESPONSE =
-    Arrays.asList(new String[]{Constants.ELEM_OUTPUT, Constants.ELEM_INPUT});
+    Arrays.asList(Constants.ELEM_OUTPUT, Constants.ELEM_INPUT);
   private static final List STYLE_NOTIFICATION =
-    Arrays.asList(new String[]{Constants.ELEM_OUTPUT});
+    Arrays.asList(Constants.ELEM_OUTPUT);
 
   protected boolean verbose = true;
   protected boolean importDocuments = true;

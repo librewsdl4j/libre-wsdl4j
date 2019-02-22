@@ -22,21 +22,21 @@ public interface Service extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setQName(QName name);
+  void setQName(QName name);
 
   /**
    * Get the name of this service.
    *
    * @return the service name
    */
-  public QName getQName();
+  QName getQName();
 
   /**
    * Add a port to this service.
    *
    * @param port the port to be added
    */
-  public void addPort(Port port);
+  void addPort(Port port);
 
   /**
    * Get the specified port.
@@ -45,7 +45,7 @@ public interface Service extends WSDLElement
    * @return the corresponding port, or null if there wasn't
    * any matching port
    */
-  public Port getPort(String name);
+  Port getPort(String name);
   
   /**
    * Remove the specified port.
@@ -53,10 +53,10 @@ public interface Service extends WSDLElement
    * @param name the name of the port to be removed.
    * @return the port which was removed.
    */
-  public Port removePort(String name);
+  Port removePort(String name);
 
   /**
    * Get all the ports defined here.
    */
-  public Map getPorts();
+  Map getPorts();
 }

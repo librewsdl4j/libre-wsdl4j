@@ -19,13 +19,13 @@ public interface BindingInput extends WSDLElement
    *
    * @param name the desired name
    */
-  public void setName(String name);
+  void setName(String name);
 
   /**
    * Get the name of this input binding.
    *
    * @return the input binding name
    */
-  public String getName();
+  String getName();
 
 }

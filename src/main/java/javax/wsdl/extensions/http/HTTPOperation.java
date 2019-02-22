@@ -17,10 +17,10 @@ public interface HTTPOperation extends ExtensibilityElement,
    *
    * @param locationURI the desired location URI
    */
-  public void setLocationURI(String locationURI);
+  void setLocationURI(String locationURI);
 
   /**
    * Get the location URI for this HTTP operation.
    */
-  public String getLocationURI();
+  String getLocationURI();
 }

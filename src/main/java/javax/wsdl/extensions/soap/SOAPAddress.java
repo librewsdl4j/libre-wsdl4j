@@ -16,10 +16,10 @@ public interface SOAPAddress extends ExtensibilityElement, java.io.Serializable
    *
    * @param locationURI the desired location URI
    */
-  public void setLocationURI(String locationURI);
+  void setLocationURI(String locationURI);
 
   /**
    * Get the location URI for this SOAP address.
    */
-  public String getLocationURI();
+  String getLocationURI();
 }

@@ -16,22 +16,22 @@ public interface MIMEContent extends ExtensibilityElement, java.io.Serializable
    *
    * @param part the desired part
    */
-  public void setPart(String part);
+  void setPart(String part);
 
   /**
    * Get the part for this MIME content.
    */
-  public String getPart();
+  String getPart();
 
   /**
    * Set the type for this MIME content.
    *
    * @param type the desired type
    */
-  public void setType(String type);
+  void setType(String type);
 
   /**
    * Get the type for this MIME content.
    */
-  public String getType();
+  String getType();
 }

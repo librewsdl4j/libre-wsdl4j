@@ -16,10 +16,10 @@ public interface SchemaImport extends SchemaReference
   /**
    * @return Returns the namespace.
    */
-  public abstract String getNamespaceURI();
+  String getNamespaceURI();
 
   /**
    * @param namespace The namespace to set.
    */
-  public abstract void setNamespaceURI(String namespace);
+  void setNamespaceURI(String namespace);
 }

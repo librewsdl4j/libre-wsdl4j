@@ -21,40 +21,40 @@ public interface SchemaReference extends Serializable
      * 
      * @return the id string 
      */
-    public abstract String getId();
+    String getId();
 
     /**
      * Sets the ID attribute of the referenced schema.
      * 
      * @param id The id string to set.
      */
-    public abstract void setId(String id);
+    void setId(String id);
 
     /**
      * Gets the schemaLocation attribute of the referenced schema.
      * 
      * @return the schemaLocation string.
      */
-    public abstract String getSchemaLocationURI();
+    String getSchemaLocationURI();
 
     /**
      * Sets the schemaLocation attribute of the referenced schema.
      * 
      * @param schemaLocation The schemaLocation string to set.
      */
-    public abstract void setSchemaLocationURI(String schemaLocation);
+    void setSchemaLocationURI(String schemaLocation);
 
     /**
      * Gets the referenced schema, represented as a LightWeightSchema.
      * 
      * @return the referenced LightWeightSchema.
      */
-    public abstract Schema getReferencedSchema();
+    Schema getReferencedSchema();
 
     /**
      * Sets the referenced schema to a LightWeightSchema.
      * 
      * @param referencedSchema The LightWeightSchema to set.
      */
-    public abstract void setReferencedSchema(Schema referencedSchema);
+    void setReferencedSchema(Schema referencedSchema);
 }
