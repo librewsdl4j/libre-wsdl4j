@@ -4,6 +4,8 @@ Libre-wsdl4j is a fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL.
 
 Pull requests welcome! The last release of the original WSDL4J was in Feb, 2013.
 
+WSDL4J is described as "The Web Services Description Language for Java Toolkit (WSDL4J) allows the creation, representation, and manipulation of WSDL documents. Is the reference implementation for JSR110 'JWSDL'", by the original authors .
+
 Source code downloaded from:  https://sourceforge.net/projects/wsdl4j/
 
 License: Common Public License 1.0 
