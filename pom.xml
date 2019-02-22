@@ -80,24 +80,4 @@
         </plugins>
     </build>
 
-    <repositories>
-        <repository>
-            <id>remote.repository</id>
-            <name>Tripletex repo</name>
-            <url>https://tripletex.jfrog.io/tripletex/repo</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>tripletex-releases</name>
-            <url>https://tripletex.jfrog.io/tripletex/libs-releases-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>tripletex-snapshots</name>
-            <url>https://tripletex.jfrog.io/tripletex/libs-snapshots-local</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
