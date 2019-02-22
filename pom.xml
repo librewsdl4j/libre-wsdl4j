@@ -16,7 +16,7 @@
     <version>1.6.4</version>
     <packaging>jar</packaging>
 
-    <name>WSDL4J - Tripletex edition</name>
+    <name>libre-wsdl4j</name>
 
     <build>
         <plugins>
