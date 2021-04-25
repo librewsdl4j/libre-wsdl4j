@@ -55,12 +55,12 @@ public interface SOAPHeaderFault extends ExtensibilityElement,
    *
    * @param encodingStyles the desired encodingStyles
    */
-  void setEncodingStyles(List encodingStyles);
+  void setEncodingStyles(List<String> encodingStyles);
 
   /**
    * Get the encodingStyles for this SOAP header fault.
    */
-  List getEncodingStyles();
+  List<String> getEncodingStyles();
 
   /**
    * Set the namespace URI for this SOAP header fault.

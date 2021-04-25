@@ -66,7 +66,7 @@ public interface AttributeExtensible
    * @see ExtensionRegistry#registerExtensionAttributeType
    * @see ExtensionRegistry#queryExtensionAttributeType
    */
-  Map getExtensionAttributes();
+  Map<QName, Object> getExtensionAttributes();
 
   /**
    * Get the list of local attribute names defined for this element in
@@ -74,5 +74,5 @@ public interface AttributeExtensible
    *
    * @return a List of Strings, one for each local attribute name
    */
-  List getNativeAttributeNames();
+  List<String> getNativeAttributeNames();
 }

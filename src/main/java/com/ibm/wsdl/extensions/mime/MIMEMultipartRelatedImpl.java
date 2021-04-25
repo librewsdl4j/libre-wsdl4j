@@ -16,7 +16,7 @@ public class MIMEMultipartRelatedImpl implements MIMEMultipartRelated
   protected QName elementType = MIMEConstants.Q_ELEM_MIME_MULTIPART_RELATED;
   // Uses the wrapper type so we can tell if it was set or not.
   protected Boolean required = null;
-  protected List mimeParts = new Vector();
+  protected List<MIMEPart> mimeParts = new ArrayList<>();
 
   public static final long serialVersionUID = 1;
 
@@ -85,24 +85,21 @@ public class MIMEMultipartRelatedImpl implements MIMEMultipartRelated
   /**
    * Get all the MIME parts defined here.
    */
-  public List getMIMEParts()
+  public List<MIMEPart> getMIMEParts()
   {
     return mimeParts;
   }
 
-  public String toString()
-  {
-    StringBuffer strBuf = new StringBuffer();
+  public String toString() {
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("MIMEMultipartRelated (" + elementType + "):");
     strBuf.append("\nrequired=" + required);
 
-    if (mimeParts != null)
-    {
-      Iterator mimePartIterator = mimeParts.iterator();
+    if (mimeParts != null) {
+      Iterator<MIMEPart> mimePartIterator = mimeParts.iterator();
 
-      while (mimePartIterator.hasNext())
-      {
+      while (mimePartIterator.hasNext()) {
         strBuf.append("\n" + mimePartIterator.next());
       }
     }

@@ -41,12 +41,12 @@ public interface SOAPFault extends ExtensibilityElement, java.io.Serializable
    *
    * @param encodingStyles the desired encodingStyles
    */
-  void setEncodingStyles(List encodingStyles);
+  void setEncodingStyles(List<String> encodingStyles);
 
   /**
    * Get the encodingStyles for this SOAP fault.
    */
-  List getEncodingStyles();
+  List<String> getEncodingStyles();
 
   /**
    * Set the namespace URI for this SOAP fault.

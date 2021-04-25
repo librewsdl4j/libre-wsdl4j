@@ -58,5 +58,5 @@ public interface Service extends WSDLElement
   /**
    * Get all the ports defined here.
    */
-  Map getPorts();
+  Map<String, Port> getPorts();
 }

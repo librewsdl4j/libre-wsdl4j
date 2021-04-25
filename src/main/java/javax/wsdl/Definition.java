@@ -112,7 +112,7 @@ public interface Definition extends WSDLElement
     *
     * @see #addNamespace(String, String)
     */
-   Map getNamespaces();
+   Map<String, String> getNamespaces();
 
   /**
    * Set the types section.
@@ -149,7 +149,7 @@ public interface Definition extends WSDLElement
    * @return a list of the corresponding imports, or null if
    * there weren't any matching imports
    */
-  List getImports(String namespaceURI);
+  List<Import> getImports(String namespaceURI);
 
   /**
    * Get a map of lists containing all the imports defined here.
@@ -157,7 +157,7 @@ public interface Definition extends WSDLElement
    * are lists. There is one list for each namespaceURI for which
    * imports have been defined.
    */
-  Map getImports();
+  Map<String, List<Import>> getImports();
 
   /**
    * Add a message to this WSDL description.
@@ -187,7 +187,7 @@ public interface Definition extends WSDLElement
   /**
    * Get all the messages defined here.
    */
-  Map getMessages();
+  Map<QName, Message> getMessages();
 
   /**
    * Add a binding to this WSDL description.
@@ -217,13 +217,13 @@ public interface Definition extends WSDLElement
   /**
    * Get all the bindings defined in this Definition.
    */
-  Map getBindings();
+  Map<QName, Binding>  getBindings();
   
   /**
    * Get all the bindings defined in this Definition and
    * those in any imported Definitions down the WSDL tree.
    */
-  Map getAllBindings();
+  Map<QName, Binding>  getAllBindings();
 
   /**
    * Add a portType to this WSDL description.
@@ -253,13 +253,13 @@ public interface Definition extends WSDLElement
   /**
    * Get all the portTypes defined in this Definition.
    */
-  Map getPortTypes();
+  Map<QName, PortType> getPortTypes();
 
   /**
    * Get all the portTypes defined in this Definition and
    * those in any imported Definitions down the WSDL tree.
    */
-  Map getAllPortTypes();
+  Map<QName, PortType> getAllPortTypes();
   
   /**
    * Add a service to this WSDL description.
@@ -289,13 +289,13 @@ public interface Definition extends WSDLElement
   /**
    * Get all the services defined in this Definition.
    */
-  Map getServices();
+  Map<QName, Service> getServices();
 
   /**
    * Get all the services defined in this Definition and
    * those in any imported Definitions down the WSDL tree.
    */
-  Map getAllServices();
+  Map<QName, Service> getAllServices();
   
   /**
    * Create a new binding.

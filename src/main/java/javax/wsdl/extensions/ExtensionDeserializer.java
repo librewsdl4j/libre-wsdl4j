@@ -34,7 +34,7 @@ public interface ExtensionDeserializer
    * encountered in
    * @param extReg the ExtensionRegistry to use (if needed again)
    */
-  ExtensibilityElement unmarshall(Class parentType,
+  ExtensibilityElement unmarshall(Class<?> parentType,
                                   QName elementType,
                                   Element el,
                                   Definition def,

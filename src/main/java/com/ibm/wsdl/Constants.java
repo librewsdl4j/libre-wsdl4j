@@ -135,4 +135,6 @@ public class Constants
 
   // Other
   public static final String NONE = ":none";
+
+  private Constants() {}
 }

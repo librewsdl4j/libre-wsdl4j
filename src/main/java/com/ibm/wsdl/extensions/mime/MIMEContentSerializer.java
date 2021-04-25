@@ -22,7 +22,7 @@ public class MIMEContentSerializer implements ExtensionSerializer,
 {
   public static final long serialVersionUID = 1;
 
-  public void marshall(Class parentType,
+  public void marshall(Class<?> parentType,
                        QName elementType,
                        ExtensibilityElement extension,
                        PrintWriter pw,
@@ -68,7 +68,7 @@ public class MIMEContentSerializer implements ExtensionSerializer,
     }
   }
 
-  public ExtensibilityElement unmarshall(Class parentType,
+  public ExtensibilityElement unmarshall(Class<?> parentType,
                                          QName elementType,
                                          Element el,
                                          Definition def,
@@ -83,19 +83,16 @@ public class MIMEContentSerializer implements ExtensionSerializer,
                                                  Constants.NS_URI_WSDL,
                                                  Constants.ATTR_REQUIRED);
 
-    if (part != null)
-    {
+    if (part != null) {
       mimeContent.setPart(part);
     }
 
-    if (type != null)
-    {
+    if (type != null) {
       mimeContent.setType(type);
     }
 
-    if (requiredStr != null)
-    {
-      mimeContent.setRequired(new Boolean(requiredStr));
+    if (requiredStr != null) {
+      mimeContent.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return mimeContent;

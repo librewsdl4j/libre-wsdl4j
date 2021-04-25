@@ -96,7 +96,7 @@ public class MIMEContentImpl implements MIMEContent
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("MIMEContent (" + elementType + "):");
     strBuf.append("\nrequired=" + required);

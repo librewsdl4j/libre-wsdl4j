@@ -54,12 +54,12 @@ public interface SOAPHeader extends ExtensibilityElement, java.io.Serializable
    *
    * @param encodingStyles the desired encodingStyles
    */
-  void setEncodingStyles(List encodingStyles);
+  void setEncodingStyles(List<String> encodingStyles);
 
   /**
    * Get the encodingStyles for this SOAP header.
    */
-  List getEncodingStyles();
+  List<String> getEncodingStyles();
 
   /**
    * Set the namespace URI for this SOAP header.
@@ -93,5 +93,5 @@ public interface SOAPHeader extends ExtensibilityElement, java.io.Serializable
    * 
    * @return a list of all SOAP header faults contained in this SOAP header.
    */
-  List getSOAPHeaderFaults();
+  List<SOAPHeaderFault> getSOAPHeaderFaults();
 }

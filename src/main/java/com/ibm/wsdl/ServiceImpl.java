@@ -5,34 +5,30 @@
 package com.ibm.wsdl;
 
 import java.util.*;
-
 import javax.wsdl.*;
 import javax.xml.namespace.*;
 
 /**
- * This class represents a service, which groups related
- * ports to provide some functionality.
+ * This class represents a service, which groups related ports to provide some functionality.
  *
  * @author Paul Fremantle
  * @author Nirmal Mukhi
  * @author Matthew J. Duftler
  */
-public class ServiceImpl extends AbstractWSDLElement implements Service
-{
-  protected QName name = null;
-  protected Map ports = new HashMap();
-  protected List nativeAttributeNames =
-    Arrays.asList(Constants.SERVICE_ATTR_NAMES);
+public class ServiceImpl extends AbstractWSDLElement implements Service {
+  private QName name = null;
+  private Map<String, Port> ports = new HashMap<>();
+  private List<String> nativeAttributeNames = Arrays.asList(Constants.SERVICE_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
 
   /**
    * Set the name of this service.
    *
-   * @param name the desired name
+   * @param name
+   *          the desired name
    */
-  public void setQName(QName name)
-  {
+  public void setQName(QName name) {
     this.name = name;
   }
 
@@ -41,86 +37,77 @@ public class ServiceImpl extends AbstractWSDLElement implements Service
    *
    * @return the service name
    */
-  public QName getQName()
-  {
+  public QName getQName() {
     return name;
   }
 
   /**
    * Add a port to this service.
    *
-   * @param port the port to be added
+   * @param port
+   *          the port to be added
    */
-  public void addPort(Port port)
-  {
+  public void addPort(Port port) {
     ports.put(port.getName(), port);
   }
 
   /**
    * Get the specified port.
    *
-   * @param name the name of the desired port.
-   * @return the corresponding port, or null if there wasn't
-   * any matching port
+   * @param name
+   *          the name of the desired port.
+   * @return the corresponding port, or null if there wasn't any matching port
    */
-  public Port getPort(String name)
-  {
-    return (Port)ports.get(name);
+  public Port getPort(String name) {
+    return ports.get(name);
   }
-  
+
   /**
    * Remove the specified port.
    *
-   * @param name the name of the port to be removed.
+   * @param name
+   *          the name of the port to be removed.
    * @return the port which was removed
    */
-  public Port removePort(String name)
-  {
-    return (Port)ports.remove(name);
+  public Port removePort(String name) {
+    return ports.remove(name);
   }
 
   /**
    * Get all the ports defined here.
    */
-  public Map getPorts()
-  {
+  public Map<String, Port> getPorts() {
     return ports;
   }
 
-  public String toString()
-  {
-    StringBuffer strBuf = new StringBuffer();
+  public String toString() {
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("Service: name=" + name);
 
-    if (ports != null)
-    {
-      Iterator portIterator = ports.values().iterator();
+    if (ports != null) {
+      Iterator<Port> portIterator = ports.values().iterator();
 
-      while (portIterator.hasNext())
-      {
+      while (portIterator.hasNext()) {
         strBuf.append("\n" + portIterator.next());
       }
     }
 
     String superString = super.toString();
-    if(!superString.equals(""))
-    {
+    if (!superString.equals("")) {
       strBuf.append("\n");
       strBuf.append(superString);
     }
 
     return strBuf.toString();
   }
-  
+
   /**
-   * Get the list of local attribute names defined for this element in
-   * the WSDL specification.
+   * Get the list of local attribute names defined for this element in the WSDL specification.
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
-  {
+  public List<String> getNativeAttributeNames() {
     return nativeAttributeNames;
   }
 }

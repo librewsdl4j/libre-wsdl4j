@@ -24,7 +24,7 @@ public class UnknownExtensionDeserializer implements ExtensionDeserializer,
 {
   public static final long serialVersionUID = 1;
 
-  public ExtensibilityElement unmarshall(Class parentType,
+  public ExtensibilityElement unmarshall(Class<?> parentType,
                                          QName elementType,
                                          Element el,
                                          Definition def,
@@ -40,7 +40,7 @@ public class UnknownExtensionDeserializer implements ExtensionDeserializer,
 
     if (requiredStr != null)
     {
-      unknownExt.setRequired(new Boolean(requiredStr));
+      unknownExt.setRequired(Boolean.valueOf(requiredStr));
     }
 
     unknownExt.setElement(el);

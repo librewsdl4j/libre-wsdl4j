@@ -31,7 +31,7 @@ public interface Schema extends ExtensibilityElement, Serializable
      *
      * @return a map of lists of schema imports
      */
-    Map getImports();
+    Map<String, List<SchemaImport>> getImports();
     
     /**
      * Create a new schema import
@@ -53,7 +53,7 @@ public interface Schema extends ExtensibilityElement, Serializable
      * 
      * @return a list of schema references.
      */
-    List getIncludes();
+    List<SchemaReference> getIncludes();
     
     /**
      * Create a new schema reference to represent an include.
@@ -75,7 +75,7 @@ public interface Schema extends ExtensibilityElement, Serializable
      * 
      * @return a list of schema references.
      */
-    List getRedefines();
+    List<SchemaReference> getRedefines();
     
     /**
      * Create a new schema reference to represent a redefine.

@@ -58,7 +58,7 @@ public class HTTPUrlEncodedImpl implements HTTPUrlEncoded
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("HTTPUrlEncoded (" + elementType + "):");
     strBuf.append("\nrequired=" + required);

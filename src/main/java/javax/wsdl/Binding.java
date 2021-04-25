@@ -92,7 +92,7 @@ public interface Binding extends WSDLElement
   /**
    * Get all the operation bindings defined here.
    */
-  List getBindingOperations();
+  List<BindingOperation> getBindingOperations();
 
   /**
    * Remove the specified operation binding. Note that operation names can

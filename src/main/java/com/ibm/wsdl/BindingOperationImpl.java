@@ -5,36 +5,30 @@
 package com.ibm.wsdl;
 
 import java.util.*;
-
 import javax.wsdl.*;
 
 /**
- * This class represents a WSDL operation binding.
- * That is, it holds the information that would be
- * specified in the operation element contained within
- * a binding element.
+ * This class represents a WSDL operation binding. That is, it holds the information that would be specified in the operation element contained within a binding element.
  *
  * @author Matthew J. Duftler (duftler@us.ibm.com)
  */
-public class BindingOperationImpl extends AbstractWSDLElement implements BindingOperation
-{
+public class BindingOperationImpl extends AbstractWSDLElement implements BindingOperation {
   protected String name = null;
   protected Operation operation = null;
   protected BindingInput bindingInput = null;
   protected BindingOutput bindingOutput = null;
-  protected Map bindingFaults = new HashMap();
-  protected List nativeAttributeNames =
-    Arrays.asList(Constants.BINDING_OPERATION_ATTR_NAMES);
+  private Map<String, BindingFault> bindingFaults = new HashMap<>();
+  private List<String> nativeAttributeNames = Arrays.asList(Constants.BINDING_OPERATION_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
 
   /**
    * Set the name of this operation binding.
    *
-   * @param name the desired name
+   * @param name
+   *          the desired name
    */
-  public void setName(String name)
-  {
+  public void setName(String name) {
     this.name = name;
   }
 
@@ -43,18 +37,17 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    *
    * @return the operation binding name
    */
-  public String getName()
-  {
+  public String getName() {
     return name;
   }
 
   /**
    * Set the operation that this operation binding binds.
    *
-   * @param operation the operation this operation binding binds
+   * @param operation
+   *          the operation this operation binding binds
    */
-  public void setOperation(Operation operation)
-  {
+  public void setOperation(Operation operation) {
     this.operation = operation;
   }
 
@@ -63,18 +56,17 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    *
    * @return the operation that this operation binding binds
    */
-  public Operation getOperation()
-  {
+  public Operation getOperation() {
     return operation;
   }
 
   /**
    * Set the input binding for this operation binding.
    *
-   * @param bindingInput the new input binding
+   * @param bindingInput
+   *          the new input binding
    */
-  public void setBindingInput(BindingInput bindingInput)
-  {
+  public void setBindingInput(BindingInput bindingInput) {
     this.bindingInput = bindingInput;
   }
 
@@ -83,18 +75,17 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    *
    * @return the input binding
    */
-  public BindingInput getBindingInput()
-  {
+  public BindingInput getBindingInput() {
     return bindingInput;
   }
 
   /**
    * Set the output binding for this operation binding.
    *
-   * @param bindingOutput the new output binding
+   * @param bindingOutput
+   *          the new output binding
    */
-  public void setBindingOutput(BindingOutput bindingOutput)
-  {
+  public void setBindingOutput(BindingOutput bindingOutput) {
     this.bindingOutput = bindingOutput;
   }
 
@@ -103,42 +94,40 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    *
    * @return the output binding for the operation binding
    */
-  public BindingOutput getBindingOutput()
-  {
+  public BindingOutput getBindingOutput() {
     return bindingOutput;
   }
 
   /**
    * Add a fault binding.
    *
-   * @param bindingFault the new fault binding
+   * @param bindingFault
+   *          the new fault binding
    */
-  public void addBindingFault(BindingFault bindingFault)
-  {
+  public void addBindingFault(BindingFault bindingFault) {
     bindingFaults.put(bindingFault.getName(), bindingFault);
   }
 
   /**
    * Get the specified fault binding.
    *
-   * @param name the name of the desired fault binding.
-   * @return the corresponding fault binding, or null if there wasn't
-   * any matching fault binding
+   * @param name
+   *          the name of the desired fault binding.
+   * @return the corresponding fault binding, or null if there wasn't any matching fault binding
    */
-  public BindingFault getBindingFault(String name)
-  {
-    return (BindingFault)bindingFaults.get(name);
+  public BindingFault getBindingFault(String name) {
+    return bindingFaults.get(name);
   }
-  
+
   /**
    * Remove the specified fault binding.
    *
-   * @param name the name of the fault binding to be removed.
+   * @param name
+   *          the name of the fault binding to be removed.
    * @return the fault binding which was removed
    */
-  public BindingFault removeBindingFault(String name)
-  {
-    return (BindingFault)bindingFaults.remove(name);
+  public BindingFault removeBindingFault(String name) {
+    return bindingFaults.remove(name);
   }
 
   /**
@@ -146,55 +135,46 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    *
    * @return names of fault bindings
    */
-  public Map getBindingFaults()
-  {
+  public Map<String, BindingFault> getBindingFaults() {
     return bindingFaults;
   }
 
-  public String toString()
-  {
-    StringBuffer strBuf = new StringBuffer();
+  public String toString() {
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("BindingOperation: name=" + name);
 
-    if (bindingInput != null)
-    {
+    if (bindingInput != null) {
       strBuf.append("\n" + bindingInput);
     }
 
-    if (bindingOutput != null)
-    {
+    if (bindingOutput != null) {
       strBuf.append("\n" + bindingOutput);
     }
 
-    if (bindingFaults != null)
-    {
-      Iterator faultIterator = bindingFaults.values().iterator();
+    if (bindingFaults != null) {
+      Iterator<BindingFault> faultIterator = bindingFaults.values().iterator();
 
-      while (faultIterator.hasNext())
-      {
+      while (faultIterator.hasNext()) {
         strBuf.append("\n" + faultIterator.next());
       }
     }
 
     String superString = super.toString();
-    if(!superString.equals(""))
-    {
+    if (!superString.equals("")) {
       strBuf.append("\n");
       strBuf.append(superString);
     }
 
     return strBuf.toString();
   }
-  
+
   /**
-   * Get the list of local attribute names defined for this element in
-   * the WSDL specification.
+   * Get the list of local attribute names defined for this element in the WSDL specification.
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
-  {
+  public List<String> getNativeAttributeNames() {
     return nativeAttributeNames;
   }
 }

@@ -18,7 +18,7 @@ public class SOAPHeaderFaultImpl implements SOAPHeaderFault
   protected QName message = null;
   protected String part = null;
   protected String use = null;
-  protected List encodingStyles = null;
+  protected List<String> encodingStyles = null;
   protected String namespaceURI = null;
 
   public static final long serialVersionUID = 1;
@@ -120,7 +120,7 @@ public class SOAPHeaderFaultImpl implements SOAPHeaderFault
    *
    * @param encodingStyles the desired encodingStyles
    */
-  public void setEncodingStyles(List encodingStyles)
+  public void setEncodingStyles(List<String> encodingStyles)
   {
     this.encodingStyles = encodingStyles;
   }
@@ -128,7 +128,7 @@ public class SOAPHeaderFaultImpl implements SOAPHeaderFault
   /**
    * Get the encodingStyles for this SOAP header fault.
    */
-  public List getEncodingStyles()
+  public List<String> getEncodingStyles()
   {
     return encodingStyles;
   }
@@ -153,7 +153,7 @@ public class SOAPHeaderFaultImpl implements SOAPHeaderFault
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("SOAPHeaderFault (" + elementType + "):");
     strBuf.append("\nrequired=" + required);

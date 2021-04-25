@@ -85,7 +85,7 @@ public class UnknownExtensibilityElement implements ExtensibilityElement,
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("UnknownExtensibilityElement (" + elementType + "):");
     strBuf.append("\nrequired=" + required);
