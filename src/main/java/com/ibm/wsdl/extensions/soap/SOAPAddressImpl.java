@@ -77,7 +77,7 @@ public class SOAPAddressImpl implements SOAPAddress
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("SOAPAddress (" + elementType + "):");
     strBuf.append("\nrequired=" + required);

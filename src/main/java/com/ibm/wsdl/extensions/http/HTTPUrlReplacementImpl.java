@@ -58,7 +58,7 @@ public class HTTPUrlReplacementImpl implements HTTPUrlReplacement
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("HTTPUrlReplacement (" + elementType + "):");
     strBuf.append("\nrequired=" + required);

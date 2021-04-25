@@ -40,7 +40,7 @@ public class SchemaConstants {
         new QName(NS_URI_XSD_2000, ELEM_SCHEMA);
     public static final QName Q_ELEM_XSD_2001 =
         new QName(NS_URI_XSD_2001, ELEM_SCHEMA);
-    public static final List XSD_QNAME_LIST = Arrays.asList(Q_ELEM_XSD_1999, Q_ELEM_XSD_2000, Q_ELEM_XSD_2001);
+    public static final List<QName> XSD_QNAME_LIST = Arrays.asList(Q_ELEM_XSD_1999, Q_ELEM_XSD_2000, Q_ELEM_XSD_2001);
     
     //Schema import qnames
     public static final QName Q_ELEM_IMPORT_XSD_1999 = new QName(
@@ -49,7 +49,7 @@ public class SchemaConstants {
         NS_URI_XSD_2000, Constants.ELEM_IMPORT);
     public static final QName Q_ELEM_IMPORT_XSD_2001 = new QName(
         NS_URI_XSD_2001, Constants.ELEM_IMPORT);
-    public static final List XSD_IMPORT_QNAME_LIST = Arrays.asList(Q_ELEM_IMPORT_XSD_1999, Q_ELEM_IMPORT_XSD_2000, Q_ELEM_IMPORT_XSD_2001);
+    public static final List<QName> XSD_IMPORT_QNAME_LIST = Arrays.asList(Q_ELEM_IMPORT_XSD_1999, Q_ELEM_IMPORT_XSD_2000, Q_ELEM_IMPORT_XSD_2001);
 
 
     //Schema include qnames
@@ -59,7 +59,7 @@ public class SchemaConstants {
         NS_URI_XSD_2000, ELEM_INCLUDE);
     public static final QName Q_ELEM_INCLUDE_XSD_2001 = new QName(
         NS_URI_XSD_2001, ELEM_INCLUDE);
-    public static final List XSD_INCLUDE_QNAME_LIST = Arrays.asList(Q_ELEM_INCLUDE_XSD_1999, Q_ELEM_INCLUDE_XSD_2000, Q_ELEM_INCLUDE_XSD_2001);
+    public static final List<QName> XSD_INCLUDE_QNAME_LIST = Arrays.asList(Q_ELEM_INCLUDE_XSD_1999, Q_ELEM_INCLUDE_XSD_2000, Q_ELEM_INCLUDE_XSD_2001);
 
     //Schema redefine qnames
     public static final QName Q_ELEM_REDEFINE_XSD_1999 = new QName(
@@ -68,7 +68,8 @@ public class SchemaConstants {
         NS_URI_XSD_2000, ELEM_REDEFINE);
     public static final QName Q_ELEM_REDEFINE_XSD_2001 = new QName(
 	    NS_URI_XSD_2001, ELEM_REDEFINE);
-    public static final List XSD_REDEFINE_QNAME_LIST = Arrays.asList(Q_ELEM_REDEFINE_XSD_1999, Q_ELEM_REDEFINE_XSD_2000, Q_ELEM_REDEFINE_XSD_2001);
+    public static final List<QName> XSD_REDEFINE_QNAME_LIST = Arrays.asList(Q_ELEM_REDEFINE_XSD_1999, Q_ELEM_REDEFINE_XSD_2000, Q_ELEM_REDEFINE_XSD_2001);
 
-
+    private SchemaConstants() {
+    }
 }

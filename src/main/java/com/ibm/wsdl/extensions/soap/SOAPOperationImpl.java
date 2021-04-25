@@ -103,7 +103,7 @@ public class SOAPOperationImpl implements SOAPOperation
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("SOAPOperation (" + elementType + "):");
     strBuf.append("\nrequired=" + required);
