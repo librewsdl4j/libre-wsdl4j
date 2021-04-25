@@ -31,5 +31,5 @@ public interface MIMEMultipartRelated extends ExtensibilityElement,
   /**
    * Get all the MIME parts defined here.
    */
-  List getMIMEParts();
+  List<MIMEPart> getMIMEParts();
 }

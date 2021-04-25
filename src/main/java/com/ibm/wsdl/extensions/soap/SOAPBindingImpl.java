@@ -99,7 +99,7 @@ public class SOAPBindingImpl implements SOAPBinding
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("SOAPBinding (" + elementType + "):");
     strBuf.append("\nrequired=" + required);

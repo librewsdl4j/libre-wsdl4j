@@ -4,8 +4,7 @@
 
 package javax.wsdl.extensions;
 
-import java.util.*;
-import javax.wsdl.extensions.ExtensibilityElement;
+import java.util.List;
 
 /**
  * Classes that implement this interface can contain extensibility
@@ -33,7 +32,7 @@ public interface ElementExtensible {
     /**
      * Get all the extensibility elements defined here.
      */
-    List getExtensibilityElements();
+    List<ExtensibilityElement> getExtensibilityElements();
 
 
 }

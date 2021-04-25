@@ -101,6 +101,6 @@ public interface BindingOperation extends WSDLElement
    *
    * @return names of fault bindings
    */
-  Map getBindingFaults();
+  Map<String, BindingFault> getBindingFaults();
 
 }

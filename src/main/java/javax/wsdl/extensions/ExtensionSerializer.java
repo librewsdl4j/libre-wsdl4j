@@ -32,7 +32,7 @@ public interface ExtensionSerializer
    * encountered in
    * @param extReg the ExtensionRegistry to use (if needed again)
    */
-  void marshall(Class parentType,
+  void marshall(Class<?> parentType,
                 QName elementType,
                 ExtensibilityElement extension,
                 PrintWriter pw,

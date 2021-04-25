@@ -78,7 +78,7 @@ public interface PortType extends WSDLElement
   /**
    * Get all the operations defined here.
    */
-  List getOperations();
+  List<Operation> getOperations();
 
   /**
    * Remove the specified operation. Note that operation names can

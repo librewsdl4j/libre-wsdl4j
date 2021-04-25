@@ -77,7 +77,7 @@ public class HTTPAddressImpl implements HTTPAddress
 
   public String toString()
   {
-    StringBuffer strBuf = new StringBuffer();
+    StringBuilder strBuf = new StringBuilder();
 
     strBuf.append("HTTPAddress (" + elementType + "):");
     strBuf.append("\nrequired=" + required);

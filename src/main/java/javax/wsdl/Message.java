@@ -57,7 +57,7 @@ public interface Message extends WSDLElement
   /**
    * Get all the parts defined here.
    */
-  Map getParts();
+  Map<String, Part> getParts();
 
   /**
    * Get an ordered list of parts as specified by the partOrder
@@ -68,7 +68,7 @@ public interface Message extends WSDLElement
    * returned in the order in which they were added to the message.
    * @return the list of parts
    */
-  List getOrderedParts(List partOrder);
+  List<Part> getOrderedParts(List<String> partOrder);
 
   void setUndefined(boolean isUndefined);
 

@@ -33,4 +33,6 @@ public class MIMEConstants
 
   // Attribute names.
   public static final String ATTR_PART = "part";
+
+  private MIMEConstants() {}
 }

@@ -6,6 +6,8 @@ package javax.wsdl;
 
 import java.util.*;
 
+import javax.xml.namespace.QName;
+
 /**
  * This interface represents a WSDL operation.
  * It includes information on input, output and fault
@@ -89,7 +91,7 @@ public interface Operation extends WSDLElement
    *
    * @return names of fault messages
    */
-  Map getFaults();
+  Map<String, Fault> getFaults();
 
   /**
    * Set the style for this operation (request-response,
@@ -114,7 +116,7 @@ public interface Operation extends WSDLElement
    * containing the part names to reflect the desired
    * order of parameters for RPC-style operations
    */
-  void setParameterOrdering(List parameterOrder);
+  void setParameterOrdering(List<String> parameterOrder);
 
   /**
    * Get the parameter ordering for this operation.
@@ -122,7 +124,7 @@ public interface Operation extends WSDLElement
    * @return the parameter ordering, a list consisting
    * of message part names
    */
-  List getParameterOrdering();
+  List<String> getParameterOrdering();
 
   void setUndefined(boolean isUndefined);
 

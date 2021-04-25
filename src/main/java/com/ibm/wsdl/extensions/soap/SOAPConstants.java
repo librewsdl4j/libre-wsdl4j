@@ -46,4 +46,6 @@ public class SOAPConstants
   public static final String ATTR_USE = "use";
   public static final String ATTR_ENCODING_STYLE = "encodingStyle";
   public static final String ATTR_PART = "part";
+
+  private SOAPConstants() {}
 }

@@ -23,7 +23,7 @@ public class UnknownExtensionSerializer implements ExtensionSerializer,
 {
   public static final long serialVersionUID = 1;
 
-  public void marshall(Class parentType,
+  public void marshall(Class<?> parentType,
                        QName elementType,
                        ExtensibilityElement extension,
                        PrintWriter pw,

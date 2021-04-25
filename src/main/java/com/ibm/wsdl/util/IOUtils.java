@@ -16,6 +16,10 @@ public class IOUtils {
   // debug flag - generates debug stuff if true
   static boolean debug = false;
 
+  private IOUtils() {
+    
+  }
+
   //////////////////////////////////////////////////////////////////////////
 
   public static String getStringFromReader (Reader reader) throws IOException {

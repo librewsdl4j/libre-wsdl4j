@@ -7,8 +7,6 @@ package javax.wsdl.extensions.schema;
 
 import java.io.Serializable;
 
-import javax.wsdl.extensions.schema.Schema;
-
 /**
  * Represents an include or a redefine element within a schema element.
  * 
