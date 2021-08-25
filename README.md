@@ -12,6 +12,8 @@ This source code was downloaded from the original WSDL4j sourceforge page:  http
 
 License: Common Public License 1.0 
 
+
+ ![CI](https://github.com/librewsdl4j/libre-wsdl4j/workflows/libre-wsdl4j%20maven%20build/badge.svg)
  [![Build Status](https://travis-ci.org/librewsdl4j/libre-wsdl4j.svg?branch=master)](https://travis-ci.org/librewsdl4j/libre-wsdl4j)
  [![Code Quality: Java](https://img.shields.io/lgtm/grade/java/g/librewsdl4j/libre-wsdl4j.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/librewsdl4j/libre-wsdl4j/)
  
