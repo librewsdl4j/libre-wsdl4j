@@ -39,6 +39,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected boolean importDocuments = true;
   protected boolean parseSchema = true;
   protected ExtensionRegistry extReg = null;
+  protected EntityResolver entityResolver = null;
   protected String factoryImplName = null;
   protected WSDLLocator loc = null;
   protected WSDLFactory factory = null;
@@ -125,6 +126,26 @@ public class WSDLReaderImpl implements WSDLReader {
     } else {
       throw new IllegalArgumentException("Feature name '" + name + "' not recognized.");
     }
+  }
+
+  /**
+   * Gets the EntityResolver, if one was set. Default is null.
+   *
+   * @return the EntityResolver, if one was set. Default is null.
+   * @since 1.10.0
+   */
+  public EntityResolver getEntityResolver() {
+      return entityResolver;
+  }
+
+  /**
+   * Sets the EntityResolver implementation when reading WSDL documents.
+   *
+   * @param entityResolver the EntityResolver implementation when reading WSDL documents.
+   * @since 1.10.0
+   */
+  public void setEntityResolver(EntityResolver entityResolver) {
+      this.entityResolver = entityResolver;
   }
 
   /**
@@ -311,7 +332,7 @@ public class WSDLReaderImpl implements WSDLReader {
                 throw new WSDLException(WSDLException.OTHER_ERROR, "Unable to locate imported document " + "at '" + locationURI + "'" + (contextURI == null ? "." : ", relative to '" + contextURI + "'."));
               }
 
-              Document doc = getDocument(inputSource, inputSource.getSystemId());
+              Document doc = getDocument(inputSource, inputSource.getSystemId(), entityResolver);
 
               if (inputStream != null) {
                 inputStream.close();
@@ -575,7 +596,7 @@ public class WSDLReaderImpl implements WSDLReader {
           // If we have not previously read the schema, get its DOM element now.
           if (referencedSchema == null) {
             inputSource.setSystemId(location);
-            Document doc = getDocument(inputSource, location);
+            Document doc = getDocument(inputSource, location, entityResolver);
 
             if (inputStream != null) {
               inputStream.close();
@@ -1539,7 +1560,7 @@ public class WSDLReaderImpl implements WSDLReader {
     }
   }
 
-  private static Document getDocument(InputSource inputSource, String desc) throws WSDLException {
+  private static Document getDocument(InputSource inputSource, String desc, EntityResolver entityResolver) throws WSDLException {
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
     factory.setNamespaceAware(true);
@@ -1547,6 +1568,9 @@ public class WSDLReaderImpl implements WSDLReader {
 
     try {
       DocumentBuilder builder = factory.newDocumentBuilder();
+      if (entityResolver != null) {
+        builder.setEntityResolver(null);
+      }
       Document doc = builder.parse(inputSource);
 
       return doc;
@@ -1607,7 +1631,7 @@ public class WSDLReaderImpl implements WSDLReader {
       InputStream inputStream = StringUtils.getContentAsInputStream(url);
       InputSource inputSource = new InputSource(inputStream);
       inputSource.setSystemId(url.toString());
-      Document doc = getDocument(inputSource, url.toString());
+      Document doc = getDocument(inputSource, url.toString(), entityResolver);
 
       inputStream.close();
 
@@ -1680,7 +1704,7 @@ public class WSDLReaderImpl implements WSDLReader {
   public Definition readWSDL(String documentBaseURI, InputSource inputSource) throws WSDLException {
     String location = (inputSource.getSystemId() != null ? inputSource.getSystemId() : "- WSDL Document -");
 
-    return readWSDL(documentBaseURI, getDocument(inputSource, location));
+    return readWSDL(documentBaseURI, getDocument(inputSource, location, entityResolver));
   }
 
   /**
@@ -1712,4 +1736,5 @@ public class WSDLReaderImpl implements WSDLReader {
       this.loc = null;
     }
   }
+
 }
