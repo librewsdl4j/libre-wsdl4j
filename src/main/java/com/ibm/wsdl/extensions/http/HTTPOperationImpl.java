@@ -24,6 +24,7 @@ public class HTTPOperationImpl implements HTTPOperation {
    * @param elementType
    *          the type
    */
+  @Override
   public void setElementType(QName elementType) {
     this.elementType = elementType;
   }
@@ -40,6 +41,7 @@ public class HTTPOperationImpl implements HTTPOperation {
   /**
    * Set whether or not the semantics of this extension are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required) {
     this.required = required;
   }
@@ -57,6 +59,7 @@ public class HTTPOperationImpl implements HTTPOperation {
    * @param locationURI
    *          the desired location URI
    */
+  @Override
   public void setLocationURI(String locationURI) {
     this.locationURI = locationURI;
   }
@@ -68,6 +71,7 @@ public class HTTPOperationImpl implements HTTPOperation {
     return locationURI;
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 

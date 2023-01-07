@@ -28,6 +28,7 @@ public class ServiceImpl extends AbstractWSDLElement implements Service {
    * @param name
    *          the desired name
    */
+  @Override
   public void setQName(QName name) {
     this.name = name;
   }
@@ -69,6 +70,7 @@ public class ServiceImpl extends AbstractWSDLElement implements Service {
    *          the name of the port to be removed.
    * @return the port which was removed
    */
+  @Override
   public Port removePort(String name) {
     return ports.remove(name);
   }
@@ -80,6 +82,7 @@ public class ServiceImpl extends AbstractWSDLElement implements Service {
     return ports;
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 

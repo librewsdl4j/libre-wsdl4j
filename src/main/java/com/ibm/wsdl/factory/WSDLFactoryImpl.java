@@ -27,6 +27,7 @@ public class WSDLFactoryImpl extends WSDLFactory
    *
    * @see com.ibm.wsdl.extensions.PopulatedExtensionRegistry
    */
+  @Override
   public Definition newDefinition()
   {
     Definition def = new DefinitionImpl();
@@ -40,6 +41,7 @@ public class WSDLFactoryImpl extends WSDLFactory
   /**
    * Create a new instance of a WSDLReader.
    */
+  @Override
   public WSDLReader newWSDLReader()
   {
     return new WSDLReaderImpl();
@@ -48,6 +50,7 @@ public class WSDLFactoryImpl extends WSDLFactory
   /**
    * Create a new instance of a WSDLWriter.
    */
+  @Override
   public WSDLWriter newWSDLWriter()
   {
     return new WSDLWriterImpl();
@@ -59,6 +62,7 @@ public class WSDLFactoryImpl extends WSDLFactory
    * extensions. Java extensionTypes are also mapped for all
    * the SOAP, HTTP and MIME extensions.
    */
+  @Override
   public ExtensionRegistry newPopulatedExtensionRegistry()
   {
     return new PopulatedExtensionRegistry();

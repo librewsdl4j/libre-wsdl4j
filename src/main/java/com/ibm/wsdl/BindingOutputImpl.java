@@ -29,6 +29,7 @@ public class BindingOutputImpl extends AbstractWSDLElement implements BindingOut
    *
    * @param name the desired name
    */
+  @Override
   public void setName(String name)
   {
     this.name = name;
@@ -44,6 +45,7 @@ public class BindingOutputImpl extends AbstractWSDLElement implements BindingOut
     return name;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

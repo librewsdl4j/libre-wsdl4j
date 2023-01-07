@@ -30,6 +30,7 @@ public class UnknownExtensibilityElement implements ExtensibilityElement,
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -49,6 +50,7 @@ public class UnknownExtensibilityElement implements ExtensibilityElement,
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -83,6 +85,7 @@ public class UnknownExtensibilityElement implements ExtensibilityElement,
     return element;
   }
 
+  @Override
   public String toString()
   {
     StringBuilder strBuf = new StringBuilder();

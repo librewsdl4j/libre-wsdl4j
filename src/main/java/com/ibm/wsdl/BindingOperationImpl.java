@@ -28,6 +28,7 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    * @param name
    *          the desired name
    */
+  @Override
   public void setName(String name) {
     this.name = name;
   }
@@ -47,6 +48,7 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    * @param operation
    *          the operation this operation binding binds
    */
+  @Override
   public void setOperation(Operation operation) {
     this.operation = operation;
   }
@@ -66,6 +68,7 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    * @param bindingInput
    *          the new input binding
    */
+  @Override
   public void setBindingInput(BindingInput bindingInput) {
     this.bindingInput = bindingInput;
   }
@@ -85,6 +88,7 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    * @param bindingOutput
    *          the new output binding
    */
+  @Override
   public void setBindingOutput(BindingOutput bindingOutput) {
     this.bindingOutput = bindingOutput;
   }
@@ -126,6 +130,7 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
    *          the name of the fault binding to be removed.
    * @return the fault binding which was removed
    */
+  @Override
   public BindingFault removeBindingFault(String name) {
     return bindingFaults.remove(name);
   }
@@ -139,6 +144,7 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
     return bindingFaults;
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 

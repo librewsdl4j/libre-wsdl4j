@@ -45,6 +45,7 @@ public class OperationType implements java.io.Serializable {
     return operationType != null && id.equals(operationType.getId());
   }
 
+  @Override
   public String toString() {
     return id + "," + intId;
   }

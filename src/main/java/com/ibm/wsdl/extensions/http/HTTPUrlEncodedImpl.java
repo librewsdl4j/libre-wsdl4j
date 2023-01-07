@@ -23,6 +23,7 @@ public class HTTPUrlEncodedImpl implements HTTPUrlEncoded
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -42,6 +43,7 @@ public class HTTPUrlEncodedImpl implements HTTPUrlEncoded
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -56,6 +58,7 @@ public class HTTPUrlEncodedImpl implements HTTPUrlEncoded
     return required;
   }
 
+  @Override
   public String toString()
   {
     StringBuilder strBuf = new StringBuilder();

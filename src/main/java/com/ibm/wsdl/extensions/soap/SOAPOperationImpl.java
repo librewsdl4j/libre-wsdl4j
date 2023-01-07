@@ -29,6 +29,7 @@ public class SOAPOperationImpl implements SOAPOperation
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -48,6 +49,7 @@ public class SOAPOperationImpl implements SOAPOperation
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -68,7 +70,8 @@ public class SOAPOperationImpl implements SOAPOperation
 	 * @param soapActionURI the desired value of the SOAP
 	 * action header for this operation.
 	 */
-	public void setSoapActionURI(String soapActionURI)
+	@Override
+    public void setSoapActionURI(String soapActionURI)
   {
 	  this.soapActionURI = soapActionURI;
 	}
@@ -88,6 +91,7 @@ public class SOAPOperationImpl implements SOAPOperation
    *
    * @param style the desired style
    */
+  @Override
   public void setStyle(String style)
   {
     this.style = style;
@@ -101,6 +105,7 @@ public class SOAPOperationImpl implements SOAPOperation
     return style;
   }
 
+  @Override
   public String toString()
   {
     StringBuilder strBuf = new StringBuilder();

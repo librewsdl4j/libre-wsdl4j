@@ -25,6 +25,7 @@ public class MIMEContentImpl implements MIMEContent
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -44,6 +45,7 @@ public class MIMEContentImpl implements MIMEContent
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -63,6 +65,7 @@ public class MIMEContentImpl implements MIMEContent
    *
    * @param part the desired part
    */
+  @Override
   public void setPart(String part)
   {
     this.part = part;
@@ -81,6 +84,7 @@ public class MIMEContentImpl implements MIMEContent
    *
    * @param type the desired type
    */
+  @Override
   public void setType(String type)
   {
     this.type = type;
@@ -94,6 +98,7 @@ public class MIMEContentImpl implements MIMEContent
     return type;
   }
 
+  @Override
   public String toString()
   {
     StringBuilder strBuf = new StringBuilder();

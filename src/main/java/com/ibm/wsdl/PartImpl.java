@@ -31,6 +31,7 @@ public class PartImpl extends AbstractWSDLElement implements Part
    *
    * @param name the desired name
    */
+  @Override
   public void setName(String name)
   {
     this.name = name;
@@ -46,6 +47,7 @@ public class PartImpl extends AbstractWSDLElement implements Part
     return name;
   }
 
+  @Override
   public void setElementName(QName elementName)
   {
     this.elementName = elementName;
@@ -56,6 +58,7 @@ public class PartImpl extends AbstractWSDLElement implements Part
     return elementName;
   }
 
+  @Override
   public void setTypeName(QName typeName)
   {
     this.typeName = typeName;
@@ -77,6 +80,7 @@ public class PartImpl extends AbstractWSDLElement implements Part
     return nativeAttributeNames;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

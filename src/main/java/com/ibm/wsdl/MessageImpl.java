@@ -32,6 +32,7 @@ public class MessageImpl extends AbstractWSDLElement implements Message
    *
    * @param name the desired name
    */
+  @Override
   public void setQName(QName name)
   {
     this.name = name;
@@ -78,6 +79,7 @@ public class MessageImpl extends AbstractWSDLElement implements Message
    * @param name the name of the part to be removed.
    * @return the part which was removed
    */
+  @Override
   public Part removePart(String name)
   {
     return (Part)parts.remove(name);
@@ -125,6 +127,7 @@ public class MessageImpl extends AbstractWSDLElement implements Message
     return orderedParts;
   }
 
+  @Override
   public void setUndefined(boolean isUndefined)
   {
     this.isUndefined = isUndefined;
@@ -135,6 +138,7 @@ public class MessageImpl extends AbstractWSDLElement implements Message
     return isUndefined;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

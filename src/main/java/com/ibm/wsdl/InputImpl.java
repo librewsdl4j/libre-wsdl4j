@@ -27,6 +27,7 @@ public class InputImpl extends AbstractWSDLElement implements Input
    *
    * @param name the desired name
    */
+  @Override
   public void setName(String name)
   {
     this.name = name;
@@ -42,6 +43,7 @@ public class InputImpl extends AbstractWSDLElement implements Input
     return name;
   }
 
+  @Override
   public void setMessage(Message message)
   {
     this.message = message;
@@ -63,6 +65,7 @@ public class InputImpl extends AbstractWSDLElement implements Input
     return nativeAttributeNames;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

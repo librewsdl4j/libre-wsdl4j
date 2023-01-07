@@ -27,6 +27,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -46,6 +47,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -65,6 +67,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
    *
    * @param message the desired message
    */
+  @Override
   public void setMessage(QName message)
   {
     this.message = message;
@@ -83,6 +86,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
    *
    * @param part the desired part
    */
+  @Override
   public void setPart(String part)
   {
     this.part = part;
@@ -101,6 +105,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
    *
    * @param use the desired use
    */
+  @Override
   public void setUse(String use)
   {
     this.use = use;
@@ -119,6 +124,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
    *
    * @param encodingStyle the desired encodingStyle
    */
+  @Override
   public void setEncodingStyle(String encodingStyle)
   {
     this.encodingStyle = encodingStyle;
@@ -137,6 +143,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
    *
    * @param namespaceURI the desired namespace URI
    */
+  @Override
   public void setNamespaceURI(String namespaceURI)
   {
     this.namespaceURI = namespaceURI;
@@ -150,6 +157,7 @@ public class SOAP12HeaderFaultImpl implements SOAP12HeaderFault
     return namespaceURI;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

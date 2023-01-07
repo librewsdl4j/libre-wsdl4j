@@ -29,6 +29,7 @@ public class BindingFaultImpl extends AbstractWSDLElement implements BindingFaul
    *
    * @param name the desired name
    */
+  @Override
   public void setName(String name)
   {
     this.name = name;
@@ -44,6 +45,7 @@ public class BindingFaultImpl extends AbstractWSDLElement implements BindingFaul
     return name;
   }  
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

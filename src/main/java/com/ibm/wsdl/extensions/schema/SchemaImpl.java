@@ -107,6 +107,7 @@ public class SchemaImpl implements Schema {
     this.redefines.add(redefineSchema);
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 
@@ -126,6 +127,7 @@ public class SchemaImpl implements Schema {
    * @param elementType
    *          the type
    */
+  @Override
   public void setElementType(QName elementType) {
     this.elementType = elementType;
   }
@@ -142,6 +144,7 @@ public class SchemaImpl implements Schema {
   /**
    * Set whether or not the semantics of this extension are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required) {
     this.required = required;
   }
@@ -159,6 +162,7 @@ public class SchemaImpl implements Schema {
    * @param element
    *          the DOM element representing this schema
    */
+  @Override
   public void setElement(Element element) {
     this.element = element;
   }
@@ -178,6 +182,7 @@ public class SchemaImpl implements Schema {
    * @param documentBaseURI
    *          the document base URI of this schema
    */
+  @Override
   public void setDocumentBaseURI(String documentBaseURI) {
     this.documentBaseURI = documentBaseURI;
   }

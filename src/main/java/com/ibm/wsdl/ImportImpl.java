@@ -27,6 +27,7 @@ public class ImportImpl extends AbstractWSDLElement implements Import
 
   public static final long serialVersionUID = 1;
 
+  @Override
   public void setNamespaceURI(String namespaceURI)
   {
     this.namespaceURI = namespaceURI;
@@ -37,6 +38,7 @@ public class ImportImpl extends AbstractWSDLElement implements Import
     return namespaceURI;
   }
 
+  @Override
   public void setLocationURI(String locationURI)
   {
     this.locationURI = locationURI;
@@ -54,6 +56,7 @@ public class ImportImpl extends AbstractWSDLElement implements Import
    * This would need to be made into a generic reference to handle
    * other types of referenced documents.
    */
+  @Override
   public void setDefinition(Definition definition)
   {
     this.definition = definition;
@@ -82,6 +85,7 @@ public class ImportImpl extends AbstractWSDLElement implements Import
     return nativeAttributeNames;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

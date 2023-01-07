@@ -24,6 +24,7 @@ public class MIMEMimeXmlImpl implements MIMEMimeXml {
    * @param elementType
    *          the type
    */
+  @Override
   public void setElementType(QName elementType) {
     this.elementType = elementType;
   }
@@ -40,6 +41,7 @@ public class MIMEMimeXmlImpl implements MIMEMimeXml {
   /**
    * Set whether or not the semantics of this extension are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required) {
     this.required = required;
   }
@@ -57,6 +59,7 @@ public class MIMEMimeXmlImpl implements MIMEMimeXml {
    * @param part
    *          the desired part
    */
+  @Override
   public void setPart(String part) {
     this.part = part;
   }
@@ -68,6 +71,7 @@ public class MIMEMimeXmlImpl implements MIMEMimeXml {
     return part;
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 

@@ -27,6 +27,7 @@ public class SOAP12BodyImpl implements SOAP12Body
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -46,6 +47,7 @@ public class SOAP12BodyImpl implements SOAP12Body
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -65,6 +67,7 @@ public class SOAP12BodyImpl implements SOAP12Body
    *
    * @param parts the desired parts
    */
+  @Override
   public void setParts(List parts)
   {
     this.parts = parts;
@@ -83,6 +86,7 @@ public class SOAP12BodyImpl implements SOAP12Body
    *
    * @param use the desired use
    */
+  @Override
   public void setUse(String use)
   {
     this.use = use;
@@ -101,6 +105,7 @@ public class SOAP12BodyImpl implements SOAP12Body
    *
    * @param encodingStyle the desired encodingStyle
    */
+  @Override
   public void setEncodingStyle(String encodingStyle)
   {
     this.encodingStyle = encodingStyle;
@@ -119,6 +124,7 @@ public class SOAP12BodyImpl implements SOAP12Body
    *
    * @param namespaceURI the desired namespace URI
    */
+  @Override
   public void setNamespaceURI(String namespaceURI)
   {
     this.namespaceURI = namespaceURI;
@@ -132,6 +138,7 @@ public class SOAP12BodyImpl implements SOAP12Body
     return namespaceURI;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

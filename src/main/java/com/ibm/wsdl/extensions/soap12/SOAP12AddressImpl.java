@@ -24,6 +24,7 @@ public class SOAP12AddressImpl implements SOAP12Address
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -43,6 +44,7 @@ public class SOAP12AddressImpl implements SOAP12Address
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -62,6 +64,7 @@ public class SOAP12AddressImpl implements SOAP12Address
    *
    * @param locationURI the desired location URI
    */
+  @Override
   public void setLocationURI(String locationURI)
   {
     this.locationURI = locationURI;
@@ -75,6 +78,7 @@ public class SOAP12AddressImpl implements SOAP12Address
     return locationURI;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

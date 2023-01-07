@@ -25,6 +25,7 @@ public class SOAP12OperationImpl implements SOAP12Operation
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -44,6 +45,7 @@ public class SOAP12OperationImpl implements SOAP12Operation
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -64,6 +66,7 @@ public class SOAP12OperationImpl implements SOAP12Operation
    * @param soapActionURI the desired value of the SOAP
    * action header for this operation.
    */
+  @Override
   public void setSoapActionURI(String soapActionURI)
   {
     this.soapActionURI = soapActionURI;
@@ -84,6 +87,7 @@ public class SOAP12OperationImpl implements SOAP12Operation
    *
    * @param soapActionRequired true if the SOAP Action is required, otherwise false.
    */
+  @Override
   public void setSoapActionRequired(Boolean soapActionRequired)
   {
     this.soapActionRequired = soapActionRequired;
@@ -104,6 +108,7 @@ public class SOAP12OperationImpl implements SOAP12Operation
    *
    * @param style the desired style
    */
+  @Override
   public void setStyle(String style)
   {
     this.style = style;
@@ -117,6 +122,7 @@ public class SOAP12OperationImpl implements SOAP12Operation
     return style;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

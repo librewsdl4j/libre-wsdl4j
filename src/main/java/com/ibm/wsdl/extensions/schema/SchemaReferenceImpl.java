@@ -31,6 +31,7 @@ public class SchemaReferenceImpl implements SchemaReference {
    * @param id
    *          The id to set.
    */
+  @Override
   public void setId(String id) {
     this.id = id;
   }
@@ -46,6 +47,7 @@ public class SchemaReferenceImpl implements SchemaReference {
    * @param schemaLocation
    *          The schemaLocation to set.
    */
+  @Override
   public void setSchemaLocationURI(String schemaLocation) {
     this.schemaLocation = schemaLocation;
   }
@@ -61,6 +63,7 @@ public class SchemaReferenceImpl implements SchemaReference {
    * @param referencedSchema
    *          The importedSchema to set.
    */
+  @Override
   public void setReferencedSchema(Schema referencedSchema) {
     this.referencedSchema = referencedSchema;
   }

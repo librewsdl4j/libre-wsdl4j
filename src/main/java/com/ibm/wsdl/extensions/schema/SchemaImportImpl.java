@@ -26,6 +26,7 @@ public class SchemaImportImpl extends SchemaReferenceImpl implements SchemaImpor
   /**
    * @param namespace The namespace to set.
    */
+  @Override
   public void setNamespaceURI(String namespace)
   {
     this.namespace = namespace;

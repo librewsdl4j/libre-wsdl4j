@@ -88,6 +88,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *           if the feature name is not recognized.
    * @see #getFeature(String)
    */
+  @Override
   public void setFeature(String name, boolean value) throws IllegalArgumentException {
     if (name == null) {
       throw new IllegalArgumentException("Feature name must not be null.");
@@ -154,6 +155,7 @@ public class WSDLReaderImpl implements WSDLReader {
    * @param extReg
    *          the extension registry to use for new definitions
    */
+  @Override
   public void setExtensionRegistry(ExtensionRegistry extReg) {
     this.extReg = extReg;
   }
@@ -183,6 +185,7 @@ public class WSDLReaderImpl implements WSDLReader {
    * @throws UnsupportedOperationException
    *           if this method is invoked on an implementation which does not support it.
    */
+  @Override
   public void setFactoryImplName(String factoryImplName) throws UnsupportedOperationException {
     // check to see if we really need to change the factory name and clear the cache
     if ((this.factoryImplName == null && factoryImplName != null) || (this.factoryImplName != null && !this.factoryImplName.equals(factoryImplName))) {
@@ -1607,6 +1610,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *          a URI (can be a filename or URL) pointing to a WSDL XML definition.
    * @return the definition.
    */
+  @Override
   public Definition readWSDL(String wsdlURI) throws WSDLException {
     return readWSDL(null, wsdlURI);
   }
@@ -1620,6 +1624,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *          a URI (can be a filename or URL) pointing to a WSDL XML definition.
    * @return the definition.
    */
+  @Override
   public Definition readWSDL(String contextURI, String wsdlURI) throws WSDLException {
     try {
       if (verbose) {
@@ -1652,6 +1657,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *          the &lt;wsdl:definitions&gt; element
    * @return the definition described by the element.
    */
+  @Override
   public Definition readWSDL(String documentBaseURI, Element definitionsElement) throws WSDLException {
     return readWSDL(documentBaseURI, definitionsElement, null);
   }
@@ -1665,6 +1671,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *          the &lt;wsdl:definitions&gt; element
    * @return the definition described by the element.
    */
+  @Override
   public Definition readWSDL(WSDLLocator locator, Element definitionsElement) throws WSDLException {
     try {
       this.loc = locator;
@@ -1688,6 +1695,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *          the WSDL document, an XML document obeying the WSDL schema.
    * @return the definition described in the document.
    */
+  @Override
   public Definition readWSDL(String documentBaseURI, Document wsdlDocument) throws WSDLException {
     return readWSDL(documentBaseURI, wsdlDocument.getDocumentElement());
   }
@@ -1701,6 +1709,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *          an InputSource pointing to the WSDL document, an XML document obeying the WSDL schema.
    * @return the definition described in the document pointed to by the InputSource.
    */
+  @Override
   public Definition readWSDL(String documentBaseURI, InputSource inputSource) throws WSDLException {
     String location = (inputSource.getSystemId() != null ? inputSource.getSystemId() : "- WSDL Document -");
 
@@ -1714,6 +1723,7 @@ public class WSDLReaderImpl implements WSDLReader {
    *          A WSDLLocator object used to provide InputSources pointing to the wsdl file.
    * @return the definition described in the document
    */
+  @Override
   public Definition readWSDL(WSDLLocator locator) throws WSDLException {
     InputSource is = locator.getBaseInputSource();
     String base = locator.getBaseURI();

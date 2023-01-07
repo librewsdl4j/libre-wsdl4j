@@ -29,6 +29,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -48,6 +49,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -67,6 +69,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
    *
    * @param message the desired message
    */
+  @Override
   public void setMessage(QName message)
   {
     this.message = message;
@@ -85,6 +88,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
    *
    * @param part the desired part
    */
+  @Override
   public void setPart(String part)
   {
     this.part = part;
@@ -103,6 +107,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
    *
    * @param use the desired use
    */
+  @Override
   public void setUse(String use)
   {
     this.use = use;
@@ -121,6 +126,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
    *
    * @param encodingStyle the desired encodingStyle
    */
+  @Override
   public void setEncodingStyle(String encodingStyle)
   {
     this.encodingStyle = encodingStyle;
@@ -139,6 +145,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
    *
    * @param namespaceURI the desired namespace URI
    */
+  @Override
   public void setNamespaceURI(String namespaceURI)
   {
     this.namespaceURI = namespaceURI;
@@ -157,6 +164,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
     soapHeaderFaults.add(soap12HeaderFault);
   }
   
+  @Override
   public SOAP12HeaderFault removeSOAP12HeaderFault(SOAP12HeaderFault soap12HeaderFault)
   {
     if(soapHeaderFaults.remove(soap12HeaderFault))
@@ -170,6 +178,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
     return soapHeaderFaults;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

@@ -30,6 +30,7 @@ public class PortImpl extends AbstractWSDLElement implements Port
    *
    * @param name the desired name
    */
+  @Override
   public void setName(String name)
   {
     this.name = name;
@@ -50,6 +51,7 @@ public class PortImpl extends AbstractWSDLElement implements Port
    *
    * @param binding the desired binding
    */
+  @Override
   public void setBinding(Binding binding)
   {
     this.binding = binding;
@@ -65,6 +67,7 @@ public class PortImpl extends AbstractWSDLElement implements Port
     return binding;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();
