@@ -25,6 +25,7 @@ public class MIMEMultipartRelatedImpl implements MIMEMultipartRelated
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -44,6 +45,7 @@ public class MIMEMultipartRelatedImpl implements MIMEMultipartRelated
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -74,6 +76,7 @@ public class MIMEMultipartRelatedImpl implements MIMEMultipartRelated
    * @param mimePart the MIME part to be removed.
    * @return the MIME part which was removed.
    */
+  @Override
   public MIMEPart removeMIMEPart(MIMEPart mimePart)
   {
     if(mimeParts.remove(mimePart))
@@ -90,6 +93,7 @@ public class MIMEMultipartRelatedImpl implements MIMEMultipartRelated
     return mimeParts;
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 

@@ -33,6 +33,7 @@ public abstract class AbstractWSDLElement implements WSDLElement
    *
    * @param docEl the documentation element
    */
+  @Override
   public void setDocumentationElement(Element docEl)
   {
     this.docEl = docEl;
@@ -66,6 +67,7 @@ public abstract class AbstractWSDLElement implements WSDLElement
    * @param extElement the extensibility element to be removed.
    * @return the extensibility element which was removed.
    */
+  @Override
   public ExtensibilityElement removeExtensibilityElement(ExtensibilityElement extElement)
   {
     if(extElements.remove(extElement))
@@ -101,6 +103,7 @@ public abstract class AbstractWSDLElement implements WSDLElement
    * @see 
    *      javax.wsdl.extensions.ExtensionRegistry#queryExtensionAttributeType
    */
+  @Override
   public void setExtensionAttribute(QName name, Object value)
   {
     if (value != null)
@@ -150,6 +153,7 @@ public abstract class AbstractWSDLElement implements WSDLElement
     return extensionAttributes;
   }
   
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

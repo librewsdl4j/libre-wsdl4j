@@ -31,6 +31,7 @@ public class PortTypeImpl extends AbstractWSDLElement implements PortType
    *
    * @param name the desired name
    */
+  @Override
   public void setQName(QName name)
   {
     this.name = name;
@@ -248,6 +249,7 @@ public class PortTypeImpl extends AbstractWSDLElement implements PortType
    * 
    * @see #getOperation(String, String, String) 
    */
+  @Override
   public Operation removeOperation(String name,
                                 String inputName,
                                 String outputName)
@@ -260,6 +262,7 @@ public class PortTypeImpl extends AbstractWSDLElement implements PortType
     else return null;
   }
   
+  @Override
   public void setUndefined(boolean isUndefined)
   {
     this.isUndefined = isUndefined;
@@ -281,6 +284,7 @@ public class PortTypeImpl extends AbstractWSDLElement implements PortType
     return nativeAttributeNames;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

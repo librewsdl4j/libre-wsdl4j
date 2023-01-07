@@ -42,6 +42,7 @@ public class WSDLWriterImpl implements WSDLWriter {
    *           if the feature name is not recognized.
    * @see #getFeature(String)
    */
+  @Override
   public void setFeature(String name, boolean value) throws IllegalArgumentException {
     if (name == null) {
       throw new IllegalArgumentException("Feature name must not be null.");

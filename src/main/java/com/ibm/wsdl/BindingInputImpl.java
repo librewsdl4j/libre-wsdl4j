@@ -29,6 +29,7 @@ public class BindingInputImpl extends AbstractWSDLElement implements BindingInpu
    *
    * @param name the desired name
    */
+  @Override
   public void setName(String name)
   {
     this.name = name;
@@ -44,6 +45,7 @@ public class BindingInputImpl extends AbstractWSDLElement implements BindingInpu
     return name;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

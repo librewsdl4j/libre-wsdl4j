@@ -105,6 +105,7 @@ public class QName implements Serializable {
    *
    * @return a string representation of the QName
    */
+  @Override
   public String toString() {
     return (EMPTY_STRING.equals(namespaceURI) || namespaceURI == null ? localPart : '{' + namespaceURI + '}' + localPart);
   }

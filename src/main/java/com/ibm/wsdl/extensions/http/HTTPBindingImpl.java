@@ -24,6 +24,7 @@ public class HTTPBindingImpl implements HTTPBinding {
    * @param elementType
    *          the type
    */
+  @Override
   public void setElementType(QName elementType) {
     this.elementType = elementType;
   }
@@ -40,6 +41,7 @@ public class HTTPBindingImpl implements HTTPBinding {
   /**
    * Set whether or not the semantics of this extension are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required) {
     this.required = required;
   }
@@ -57,6 +59,7 @@ public class HTTPBindingImpl implements HTTPBinding {
    * @param verb
    *          the desired verb
    */
+  @Override
   public void setVerb(String verb) {
     this.verb = verb;
   }
@@ -68,6 +71,7 @@ public class HTTPBindingImpl implements HTTPBinding {
     return verb;
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 

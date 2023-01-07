@@ -20,6 +20,7 @@ public class TypesImpl extends AbstractWSDLElement implements Types
 
   public static final long serialVersionUID = 1;
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

@@ -24,6 +24,7 @@ public class SOAP12BindingImpl implements SOAP12Binding
    *
    * @param elementType the type
    */
+  @Override
   public void setElementType(QName elementType)
   {
     this.elementType = elementType;
@@ -43,6 +44,7 @@ public class SOAP12BindingImpl implements SOAP12Binding
    * Set whether or not the semantics of this extension
    * are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required)
   {
     this.required = required;
@@ -62,6 +64,7 @@ public class SOAP12BindingImpl implements SOAP12Binding
    *
    * @param style the desired style
    */
+  @Override
   public void setStyle(String style)
   {
     this.style = style;
@@ -82,6 +85,7 @@ public class SOAP12BindingImpl implements SOAP12Binding
    * @param transportURI the URI describing the transport 
    * to be used
    */
+  @Override
   public void setTransportURI(String transportURI)
   {
     this.transportURI = transportURI;
@@ -97,6 +101,7 @@ public class SOAP12BindingImpl implements SOAP12Binding
     return transportURI;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

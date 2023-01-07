@@ -33,6 +33,7 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
    *
    * @param name the desired name
    */
+  @Override
   public void setQName(QName name)
   {
     this.name = name;
@@ -53,6 +54,7 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
    *
    * @param portType the port type associated with this binding
    */
+  @Override
   public void setPortType(PortType portType)
   {
     this.portType = portType;
@@ -294,6 +296,7 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
    * 
    * @see #getBindingOperation(String, String, String) 
    */
+  @Override
   public BindingOperation removeBindingOperation(String name,
                                                  String inputName,
                                                  String outputName)
@@ -306,6 +309,7 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
     else return null;
   }
   
+  @Override
   public void setUndefined(boolean isUndefined)
   {
     this.isUndefined = isUndefined;
@@ -316,6 +320,7 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
     return isUndefined;
   }
 
+  @Override
   public String toString()
   {
     StringBuffer strBuf = new StringBuffer();

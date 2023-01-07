@@ -26,6 +26,7 @@ public class MIMEPartImpl implements MIMEPart {
    * @param elementType
    *          the type
    */
+  @Override
   public void setElementType(QName elementType) {
     this.elementType = elementType;
   }
@@ -42,6 +43,7 @@ public class MIMEPartImpl implements MIMEPart {
   /**
    * Set whether or not the semantics of this extension are required. Relates to the wsdl:required attribute.
    */
+  @Override
   public void setRequired(Boolean required) {
     this.required = required;
   }
@@ -70,6 +72,7 @@ public class MIMEPartImpl implements MIMEPart {
    *          the extensibility element to be removed
    * @return the extensibility element which was removed
    */
+  @Override
   public ExtensibilityElement removeExtensibilityElement(ExtensibilityElement extElement) {
     if (extElements.remove(extElement))
       return extElement;
@@ -84,6 +87,7 @@ public class MIMEPartImpl implements MIMEPart {
     return extElements;
   }
 
+  @Override
   public String toString() {
     StringBuilder strBuf = new StringBuilder();
 
