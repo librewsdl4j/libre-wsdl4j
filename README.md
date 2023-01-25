@@ -9,7 +9,7 @@ Add this to your pom.xml file to use the latest version of OpenPDF:
 ```xml
 
 <dependency>
-  <groupId>com.github.librewsdl4j</groupId>
+  <groupId>io.github.librewsdl4j</groupId>
   <artifactId>libre-wsdl4j</artifactId>
   <version>1.9.0</version>
 </dependency> 
