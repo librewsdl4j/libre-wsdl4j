@@ -11,7 +11,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <groupId>librewsdl4j</groupId>
+    <groupId>com.github.librewsdl4j</groupId>
     <artifactId>libre-wsdl4j</artifactId>
     <version>1.10.0-SNAPSHOT</version>
     <packaging>jar</packaging>
