@@ -4,7 +4,7 @@ Libre-wsdl4j is a fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL.
 
 ## Use libre-wsdl4j as Maven dependency
 
-Add this to your pom.xml file to use the latest version of OpenPDF: (Pending publish to Maven Central)
+Add this to your pom.xml file to use the latest version of OpenPDF: (Now on Maven Central!)
 
 ```xml
 
