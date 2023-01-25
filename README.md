@@ -37,7 +37,7 @@ https://opensource.org/licenses/cpl1.0.php
 
 
 ## Maintainer  ##
-* [@andreasrosdal](https://github.com/andreasrosdal) - Andreas Røsdal - Maintainer 
+* [@andreasrosdal](https://github.com/andreasrosdal) - Andreas Røsdal
 
 ## Contributors  ##
 * [@garydgregory](https://github.com/garydgregory) - Gary Gregory
