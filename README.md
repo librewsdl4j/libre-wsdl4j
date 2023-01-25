@@ -11,7 +11,7 @@ Add this to your pom.xml file to use the latest version of OpenPDF: (Pending pub
 <dependency>
   <groupId>io.github.librewsdl4j</groupId>
   <artifactId>libre-wsdl4j</artifactId>
-  <version>1.9.0</version>
+  <version>1.10.0</version>
 </dependency> 
 ```
 
@@ -26,6 +26,7 @@ JSR110 - https://jcp.org/en/jsr/detail?id=110
 This source code was downloaded from the original WSDL4j sourceforge page:  https://sourceforge.net/projects/wsdl4j/
 
 License: Common Public License 1.0 
+https://opensource.org/licenses/cpl1.0.php
 
 
  [![CI](https://github.com/librewsdl4j/libre-wsdl4j/workflows/libre-wsdl4j%20maven%20build/badge.svg)](https://github.com/librewsdl4j/libre-wsdl4j/actions)
@@ -42,3 +43,10 @@ available.
 * Ported from Ant to Maven.
 
 
+
+## Maintainer  ##
+* [@andreasrosdal](https://github.com/andreasrosdal) - Andreas Røsdal - Maintainer 
+
+## Contributors  ##
+* [@garydgregory](https://github.com/garydgregory) - Gary Gregory
+* [@olivierdepriester](https://github.com/olivierdepriester) - Olivier Depriester

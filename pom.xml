@@ -9,14 +9,49 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
+        <maven-repository-plugin.version>2.4</maven-repository-plugin.version>
+        <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     </properties>
 
     <groupId>io.github.librewsdl4j</groupId>
     <artifactId>libre-wsdl4j</artifactId>
-    <version>1.10.0-SNAPSHOT</version>
+    <version>1.11.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>libre-wsdl4j</name>
+    <description>Open and Free WSDL library: Web Services Description Language. Libre-wsdl4j is a fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL. Many software projects still depends on WSL4j, so the idea is that libre-wsdl4j should be an actively maintained version of this software on GitHub. "WSDL, that's an anchronym i haven't heard in almost ten years." Still big in the enterprise world" - comments on the Internet.</description>
+    <url>https://github.com/librewsdl4j/libre-wsdl4j</url>
+
+    <licenses>
+        <license>
+            <name>Common Public License 1.0</name>
+            <url>https://opensource.org/licenses/cpl1.0.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>The libre-wsdl4j Project</name>
+            <organizationUrl>https://github.com/librewsdl4j/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>scm:git:https://github.com/librewsdl4j/libre-wsdl4j</url>
+        <connection>scm:git:https://github.com/librewsdl4j/libre-wsdl4j</connection>
+        <developerConnection>scm:git:https://github.com/librewsdl4j/libre-wsdl4j</developerConnection>
+    </scm>
+    
+    <!-- Distribution config from http://central.sonatype.org/pages/apache-maven.html#distribution-management-and-authentication -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
@@ -50,11 +85,14 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>${maven-javadoc-plugin.version}</version>
+                <configuration>
+                    <source>8</source>
+                </configuration>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -62,31 +100,54 @@
                             <goal>jar</goal>
                         </goals>
                         <configuration>
-                            <attach>true</attach>
+                            <additionalJOptions>-Xdoclint:none</additionalJOptions>
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-repository-plugin</artifactId>
+                <version>${maven-repository-plugin.version}</version>
+            </plugin>
+            <!-- GPG signing config -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>${maven-gpg-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>${nexus-staging-maven-plugin.version}</version>
+                <extensions>true</extensions>
                 <configuration>
-                    <tags>
-                        <tag>
-                            <name>date</name>
-                            <placement>a</placement>
-                            <head>Object creation date:</head>
-                        </tag>
-                    </tags>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
-            -->
+
         </plugins>
     </build>
          
-   <distributionManagement>
+   <!--<distributionManagement>
      <repository>
        <id>github</id>
        <name>GitHub librewsdl4j Apache Maven Packages</name>
        <url>https://maven.pkg.github.com/librewsdl4j/libre-wsdl4j</url>
      </repository>
-  </distributionManagement>
+  </distributionManagement>-->
 
 
 </project>
