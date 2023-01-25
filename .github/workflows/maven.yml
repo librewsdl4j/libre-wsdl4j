@@ -22,4 +22,4 @@ jobs:
         with:
           java-version: ${{matrix.java}}
       - name: Build with Maven
-        run: mvn -B -V clean verify --file pom.xml --no-transfer-progress
+        run: mvn -B -V clean verify --file pom.xml --no-transfer-progress -Dgpg.skip
