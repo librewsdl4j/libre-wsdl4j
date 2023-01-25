@@ -35,14 +35,6 @@ https://opensource.org/licenses/cpl1.0.php
    "WSDL, that's an anchronym i haven't heard in almost ten years."  
    "Still big in the enterprise world" - comments on the Internet. 
 
-## Changes:
-* Modified PopulatedExtensionRegistry, so that external HTTP requests 
-to fetch .xsd files references in the .wsdl files are not fetched. 
-This would cause connection refused errors when the .xsd files are not
-available.
-* Ported from Ant to Maven.
-
-
 
 ## Maintainer  ##
 * [@andreasrosdal](https://github.com/andreasrosdal) - Andreas Røsdal - Maintainer 
