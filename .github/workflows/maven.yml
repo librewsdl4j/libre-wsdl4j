@@ -1,6 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
+
 name: libre-wsdl4j maven build
 on:
   push:
@@ -8,18 +9,25 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ 8, 11, 17, 21 ]
+        # The last 3 LTS releases
+        # Java 17 is run in codacy-coverage-reporter
+        java: [ 11, 17, 21 ]
     name: Java ${{matrix.java}}
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup java
         uses: actions/setup-java@v4
         with:
+          distribution: temurin
           java-version: ${{matrix.java}}
       - name: Build with Maven
         run: mvn -B -V clean verify --file pom.xml --no-transfer-progress -Dgpg.skip
+
