@@ -9,7 +9,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
+        <maven-gpg-plugin.version>3.2.5</maven-gpg-plugin.version>
         <maven-repository-plugin.version>2.4</maven-repository-plugin.version>
         <maven-javadoc-plugin.version>3.8.0</maven-javadoc-plugin.version>
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
