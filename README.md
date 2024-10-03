@@ -17,6 +17,8 @@ Add this to your pom.xml file to use the latest version of OpenPDF: (Now on Mave
 
 Download: [libre-wsdl4j 1.10.0 here]([https://github.com/librewsdl4j/libre-wsdl4j/releases/tag/1.8.0](https://github.com/librewsdl4j/libre-wsdl4j/releases/tag/1.10.0))!
 
+Requires Java 11 or later.
+
 Pull requests welcome! The last release of the original WSDL4J was in Feb, 2013.
 
 WSDL4J is described as "The Web Services Description Language for Java Toolkit (WSDL4J) allows the creation, representation, and manipulation of WSDL documents. It is the reference implementation for JSR110 'JWSDL'", by the original authors.
