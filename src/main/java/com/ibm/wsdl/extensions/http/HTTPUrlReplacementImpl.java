@@ -61,11 +61,10 @@ public class HTTPUrlReplacementImpl implements HTTPUrlReplacement
   @Override
   public String toString()
   {
-    StringBuilder strBuf = new StringBuilder();
 
-    strBuf.append("HTTPUrlReplacement (" + elementType + "):");
-    strBuf.append("\nrequired=" + required);
+      String strBuf = "HTTPUrlReplacement (" + elementType + "):" +
+              "\nrequired=" + required;
 
-    return strBuf.toString();
+    return strBuf;
   }
 }

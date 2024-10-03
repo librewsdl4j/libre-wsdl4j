@@ -24,14 +24,14 @@ public class DOM2Writer
   /**
    * The namespaceURI represented by the prefix <code>xmlns</code>.
    */
-  private static String NS_URI_XMLNS = "http://www.w3.org/2000/xmlns/";
+  private static final String NS_URI_XMLNS = "http://www.w3.org/2000/xmlns/";
 
   /**
    * The namespaceURI represented by the prefix <code>xml</code>.
    */
-  private static String NS_URI_XML = "http://www.w3.org/XML/1998/namespace";
+  private static final String NS_URI_XML = "http://www.w3.org/XML/1998/namespace";
 
-  private static Map xmlEncodingMap = new HashMap();
+  private static final Map xmlEncodingMap = new HashMap();
 
   static
   {
@@ -315,7 +315,7 @@ public class DOM2Writer
       }
     }
 
-    if (type == Node.ELEMENT_NODE && hasChildren == true)
+    if (type == Node.ELEMENT_NODE && hasChildren)
     {
       out.print("</");
       out.print(node.getNodeName());

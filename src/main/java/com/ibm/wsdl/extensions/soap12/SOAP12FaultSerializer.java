@@ -111,7 +111,7 @@ public class SOAP12FaultSerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapFault.setRequired(new Boolean(requiredStr));
+      soapFault.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return soapFault;

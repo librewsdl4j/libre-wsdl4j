@@ -90,7 +90,7 @@ public class SOAP12BindingSerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapBinding.setRequired(new Boolean(requiredStr));
+      soapBinding.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return soapBinding;

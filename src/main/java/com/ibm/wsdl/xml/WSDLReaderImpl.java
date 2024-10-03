@@ -30,10 +30,10 @@ import com.ibm.wsdl.extensions.schema.SchemaConstants;
  */
 public class WSDLReaderImpl implements WSDLReader {
   // Used for determining the style of operations.
-  private static final List<String> STYLE_ONE_WAY = Arrays.asList(Constants.ELEM_INPUT);
+  private static final List<String> STYLE_ONE_WAY = List.of(Constants.ELEM_INPUT);
   private static final List<String> STYLE_REQUEST_RESPONSE = Arrays.asList(Constants.ELEM_INPUT, Constants.ELEM_OUTPUT);
   private static final List<String> STYLE_SOLICIT_RESPONSE = Arrays.asList(Constants.ELEM_OUTPUT, Constants.ELEM_INPUT);
-  private static final List<String> STYLE_NOTIFICATION = Arrays.asList(Constants.ELEM_OUTPUT);
+  private static final List<String> STYLE_NOTIFICATION = List.of(Constants.ELEM_OUTPUT);
 
   protected boolean verbose = true;
   protected boolean importDocuments = true;

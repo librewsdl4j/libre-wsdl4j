@@ -17,8 +17,8 @@ public class BindingOperationImpl extends AbstractWSDLElement implements Binding
   protected Operation operation = null;
   protected BindingInput bindingInput = null;
   protected BindingOutput bindingOutput = null;
-  private Map<String, BindingFault> bindingFaults = new HashMap<>();
-  private List<String> nativeAttributeNames = Arrays.asList(Constants.BINDING_OPERATION_ATTR_NAMES);
+  private final Map<String, BindingFault> bindingFaults = new HashMap<>();
+  private final List<String> nativeAttributeNames = Arrays.asList(Constants.BINDING_OPERATION_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
 

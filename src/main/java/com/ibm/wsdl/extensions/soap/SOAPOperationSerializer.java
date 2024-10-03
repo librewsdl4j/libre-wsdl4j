@@ -90,7 +90,7 @@ public class SOAPOperationSerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapOperation.setRequired(new Boolean(requiredStr));
+      soapOperation.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return soapOperation;

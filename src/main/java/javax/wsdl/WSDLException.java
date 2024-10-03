@@ -103,7 +103,7 @@ public class WSDLException extends Exception
     }
 
     if (thisMsg != null
-        && (targetMsg == null || !thisMsg.equals(targetMsg)))
+        && (!thisMsg.equals(targetMsg)))
     {
       strBuf.append(": " + thisMsg);
     }

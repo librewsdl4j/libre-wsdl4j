@@ -27,21 +27,21 @@ public class ExtensionRegistry implements java.io.Serializable {
   /*
    * This is a Map of Maps. The top-level Map is keyed by (Class)parentType, and the inner Maps are keyed by (QName)elementType.
    */
-  private Map<Class<?>, Map<QName, ExtensionSerializer>> serializerReg = new HashMap<>();
+  private final Map<Class<?>, Map<QName, ExtensionSerializer>> serializerReg = new HashMap<>();
   /*
    * This is a Map of Maps. The top-level Map is keyed by (Class)parentType, and the inner Maps are keyed by (QName)elementType.
    */
-  private Map<Class<?>, Map<QName, ExtensionDeserializer>> deserializerReg = new HashMap<>();
+  private final Map<Class<?>, Map<QName, ExtensionDeserializer>> deserializerReg = new HashMap<>();
   /*
    * This is a Map of Maps. The top-level Map is keyed by (Class)parentType, and the inner Maps are keyed by (QName)elementType.
    */
-  private Map<Class<?>, Map<QName, Class<?>>> extensionTypeReg = new HashMap<>();
+  private final Map<Class<?>, Map<QName, Class<?>>> extensionTypeReg = new HashMap<>();
   private ExtensionSerializer defaultSer = null;
   private ExtensionDeserializer defaultDeser = null;
   /*
    * This is a Map of Maps. The top-level Map is keyed by (Class)parentType, and the inner Maps are keyed by (QName)attrName.
    */
-  private Map<Class<?>, Map<QName, Integer>> extensionAttributeTypeReg = new HashMap<>();
+  private final Map<Class<?>, Map<QName, Integer>> extensionAttributeTypeReg = new HashMap<>();
 
   /**
    * Set the serializer to be used when none is found for an extensibility element. Set this to null to have an exception thrown when unexpected extensibility elements are encountered. Default value is an instance of UnknownExtensionSerializer.

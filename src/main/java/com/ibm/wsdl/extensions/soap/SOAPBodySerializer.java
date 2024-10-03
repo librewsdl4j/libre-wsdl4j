@@ -116,7 +116,7 @@ public class SOAPBodySerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapBody.setRequired(new Boolean(requiredStr));
+      soapBody.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return soapBody;

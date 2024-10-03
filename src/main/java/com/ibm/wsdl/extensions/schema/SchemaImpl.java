@@ -33,17 +33,17 @@ public class SchemaImpl implements Schema {
   /*
    * imports is a Map of Lists with key of the import's namespace URI. Each List contains the SchemaImport objects for that namespace. There can be more than one SchemaImport in a List - one for each schemaLocation attribute setting.
    */
-  private Map<String, List<SchemaImport>> imports = new HashMap<>();
+  private final Map<String, List<SchemaImport>> imports = new HashMap<>();
 
   /*
    * includes is a List of Include objects for the targetNamespace of the enclosing schema. There is one Include in the List for each <include> element in the XML Schema.
    */
-  private List<SchemaReference> includes = new ArrayList<>();
+  private final List<SchemaReference> includes = new ArrayList<>();
 
   /*
    * redefines is a list of Redefine obejcts for the targetNamespace of the enclosing schema. There is one Redefine in the List for each <redefine> element in the XML Schema.
    */
-  private List<SchemaReference> redefines = new ArrayList<>();
+  private final List<SchemaReference> redefines = new ArrayList<>();
 
   private String documentBaseURI = null;
 

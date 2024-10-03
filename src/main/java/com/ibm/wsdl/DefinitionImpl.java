@@ -20,14 +20,14 @@ public class DefinitionImpl extends AbstractWSDLElement implements Definition {
   private String documentBaseURI = null;
   private QName name = null;
   private String targetNamespace = null;
-  private Map<String, String> namespaces = new HashMap<>();
-  private Map<String, List<Import>> imports = new HashMap<>();
+  private final Map<String, String> namespaces = new HashMap<>();
+  private final Map<String, List<Import>> imports = new HashMap<>();
   private Types types = null;
-  private Map<QName, Message> messages = new HashMap<>();
-  private Map<QName, Binding> bindings = new HashMap<>();
-  private Map<QName, PortType> portTypes = new HashMap<>();
-  private Map<QName, Service> services = new HashMap<>();
-  private List<String> nativeAttributeNames = Arrays.asList(Constants.DEFINITION_ATTR_NAMES);
+  private final Map<QName, Message> messages = new HashMap<>();
+  private final Map<QName, Binding> bindings = new HashMap<>();
+  private final Map<QName, PortType> portTypes = new HashMap<>();
+  private final Map<QName, Service> services = new HashMap<>();
+  private final List<String> nativeAttributeNames = Arrays.asList(Constants.DEFINITION_ATTR_NAMES);
   private ExtensionRegistry extReg = null;
 
   public static final long serialVersionUID = 1;

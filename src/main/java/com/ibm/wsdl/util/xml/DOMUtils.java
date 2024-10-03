@@ -23,7 +23,7 @@ public class DOMUtils {
   /**
    * The namespaceURI represented by the prefix <code>xmlns</code>.
    */
-  private static String NS_URI_XMLNS = "http://www.w3.org/2000/xmlns/";
+  private static final String NS_URI_XMLNS = "http://www.w3.org/2000/xmlns/";
 
   private static final String ATTR_XMLNS = "xmlns";
   

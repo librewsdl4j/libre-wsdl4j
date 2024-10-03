@@ -181,7 +181,7 @@ public class SOAP12HeaderSerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapHeader.setRequired(new Boolean(requiredStr));
+      soapHeader.setRequired(Boolean.valueOf(requiredStr));
     }
 
     Element tempEl = DOMUtils.getFirstChildElement(el);
@@ -259,7 +259,7 @@ public class SOAP12HeaderSerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapHeaderFault.setRequired(new Boolean(requiredStr));
+      soapHeaderFault.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return soapHeaderFault;

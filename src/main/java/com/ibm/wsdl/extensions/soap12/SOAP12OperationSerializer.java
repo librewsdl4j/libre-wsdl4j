@@ -93,7 +93,7 @@ public class SOAP12OperationSerializer implements ExtensionSerializer,
     
     if(soapActionRequiredString != null)
     {
-      Boolean soapActionRequired = new Boolean(soapActionRequiredString);
+      Boolean soapActionRequired = Boolean.valueOf(soapActionRequiredString);
       soapOperation.setSoapActionRequired(soapActionRequired);
     }
     
@@ -104,7 +104,7 @@ public class SOAP12OperationSerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapOperation.setRequired(new Boolean(requiredStr));
+      soapOperation.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return soapOperation;

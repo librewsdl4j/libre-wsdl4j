@@ -18,10 +18,10 @@ public class OperationImpl extends AbstractWSDLElement implements Operation {
   protected String name = null;
   protected Input input = null;
   protected Output output = null;
-  private Map<String, Fault> faults = new HashMap<>();
+  private final Map<String, Fault> faults = new HashMap<>();
   private OperationType style = null;
   private List<String> parameterOrder = null;
-  private List<String> nativeAttributeNames = Arrays.asList(Constants.OPERATION_ATTR_NAMES);
+  private final List<String> nativeAttributeNames = Arrays.asList(Constants.OPERATION_ATTR_NAMES);
   protected boolean isUndefined = true;
 
   public static final long serialVersionUID = 1;

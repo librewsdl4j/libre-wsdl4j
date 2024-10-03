@@ -44,7 +44,7 @@ public class SchemaDeserializer implements ExtensionDeserializer, Serializable
 
   private final Map allReferencedSchemas = new Hashtable();
 
-  private static ThreadLocal wsdlLocator = new ThreadLocal();
+  private static final ThreadLocal wsdlLocator = new ThreadLocal();
 
   /**
    * Set the WSDLLocator to be used by the deserializer on this thread.

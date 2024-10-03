@@ -17,8 +17,8 @@ import javax.xml.namespace.*;
  */
 public class ServiceImpl extends AbstractWSDLElement implements Service {
   private QName name = null;
-  private Map<String, Port> ports = new HashMap<>();
-  private List<String> nativeAttributeNames = Arrays.asList(Constants.SERVICE_ATTR_NAMES);
+  private final Map<String, Port> ports = new HashMap<>();
+  private final List<String> nativeAttributeNames = Arrays.asList(Constants.SERVICE_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
 

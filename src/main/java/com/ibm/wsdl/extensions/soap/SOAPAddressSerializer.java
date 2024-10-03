@@ -80,7 +80,7 @@ public class SOAPAddressSerializer implements ExtensionSerializer,
 
     if (requiredStr != null)
     {
-      soapAddress.setRequired(new Boolean(requiredStr));
+      soapAddress.setRequired(Boolean.valueOf(requiredStr));
     }
 
     return soapAddress;
