@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://www.example.com/sample"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             name="SampleService"
+             targetNamespace="http://www.example.com/sample">
+
+    <!-- Types definition for the request and response messages -->
+    <types>
+        <xsd:schema targetNamespace="http://www.example.com/sample">
+            <xsd:element name="getSampleRequest" type="xsd:string"/>
+            <xsd:element name="getSampleResponse" type="xsd:string"/>
+        </xsd:schema>
+    </types>
+
+    <!-- Message definitions for the input and output of the operation -->
+    <message name="getSampleRequest">
+        <part name="parameters" element="tns:getSampleRequest"/>
+    </message>
+
+    <message name="getSampleResponse">
+        <part name="parameters" element="tns:getSampleResponse"/>
+    </message>
+
+    <!-- Port type definition, defining the operation -->
+    <portType name="SamplePortType">
+        <operation name="getSampleResponse">
+            <input message="tns:getSampleRequest"/>
+            <output message="tns:getSampleResponse"/>
+        </operation>
+    </portType>
+
+    <!-- Binding definition, using SOAP binding -->
+    <binding name="SampleSoapBinding" type="tns:SamplePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <operation name="getSampleResponse">
+            <soap:operation soapAction="getSampleResponse"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+
+    <!-- Service definition, including the binding -->
+    <service name="SampleService">
+        <port name="SamplePort" binding="tns:SampleSoapBinding">
+            <soap:address location="http://www.example.com/sample"/>
+        </port>
+    </service>
+
+</definitions>
