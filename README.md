@@ -33,7 +33,6 @@ License: Common Public License 1.0
 https://opensource.org/licenses/cpl1.0.php
 
 
- [![CI](https://github.com/librewsdl4j/libre-wsdl4j/workflows/libre-wsdl4j%20maven%20build/badge.svg)](https://github.com/librewsdl4j/libre-wsdl4j/actions)
  
  
    "WSDL, that's an anchronym i haven't heard in almost ten years."  
