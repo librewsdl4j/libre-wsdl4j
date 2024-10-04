@@ -13,7 +13,7 @@ Add this to your pom.xml file to use the latest version of OpenPDF: (Now on Mave
 <dependency>
   <groupId>io.github.librewsdl4j</groupId>
   <artifactId>libre-wsdl4j</artifactId>
-  <version>1.10.0</version>
+  <version>1.11.0</version>
 </dependency> 
 ```
 
