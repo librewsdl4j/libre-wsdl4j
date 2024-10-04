@@ -2,7 +2,8 @@
 
 Libre-wsdl4j is a fork of WSDL4J 1.6.3. WSL4j is a Java stub generator for WSDL. Many software projects still depends on WSL4j, so the idea is that libre-wsdl4j should be an actively maintained version of this software on GitHub.
 
-![CI](https://github.com/librewsdl4j/libre-wsdl4j/actions/workflows/maven.yml/badge.svg)
+![CI](https://github.com/librewsdl4j/libre-wsdl4j/actions/workflows/maven.yml/badge.svg) 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.librewsdl4j/libre-wsdl4j/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.librewsdl4j/libre-wsdl4j)
 
 ## Use libre-wsdl4j as Maven dependency
 
