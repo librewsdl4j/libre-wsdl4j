@@ -11,14 +11,10 @@ public class WSDLReaderTest {
 
     private WSDLReader wsdlReader;
 
-    @BeforeEach
-    public void setUp() throws Exception {
-        WSDLFactory factory = WSDLFactory.newInstance();
-        wsdlReader = factory.newWSDLReader();
-    }
-
     @Test
     public void testLoadWSDL() throws Exception {
+        WSDLFactory factory = WSDLFactory.newInstance();
+        wsdlReader = factory.newWSDLReader();
         // Load the sample WSDL file
         String wsdlPath = "src/test/resources/sample.wsdl";
 
