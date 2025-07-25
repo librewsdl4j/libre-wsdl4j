@@ -408,11 +408,6 @@ public class PopulatedExtensionRegistry extends ExtensionRegistry
                       MIMEConstants.Q_ELEM_MIME_MIME_XML,
                       MIMEMimeXmlImpl.class);
 
-    // [tellef - 2019-02-22]: The following code has been removed
-    //  to prevent WSDL4j from fetching external files using HTTP.
-    //
-    //Register the schema parser
-    /*
     mapExtensionTypes(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
         SchemaImpl.class);
     registerDeserializer(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
@@ -433,6 +428,5 @@ public class PopulatedExtensionRegistry extends ExtensionRegistry
         new SchemaDeserializer());
     registerSerializer(Types.class, SchemaConstants.Q_ELEM_XSD_2001,
         new SchemaSerializer());
-    */
   }
 }
