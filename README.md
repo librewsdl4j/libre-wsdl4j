@@ -46,3 +46,4 @@ https://opensource.org/licenses/cpl1.0.php
 ## Contributors  ##
 * [@garydgregory](https://github.com/garydgregory) - Gary Gregory
 * [@olivierdepriester](https://github.com/olivierdepriester) - Olivier Depriester
+* [@rzo1](https://github.com/rzo1) - Richard Zowalla
