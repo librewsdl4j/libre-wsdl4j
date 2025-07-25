@@ -22,7 +22,7 @@ Add this to your pom.xml file to use the latest version of OpenPDF: (Now on Mave
 
 Download: [libre-wsdl4j 1.10.0 here]([https://github.com/librewsdl4j/libre-wsdl4j/releases/tag/1.8.0](https://github.com/librewsdl4j/libre-wsdl4j/releases/tag/1.10.0))!
 
-Requires Java 17 or later.
+The master branch on GitHub requires Java 17 or later.  (libre-wsdl4j 1.11.0 requires Java 11.)
 
 Pull requests welcome! The last release of the original WSDL4J was in Feb, 2013.
 
