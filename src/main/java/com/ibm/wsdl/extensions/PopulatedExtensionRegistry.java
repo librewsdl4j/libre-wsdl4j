@@ -408,25 +408,27 @@ public class PopulatedExtensionRegistry extends ExtensionRegistry
                       MIMEConstants.Q_ELEM_MIME_MIME_XML,
                       MIMEMimeXmlImpl.class);
 
-    mapExtensionTypes(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
-        SchemaImpl.class);
-    registerDeserializer(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
-        new SchemaDeserializer());
-    registerSerializer(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
-        new SchemaSerializer());
+    if ("true".equals(System.getProperty("libre-wsdl4j.externalSchemaSerializers.enabled", "true"))) {
+      mapExtensionTypes(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
+          SchemaImpl.class);
+      registerDeserializer(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
+          new SchemaDeserializer());
+      registerSerializer(Types.class, SchemaConstants.Q_ELEM_XSD_1999,
+          new SchemaSerializer());
 
-    mapExtensionTypes(Types.class, SchemaConstants.Q_ELEM_XSD_2000,
-        SchemaImpl.class);
-    registerDeserializer(Types.class, SchemaConstants.Q_ELEM_XSD_2000,
-        new SchemaDeserializer());
-    registerSerializer(Types.class, SchemaConstants.Q_ELEM_XSD_2000,
-        new SchemaSerializer());
+      mapExtensionTypes(Types.class, SchemaConstants.Q_ELEM_XSD_2000,
+          SchemaImpl.class);
+      registerDeserializer(Types.class, SchemaConstants.Q_ELEM_XSD_2000,
+          new SchemaDeserializer());
+      registerSerializer(Types.class, SchemaConstants.Q_ELEM_XSD_2000,
+          new SchemaSerializer());
 
-    mapExtensionTypes(Types.class, SchemaConstants.Q_ELEM_XSD_2001,
-        SchemaImpl.class);
-    registerDeserializer(Types.class, SchemaConstants.Q_ELEM_XSD_2001,
-        new SchemaDeserializer());
-    registerSerializer(Types.class, SchemaConstants.Q_ELEM_XSD_2001,
-        new SchemaSerializer());
+      mapExtensionTypes(Types.class, SchemaConstants.Q_ELEM_XSD_2001,
+          SchemaImpl.class);
+      registerDeserializer(Types.class, SchemaConstants.Q_ELEM_XSD_2001,
+          new SchemaDeserializer());
+      registerSerializer(Types.class, SchemaConstants.Q_ELEM_XSD_2001,
+          new SchemaSerializer());
+    }
   }
 }
