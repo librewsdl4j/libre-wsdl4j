@@ -119,57 +119,48 @@ public abstract class WSDLFactory {
     return (() -> WSDLFactory.class.getResourceAsStream(fileName));
   }
 
-  private static String findFactoryImplName() {
+private static String findFactoryImplName() {
     String factoryImplName = null;
 
     // First, check the META-INF/services property file.
     final String metaInfServicesPropFileName = getMetaInfFullPropertyFileName();
 
-    try (InputStream is = AccessController.doPrivileged(getMetaInfServicesAsStream(metaInfServicesPropFileName))) {
-
-      if (is != null) {
-        InputStreamReader isr = new InputStreamReader(is);
-        BufferedReader br = new BufferedReader(isr);
-
-        factoryImplName = br.readLine();
-
-        br.close();
-        isr.close();
-      }
-
-      if (factoryImplName != null) {
-        return factoryImplName;
-      }
+    try (InputStream is = getMetaInfServicesAsStream(metaInfServicesPropFileName)) {
+        if (is != null) {
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
+                factoryImplName = br.readLine();
+            }
+            if (factoryImplName != null) {
+                return factoryImplName;
+            }
+        }
     } catch (IOException e) {
-      factoryImplName = null;
+        // Ignore, fall through to next method
     }
 
     // Second, check the system property.
     try {
-      factoryImplName = System.getProperty(PROPERTY_NAME);
-
-      if (factoryImplName != null) {
-        return factoryImplName;
-      }
+        factoryImplName = System.getProperty(PROPERTY_NAME);
+        if (factoryImplName != null) {
+            return factoryImplName;
+        }
     } catch (SecurityException e) {
-      factoryImplName = null;
+        // Ignore
     }
 
     // Third, check the properties file.
     String propFileName = getFullPropertyFileName();
-
     if (propFileName != null) {
-      try (FileInputStream fis = new FileInputStream(new File(propFileName))) {
-        Properties properties = new Properties();
-        properties.load(fis);
-        factoryImplName = properties.getProperty(PROPERTY_NAME);
-
-        if (factoryImplName != null) {
-          return factoryImplName;
+        try (FileInputStream fis = new FileInputStream(propFileName)) {
+            Properties properties = new Properties();
+            properties.load(fis);
+            factoryImplName = properties.getProperty(PROPERTY_NAME);
+            if (factoryImplName != null) {
+                return factoryImplName;
+            }
+        } catch (IOException e) {
+            // Ignore
         }
-      } catch (IOException e) {
-        factoryImplName = null;
-      }
     }
 
     // Fourth, return the default.
