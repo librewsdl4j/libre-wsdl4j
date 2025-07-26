@@ -39,6 +39,21 @@ https://opensource.org/licenses/cpl1.0.php
    "WSDL, that's an anchronym i haven't heard in almost ten years."  
    "Still big in the enterprise world" - comments on the Internet. 
 
+## Configuration
+
+### `libre-wsdl4j.externalSchemaSerializers.enabled` (default: `true`)
+
+Controls whether support for external schema serializers and deserializers is enabled.
+
+When set to `true` (the default), the library registers serializers and deserializers for XML Schema definitions (XSD) based on various W3C versions (1999, 2000, 2001). This allows for parsing and generating schema extensions in WSDL documents.
+
+To **disable** this behavior (e.g., to reduce overhead, improve startup time, or in Internet restricted environments), set the system property to `false`:
+
+```
+-Dlibre-wsdl4j.externalSchemaSerializers.enabled=false
+```
+
+When disabled, schema extensions in WSDL documents (for example via Apache CXF) will not be automatically serialized or deserialized.
 
 ## Maintainer  ##
 * [@andreasrosdal](https://github.com/andreasrosdal) - Andreas Røsdal
