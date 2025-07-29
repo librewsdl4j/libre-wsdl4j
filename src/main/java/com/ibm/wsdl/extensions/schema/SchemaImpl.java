@@ -21,7 +21,7 @@ import java.util.Map;
  * @see SchemaSerializer
  * @see SchemaDeserializer
  * 
- * @author Jeremy Hughes <hughesj@uk.ibm.com>
+ * @author Jeremy Hughes &lt;hughesj@uk.ibm.com&gt;
  */
 public class SchemaImpl implements Schema {
   private QName elementType = null;

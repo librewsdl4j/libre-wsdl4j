@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * Represents an include or a redefine element within a schema element.
  * 
- * @author Jeremy Hughes <hughesj@uk.ibm.com>
+ * @author Jeremy Hughes &lt;hughesj@uk.ibm.com&gt;
  */
 public interface SchemaReference extends Serializable
 {

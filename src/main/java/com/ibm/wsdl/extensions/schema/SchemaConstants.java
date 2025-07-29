@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Constants used for handling XML Schemas
  * 
- * @author John Kaputin <kaputin@uk.ibm.com>
+ * @author John Kaputin &lt;kaputin@uk.ibm.com&gt;
  */
 public class SchemaConstants {
 

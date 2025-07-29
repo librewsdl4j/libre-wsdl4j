@@ -30,7 +30,7 @@ import java.util.Map;
  * @see SchemaImpl
  * @see SchemaSerializer
  * 
- * @author Jeremy Hughes <hughesj@uk.ibm.com>
+ * @author Jeremy Hughes &lt;hughesj@uk.ibm.com&gt;
  */
 public class SchemaDeserializer implements ExtensionDeserializer, Serializable
 {

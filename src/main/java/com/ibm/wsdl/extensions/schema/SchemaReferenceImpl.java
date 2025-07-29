@@ -8,7 +8,7 @@ import javax.wsdl.extensions.schema.Schema;
 import javax.wsdl.extensions.schema.SchemaReference;
 
 /**
- * @author Jeremy Hughes <hughesj@uk.ibm.com>
+ * @author Jeremy Hughes &lt;hughesj@uk.ibm.com&gt;
  */
 public class SchemaReferenceImpl implements SchemaReference {
 

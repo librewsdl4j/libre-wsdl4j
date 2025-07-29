@@ -29,7 +29,7 @@ public interface ExtensionDeserializer
    * document this extensibility element was encountered. For
    * example, javax.wsdl.Binding.class would be used to indicate
    * this element was encountered as an immediate child of
-   * a <wsdl:binding> element.
+   * a {@code <wsdl:binding>} element.
    * @param elementType the qname of the extensibility element
    * @param el the extensibility element to deserialize
    * @param def the definition this extensibility element was

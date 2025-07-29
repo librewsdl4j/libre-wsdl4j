@@ -7,7 +7,7 @@ package com.ibm.wsdl.extensions.schema;
 import javax.wsdl.extensions.schema.SchemaImport;
 
 /**
- * @author Jeremy Hughes <hughesj@uk.ibm.com>
+ * @author Jeremy Hughes &lt;hughesj@uk.ibm.com&gt;
  */
 public class SchemaImportImpl extends SchemaReferenceImpl implements SchemaImport
 {

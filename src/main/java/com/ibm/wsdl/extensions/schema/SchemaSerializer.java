@@ -23,7 +23,7 @@ import java.io.Serializable;
  * @see SchemaImpl
  * @see SchemaDeserializer
  *
- * @author Jeremy Hughes <hughesj@uk.ibm.com>
+ * @author Jeremy Hughes &lt;hughesj@uk.ibm.com&gt;
  */
 public class SchemaSerializer implements ExtensionSerializer, Serializable
 {

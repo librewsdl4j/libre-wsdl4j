@@ -9,7 +9,7 @@ package javax.wsdl.extensions.schema;
  * Represents an import element within a schema element.
  * Similar to an include or redefine, but includes a namespace.
  * 
- * @author Jeremy Hughes <hughesj@uk.ibm.com>
+ * @author Jeremy Hughes &lt;hughesj@uk.ibm.com&gt;
  */
 public interface SchemaImport extends SchemaReference
 {
