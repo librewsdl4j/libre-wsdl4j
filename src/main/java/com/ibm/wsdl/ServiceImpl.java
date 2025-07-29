@@ -4,9 +4,14 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-import javax.wsdl.*;
-import javax.xml.namespace.*;
+import javax.wsdl.Port;
+import javax.wsdl.Service;
+import javax.xml.namespace.QName;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class represents a service, which groups related ports to provide some functionality.

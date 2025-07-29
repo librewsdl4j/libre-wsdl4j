@@ -4,8 +4,8 @@
 
 package com.ibm.wsdl.extensions.mime;
 
-import javax.wsdl.extensions.mime.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.mime.MIMEContent;
+import javax.xml.namespace.QName;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

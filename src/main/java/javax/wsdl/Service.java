@@ -4,8 +4,8 @@
 
 package javax.wsdl;
 
-import java.util.*;
-import javax.xml.namespace.*;
+import javax.xml.namespace.QName;
+import java.util.Map;
 
 /**
  * This interface represents a service, which groups related

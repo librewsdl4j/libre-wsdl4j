@@ -4,10 +4,13 @@
 
 package javax.wsdl.xml;
 
-import org.w3c.dom.*;
-import org.xml.sax.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.xml.sax.InputSource;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.wsdl.extensions.ExtensionRegistry;
 
 /**
  * This interface describes a collection of methods

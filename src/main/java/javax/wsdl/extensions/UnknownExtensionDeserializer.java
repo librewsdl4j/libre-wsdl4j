@@ -4,11 +4,13 @@
 
 package javax.wsdl.extensions;
 
-import org.w3c.dom.*;
-import javax.wsdl.*;
-import javax.xml.namespace.*;
-import com.ibm.wsdl.*;
-import com.ibm.wsdl.util.xml.*;
+import com.ibm.wsdl.Constants;
+import com.ibm.wsdl.util.xml.DOMUtils;
+import org.w3c.dom.Element;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.xml.namespace.QName;
 
 /**
  * This class is used to deserialize arbitrary elements into

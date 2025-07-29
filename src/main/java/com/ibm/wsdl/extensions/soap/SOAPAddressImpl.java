@@ -4,8 +4,8 @@
 
 package com.ibm.wsdl.extensions.soap;
 
-import javax.wsdl.extensions.soap.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.soap.SOAPAddress;
+import javax.xml.namespace.QName;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

@@ -4,10 +4,10 @@
 
 package javax.wsdl;
 
+import org.w3c.dom.Element;
+
 import javax.wsdl.extensions.AttributeExtensible;
 import javax.wsdl.extensions.ElementExtensible;
-
-import org.w3c.dom.Element;
 
 /**
  * This interface represents all WSDL Elements

@@ -4,9 +4,12 @@
 
 package javax.wsdl.xml;
 
-import java.io.*;
-import org.w3c.dom.*;
-import javax.wsdl.*;
+import org.w3c.dom.Document;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import java.io.OutputStream;
+import java.io.Writer;
 
 /**
  * This interface describes a collection of methods

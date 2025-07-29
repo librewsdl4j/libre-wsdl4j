@@ -4,8 +4,9 @@
 
 package javax.wsdl;
 
-import java.util.*;
 import javax.xml.namespace.QName;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This interface describes a message used for communication with an operation.

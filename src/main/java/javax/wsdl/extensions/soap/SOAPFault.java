@@ -4,8 +4,8 @@
 
 package javax.wsdl.extensions.soap;
 
-import java.util.*;
-import javax.wsdl.extensions.*;
+import javax.wsdl.extensions.ExtensibilityElement;
+import java.util.List;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

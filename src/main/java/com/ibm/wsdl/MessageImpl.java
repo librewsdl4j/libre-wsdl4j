@@ -4,10 +4,15 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-
-import javax.wsdl.*;
-import javax.xml.namespace.*;
+import javax.wsdl.Message;
+import javax.wsdl.Part;
+import javax.xml.namespace.QName;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Vector;
 
 /**
  * This class describes a message used for communication with an operation.

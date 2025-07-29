@@ -4,8 +4,8 @@
 
 package com.ibm.wsdl.extensions.soap12;
 
-import javax.wsdl.extensions.soap12.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.soap12.SOAP12Binding;
+import javax.xml.namespace.QName;
 
 /**
  * Copied from com.ibm.wsdl.extensions.soap.SOAPBindingImpl

@@ -4,9 +4,9 @@
 
 package javax.wsdl.extensions.soap12;
 
-import java.util.*;
-import javax.wsdl.extensions.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.ExtensibilityElement;
+import javax.xml.namespace.QName;
+import java.util.List;
 
 /**
  * Based on javax.wsdl.extensions.SOAPHeader.

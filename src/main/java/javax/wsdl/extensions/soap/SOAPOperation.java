@@ -4,7 +4,7 @@
 
 package javax.wsdl.extensions.soap;
 
-import javax.wsdl.extensions.*;
+import javax.wsdl.extensions.ExtensibilityElement;
 
 /**
  * This class stores information associated with a SOAP operation that

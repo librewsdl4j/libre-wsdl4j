@@ -4,9 +4,11 @@
 
 package javax.wsdl.extensions;
 
-import java.util.*;
-import javax.wsdl.*;
-import javax.xml.namespace.*;
+import javax.wsdl.WSDLException;
+import javax.xml.namespace.QName;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This class is used to associate serializers, deserializers, and Java implementation types with extensibility elements.

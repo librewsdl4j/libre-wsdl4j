@@ -4,9 +4,9 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-
-import javax.wsdl.*;
+import javax.wsdl.BindingFault;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents a fault binding. That is, it contains

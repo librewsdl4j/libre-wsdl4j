@@ -4,8 +4,16 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-import javax.wsdl.*;
+import javax.wsdl.BindingFault;
+import javax.wsdl.BindingInput;
+import javax.wsdl.BindingOperation;
+import javax.wsdl.BindingOutput;
+import javax.wsdl.Operation;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class represents a WSDL operation binding. That is, it holds the information that would be specified in the operation element contained within a binding element.

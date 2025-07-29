@@ -4,9 +4,9 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-
-import javax.wsdl.*;
+import javax.wsdl.Types;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents the &lt;types&gt; section of a WSDL document.

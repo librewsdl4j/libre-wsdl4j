@@ -4,20 +4,19 @@
 
 package com.ibm.wsdl.util.xml;
 
-import java.io.PrintWriter;
-import java.util.Collection;
-import java.util.List;
-import java.util.Vector;
-
-import javax.wsdl.Definition;
-import javax.wsdl.WSDLException;
-import javax.xml.namespace.QName;
-
 import org.w3c.dom.Attr;
 import org.w3c.dom.CharacterData;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.xml.namespace.QName;
+import java.io.PrintWriter;
+import java.util.Collection;
+import java.util.List;
+import java.util.Vector;
 
 public class DOMUtils {
   /**

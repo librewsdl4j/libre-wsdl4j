@@ -1,8 +1,11 @@
 import org.junit.jupiter.api.Test;
-import javax.wsdl.*;
+
+import javax.wsdl.Definition;
+import javax.wsdl.Fault;
+import javax.wsdl.Operation;
 import javax.wsdl.factory.WSDLFactory;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FaultTest {
 

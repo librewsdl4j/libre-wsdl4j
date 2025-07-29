@@ -4,11 +4,20 @@
 
 package com.ibm.wsdl.util.xml;
 
-import java.io.*;
-import java.util.*;
-import org.w3c.dom.*;
-import com.ibm.wsdl.*;
-import com.ibm.wsdl.util.*;
+import com.ibm.wsdl.Constants;
+import com.ibm.wsdl.util.ObjectRegistry;
+import com.ibm.wsdl.util.StringUtils;
+import org.w3c.dom.Attr;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This class is a utility to serialize a DOM node as XML. This class

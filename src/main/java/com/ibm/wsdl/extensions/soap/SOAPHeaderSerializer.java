@@ -4,16 +4,25 @@
 
 package com.ibm.wsdl.extensions.soap;
 
-import java.io.*;
-import java.util.*;
-import org.w3c.dom.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
-import javax.wsdl.extensions.soap.*;
-import javax.xml.namespace.*;
-import com.ibm.wsdl.*;
-import com.ibm.wsdl.util.*;
-import com.ibm.wsdl.util.xml.*;
+import com.ibm.wsdl.Constants;
+import com.ibm.wsdl.util.StringUtils;
+import com.ibm.wsdl.util.xml.DOMUtils;
+import com.ibm.wsdl.util.xml.QNameUtils;
+import org.w3c.dom.Element;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.wsdl.extensions.ExtensibilityElement;
+import javax.wsdl.extensions.ExtensionDeserializer;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.wsdl.extensions.ExtensionSerializer;
+import javax.wsdl.extensions.soap.SOAPHeader;
+import javax.wsdl.extensions.soap.SOAPHeaderFault;
+import javax.xml.namespace.QName;
+import java.io.PrintWriter;
+import java.io.Serializable;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

@@ -4,14 +4,20 @@
 
 package com.ibm.wsdl.extensions.soap12;
 
-import java.io.*;
-import org.w3c.dom.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
-import javax.wsdl.extensions.soap12.*;
-import javax.xml.namespace.*;
-import com.ibm.wsdl.*;
-import com.ibm.wsdl.util.xml.*;
+import com.ibm.wsdl.Constants;
+import com.ibm.wsdl.util.xml.DOMUtils;
+import org.w3c.dom.Element;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.wsdl.extensions.ExtensibilityElement;
+import javax.wsdl.extensions.ExtensionDeserializer;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.wsdl.extensions.ExtensionSerializer;
+import javax.wsdl.extensions.soap12.SOAP12Binding;
+import javax.xml.namespace.QName;
+import java.io.PrintWriter;
+import java.io.Serializable;
 
 /**
  * Copied from com.ibm.wsdl.extensions.soap.SOAPBindingSerializer

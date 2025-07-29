@@ -4,8 +4,10 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-import javax.wsdl.*;
+import javax.wsdl.Definition;
+import javax.wsdl.Import;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents an import, and may contain a reference

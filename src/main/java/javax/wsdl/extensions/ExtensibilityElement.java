@@ -4,7 +4,7 @@
 
 package javax.wsdl.extensions;
 
-import javax.xml.namespace.*;
+import javax.xml.namespace.QName;
 
 /**
  * This interface should be implemented by classes intending to represent

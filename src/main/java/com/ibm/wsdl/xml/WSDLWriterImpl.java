@@ -4,20 +4,55 @@
 
 package com.ibm.wsdl.xml;
 
-import java.io.*;
+import com.ibm.wsdl.Constants;
+import com.ibm.wsdl.util.StringUtils;
+import com.ibm.wsdl.util.xml.DOM2Writer;
+import com.ibm.wsdl.util.xml.DOMUtils;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.xml.sax.InputSource;
+
+import javax.wsdl.Binding;
+import javax.wsdl.BindingFault;
+import javax.wsdl.BindingInput;
+import javax.wsdl.BindingOperation;
+import javax.wsdl.BindingOutput;
+import javax.wsdl.Definition;
+import javax.wsdl.Fault;
+import javax.wsdl.Import;
+import javax.wsdl.Input;
+import javax.wsdl.Message;
+import javax.wsdl.Operation;
+import javax.wsdl.OperationType;
+import javax.wsdl.Output;
+import javax.wsdl.Part;
+import javax.wsdl.Port;
+import javax.wsdl.PortType;
+import javax.wsdl.Service;
+import javax.wsdl.Types;
+import javax.wsdl.WSDLException;
+import javax.wsdl.extensions.AttributeExtensible;
+import javax.wsdl.extensions.ExtensibilityElement;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.wsdl.extensions.ExtensionSerializer;
+import javax.wsdl.extensions.UnknownExtensibilityElement;
+import javax.wsdl.factory.WSDLFactory;
+import javax.wsdl.xml.WSDLReader;
+import javax.wsdl.xml.WSDLWriter;
+import javax.xml.namespace.QName;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
-import javax.xml.namespace.*;
-import javax.xml.parsers.*;
-import org.w3c.dom.*;
-import org.xml.sax.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
-import javax.wsdl.factory.*;
-import javax.wsdl.xml.*;
-import com.ibm.wsdl.*;
-import com.ibm.wsdl.util.*;
-import com.ibm.wsdl.util.xml.*;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This class describes a collection of methods that allow a WSDL model to be written to a writer in an XML format that follows the WSDL schema.

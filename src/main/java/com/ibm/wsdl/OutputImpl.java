@@ -4,8 +4,10 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-import javax.wsdl.*;
+import javax.wsdl.Message;
+import javax.wsdl.Output;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents an output message, and contains the name

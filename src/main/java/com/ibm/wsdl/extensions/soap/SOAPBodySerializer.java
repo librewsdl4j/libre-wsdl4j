@@ -4,18 +4,22 @@
 
 package com.ibm.wsdl.extensions.soap;
 
-import java.io.*;
-import org.w3c.dom.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
-// MIMEPart.class is needed so <soap:body> can be indented properly.
-import javax.wsdl.extensions.mime.*;
-import javax.wsdl.extensions.soap.*;
-import javax.xml.namespace.*;
-import com.ibm.wsdl.*;
-// MIMEPart.class is needed so <soap:body> can be indented properly.
-import com.ibm.wsdl.util.*;
-import com.ibm.wsdl.util.xml.*;
+import com.ibm.wsdl.Constants;
+import com.ibm.wsdl.util.StringUtils;
+import com.ibm.wsdl.util.xml.DOMUtils;
+import org.w3c.dom.Element;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.wsdl.extensions.ExtensibilityElement;
+import javax.wsdl.extensions.ExtensionDeserializer;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.wsdl.extensions.ExtensionSerializer;
+import javax.wsdl.extensions.mime.MIMEPart;
+import javax.wsdl.extensions.soap.SOAPBody;
+import javax.xml.namespace.QName;
+import java.io.PrintWriter;
+import java.io.Serializable;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

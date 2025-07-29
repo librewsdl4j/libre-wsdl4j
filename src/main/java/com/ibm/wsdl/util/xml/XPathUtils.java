@@ -4,8 +4,12 @@
 
 package com.ibm.wsdl.util.xml;
 
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.ProcessingInstruction;
+import org.w3c.dom.Text;
+
 import java.util.Vector;
-import org.w3c.dom.*;
 
 /**
  * A <code>XPathUtils</code> ...

@@ -4,8 +4,9 @@
 
 package javax.wsdl.extensions;
 
-import java.util.*;
-import javax.xml.namespace.*;
+import javax.xml.namespace.QName;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Classes that implement this interface can contain extensibility

@@ -4,7 +4,7 @@
 
 package com.ibm.wsdl;
 
-import javax.xml.namespace.*;
+import javax.xml.namespace.QName;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

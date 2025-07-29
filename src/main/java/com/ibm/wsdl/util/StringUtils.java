@@ -4,10 +4,15 @@
 
 package com.ibm.wsdl.util;
 
-import java.io.*;
-import java.util.*;
-import java.net.URL;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * Deals with strings (probably need to elaborate some more).

@@ -4,9 +4,10 @@
 
 package javax.wsdl.extensions;
 
-import java.io.*;
-import javax.wsdl.*;
-import javax.xml.namespace.*;
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.xml.namespace.QName;
+import java.io.PrintWriter;
 
 /**
  * This interface should be implemented by classes which serialize

@@ -4,9 +4,9 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-
-import javax.wsdl.*;
+import javax.wsdl.BindingInput;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents an input binding. That is, it contains

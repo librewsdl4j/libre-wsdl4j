@@ -4,8 +4,9 @@
 
 package javax.wsdl.extensions;
 
-import org.w3c.dom.*;
-import javax.xml.namespace.*;
+import org.w3c.dom.Element;
+
+import javax.xml.namespace.QName;
 
 /**
  * This class is used to wrap arbitrary elements.

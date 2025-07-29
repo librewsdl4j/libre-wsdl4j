@@ -4,9 +4,8 @@
 
 package javax.wsdl;
 
-import java.util.*;
-
-import javax.xml.namespace.QName;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This interface represents a WSDL operation.

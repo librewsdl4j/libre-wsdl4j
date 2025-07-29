@@ -4,7 +4,7 @@
 
 package javax.wsdl.extensions.http;
 
-import javax.wsdl.extensions.*;
+import javax.wsdl.extensions.ExtensibilityElement;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

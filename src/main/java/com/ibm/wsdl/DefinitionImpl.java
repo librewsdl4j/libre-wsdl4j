@@ -4,10 +4,32 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
-import javax.xml.namespace.*;
+import javax.wsdl.Binding;
+import javax.wsdl.BindingFault;
+import javax.wsdl.BindingInput;
+import javax.wsdl.BindingOperation;
+import javax.wsdl.BindingOutput;
+import javax.wsdl.Definition;
+import javax.wsdl.Fault;
+import javax.wsdl.Import;
+import javax.wsdl.Input;
+import javax.wsdl.Message;
+import javax.wsdl.Operation;
+import javax.wsdl.Output;
+import javax.wsdl.Part;
+import javax.wsdl.Port;
+import javax.wsdl.PortType;
+import javax.wsdl.Service;
+import javax.wsdl.Types;
+import javax.wsdl.WSDLElement;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class represents a WSDL definition.

@@ -4,8 +4,16 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-import javax.wsdl.*;
+import javax.wsdl.Fault;
+import javax.wsdl.Input;
+import javax.wsdl.Operation;
+import javax.wsdl.OperationType;
+import javax.wsdl.Output;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class represents a WSDL operation. It includes information on input, output and fault messages associated with usage of the operation.

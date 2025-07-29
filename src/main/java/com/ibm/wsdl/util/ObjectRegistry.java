@@ -4,7 +4,9 @@
 
 package com.ibm.wsdl.util;
 
-import java.util.*;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * The <em>ObjectRegistry</em> is used to do name-to-object reference lookups.

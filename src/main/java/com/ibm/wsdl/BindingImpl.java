@@ -4,10 +4,18 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-
-import javax.wsdl.*;
-import javax.xml.namespace.*;
+import javax.wsdl.Binding;
+import javax.wsdl.BindingInput;
+import javax.wsdl.BindingOperation;
+import javax.wsdl.BindingOutput;
+import javax.wsdl.Operation;
+import javax.wsdl.OperationType;
+import javax.wsdl.PortType;
+import javax.xml.namespace.QName;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
 
 /**
  * This class represents a port type binding and describes the

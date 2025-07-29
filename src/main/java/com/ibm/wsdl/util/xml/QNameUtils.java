@@ -4,8 +4,9 @@
 
 package com.ibm.wsdl.util.xml;
 
-import javax.xml.namespace.*;
-import org.w3c.dom.*;
+import org.w3c.dom.Node;
+
+import javax.xml.namespace.QName;
 
 public class QNameUtils
 {

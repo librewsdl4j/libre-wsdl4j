@@ -4,8 +4,8 @@
 
 package javax.wsdl;
 
-import java.util.*;
-import javax.xml.namespace.*;
+import javax.xml.namespace.QName;
+import java.util.List;
 
 /**
  * This interface represents a port type. It contains information about

@@ -4,8 +4,7 @@
 
 package com.ibm.wsdl.extensions.schema;
 
-import java.io.PrintWriter;
-import java.io.Serializable;
+import com.ibm.wsdl.util.xml.DOM2Writer;
 
 import javax.wsdl.Definition;
 import javax.wsdl.WSDLException;
@@ -14,8 +13,8 @@ import javax.wsdl.extensions.ExtensionRegistry;
 import javax.wsdl.extensions.ExtensionSerializer;
 import javax.wsdl.extensions.schema.Schema;
 import javax.xml.namespace.QName;
-
-import com.ibm.wsdl.util.xml.DOM2Writer;
+import java.io.PrintWriter;
+import java.io.Serializable;
 
 /**
  * This class is used to serialize Schema instances

@@ -4,7 +4,7 @@
 
 package javax.wsdl;
 
-import java.util.*;
+import java.util.Map;
 
 /**
  * This interface represents a WSDL operation binding.

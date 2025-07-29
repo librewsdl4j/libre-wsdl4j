@@ -4,13 +4,16 @@
 
 package com.ibm.wsdl.factory;
 
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
-import javax.wsdl.factory.*;
-import javax.wsdl.xml.*;
-import com.ibm.wsdl.*;
-import com.ibm.wsdl.extensions.*;
-import com.ibm.wsdl.xml.*;
+import com.ibm.wsdl.DefinitionImpl;
+import com.ibm.wsdl.extensions.PopulatedExtensionRegistry;
+import com.ibm.wsdl.xml.WSDLReaderImpl;
+import com.ibm.wsdl.xml.WSDLWriterImpl;
+
+import javax.wsdl.Definition;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.wsdl.factory.WSDLFactory;
+import javax.wsdl.xml.WSDLReader;
+import javax.wsdl.xml.WSDLWriter;
 
 /**
  * This class is a concrete implementation of the abstract class

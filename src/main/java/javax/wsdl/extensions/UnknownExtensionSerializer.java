@@ -4,10 +4,13 @@
 
 package javax.wsdl.extensions;
 
-import java.io.*;
-import javax.wsdl.*;
-import javax.xml.namespace.*;
-import com.ibm.wsdl.util.xml.*;
+import com.ibm.wsdl.util.xml.DOM2Writer;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.xml.namespace.QName;
+import java.io.PrintWriter;
+import java.io.Serializable;
 
 /**
  * This class is used to serialize UnknownExtensibilityElement instances

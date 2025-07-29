@@ -4,7 +4,7 @@
 
 package javax.wsdl.xml;
 
-import org.xml.sax.*;
+import org.xml.sax.InputSource;
 
 /**
  * This interface can act as an additional layer of indirection between

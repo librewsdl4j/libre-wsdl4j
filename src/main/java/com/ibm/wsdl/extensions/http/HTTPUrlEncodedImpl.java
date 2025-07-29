@@ -4,8 +4,8 @@
 
 package com.ibm.wsdl.extensions.http;
 
-import javax.wsdl.extensions.http.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.http.HTTPUrlEncoded;
+import javax.xml.namespace.QName;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

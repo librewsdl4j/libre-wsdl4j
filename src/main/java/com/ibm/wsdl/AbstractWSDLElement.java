@@ -4,17 +4,16 @@
 
 package com.ibm.wsdl;
 
+import org.w3c.dom.Element;
+
+import javax.wsdl.WSDLElement;
+import javax.wsdl.extensions.ExtensibilityElement;
+import javax.xml.namespace.QName;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
-
-import javax.wsdl.WSDLElement;
-import javax.wsdl.extensions.ExtensibilityElement;
-import javax.xml.namespace.QName;
-
-import org.w3c.dom.Element;
 
 /**
  * Abstract super class for all WSDL Elements, providing some basic

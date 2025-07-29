@@ -4,9 +4,11 @@
 
 package javax.wsdl.extensions;
 
-import org.w3c.dom.*;
-import javax.wsdl.*;
-import javax.xml.namespace.*;
+import org.w3c.dom.Element;
+
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.xml.namespace.QName;
 
 /**
  * This interface should be implemented by classes which deserialize

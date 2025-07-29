@@ -4,9 +4,10 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-
-import javax.wsdl.*;
+import javax.wsdl.Binding;
+import javax.wsdl.Port;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents a port, an endpoint for the

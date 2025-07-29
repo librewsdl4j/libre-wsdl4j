@@ -4,9 +4,10 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-import javax.wsdl.*;
-import javax.xml.namespace.*;
+import javax.wsdl.Part;
+import javax.xml.namespace.QName;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents a message part and contains the part's

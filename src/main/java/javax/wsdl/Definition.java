@@ -4,9 +4,10 @@
 
 package javax.wsdl;
 
-import java.util.*;
-import javax.wsdl.extensions.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.xml.namespace.QName;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This interface represents a WSDL definition.

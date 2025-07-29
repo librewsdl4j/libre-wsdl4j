@@ -4,10 +4,11 @@
 
 package com.ibm.wsdl.extensions.schema;
 
+import com.ibm.wsdl.Constants;
+
+import javax.xml.namespace.QName;
 import java.util.Arrays;
 import java.util.List;
-import javax.xml.namespace.QName;
-import com.ibm.wsdl.Constants;
 
 /**
  * Constants used for handling XML Schemas

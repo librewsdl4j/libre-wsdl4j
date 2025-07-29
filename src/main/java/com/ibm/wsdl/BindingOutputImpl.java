@@ -4,9 +4,9 @@
 
 package com.ibm.wsdl;
 
-import java.util.*;
-
-import javax.wsdl.*;
+import javax.wsdl.BindingOutput;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class represents an output binding. That is, it contains

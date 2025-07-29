@@ -4,8 +4,8 @@
 
 package com.ibm.wsdl.extensions.soap;
 
-import javax.wsdl.extensions.soap.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.soap.SOAPOperation;
+import javax.xml.namespace.QName;
 
 /**
  * This class stores information associated with a SOAP operation that

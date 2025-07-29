@@ -4,11 +4,18 @@
 
 package javax.wsdl.factory;
 
-import java.io.*;
-import java.util.*;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
-import javax.wsdl.xml.*;
+import javax.wsdl.Definition;
+import javax.wsdl.WSDLException;
+import javax.wsdl.extensions.ExtensionRegistry;
+import javax.wsdl.xml.WSDLReader;
+import javax.wsdl.xml.WSDLWriter;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Properties;
 
 /**
  * This abstract class defines a factory API that enables applications to obtain a WSDLFactory capable of producing new Definitions, new WSDLReaders, and new WSDLWriters.

@@ -4,13 +4,12 @@
 
 package javax.wsdl.extensions.schema;
 
+import org.w3c.dom.Element;
+
+import javax.wsdl.extensions.ExtensibilityElement;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import javax.wsdl.extensions.ExtensibilityElement;
-
-import org.w3c.dom.Element;
 
 /**
  * Represents a schema element.

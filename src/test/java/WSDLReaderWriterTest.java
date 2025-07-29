@@ -1,19 +1,20 @@
 import org.junit.jupiter.api.Test;
 import org.xml.sax.InputSource;
 
-import javax.wsdl.*;
+import javax.wsdl.Definition;
+import javax.wsdl.Service;
 import javax.wsdl.factory.WSDLFactory;
 import javax.wsdl.xml.WSDLReader;
 import javax.wsdl.xml.WSDLWriter;
+import javax.xml.namespace.QName;
 import java.io.ByteArrayInputStream;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import javax.xml.namespace.QName;
-import javax.xml.transform.stream.StreamSource;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class WSDLReaderWriterTest {
 

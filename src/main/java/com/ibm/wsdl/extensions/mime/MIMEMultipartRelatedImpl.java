@@ -4,9 +4,12 @@
 
 package com.ibm.wsdl.extensions.mime;
 
-import java.util.*;
-import javax.wsdl.extensions.mime.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.mime.MIMEMultipartRelated;
+import javax.wsdl.extensions.mime.MIMEPart;
+import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)

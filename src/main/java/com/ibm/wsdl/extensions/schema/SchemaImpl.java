@@ -4,15 +4,16 @@
 
 package com.ibm.wsdl.extensions.schema;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.w3c.dom.Element;
+
 import javax.wsdl.extensions.schema.Schema;
 import javax.wsdl.extensions.schema.SchemaImport;
 import javax.wsdl.extensions.schema.SchemaReference;
 import javax.xml.namespace.QName;
-import org.w3c.dom.Element;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class is used to wrap schema elements. It holds the DOM Element to the <code>&lt;schema&gt;</code> element.

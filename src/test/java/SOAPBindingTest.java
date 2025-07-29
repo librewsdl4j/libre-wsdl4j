@@ -1,12 +1,13 @@
 import com.ibm.wsdl.extensions.soap.SOAPBindingImpl;
 import org.junit.jupiter.api.Test;
-import javax.wsdl.*;
-import javax.wsdl.extensions.*;
+
+import javax.wsdl.Binding;
+import javax.wsdl.Definition;
 import javax.wsdl.extensions.soap.SOAPBinding;
 import javax.wsdl.factory.WSDLFactory;
 import javax.xml.namespace.QName;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SOAPBindingTest {
 

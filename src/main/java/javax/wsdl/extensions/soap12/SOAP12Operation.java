@@ -4,7 +4,7 @@
 
 package javax.wsdl.extensions.soap12;
 
-import javax.wsdl.extensions.*;
+import javax.wsdl.extensions.ExtensibilityElement;
 
 /**
  * Based on javax.wsdl.extensions.SOAPOperation.

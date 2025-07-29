@@ -4,9 +4,10 @@
 
 package com.ibm.wsdl.extensions.schema;
 
-import java.io.Serializable;
-import java.util.Hashtable;
-import java.util.Map;
+import com.ibm.wsdl.Constants;
+import com.ibm.wsdl.util.xml.DOMUtils;
+import com.ibm.wsdl.util.xml.QNameUtils;
+import org.w3c.dom.Element;
 
 import javax.wsdl.Definition;
 import javax.wsdl.WSDLException;
@@ -18,13 +19,9 @@ import javax.wsdl.extensions.schema.SchemaImport;
 import javax.wsdl.extensions.schema.SchemaReference;
 import javax.wsdl.xml.WSDLLocator;
 import javax.xml.namespace.QName;
-
-import org.w3c.dom.Element;
-
-import com.ibm.wsdl.Constants;
-import com.ibm.wsdl.extensions.schema.SchemaConstants;
-import com.ibm.wsdl.util.xml.DOMUtils;
-import com.ibm.wsdl.util.xml.QNameUtils;
+import java.io.Serializable;
+import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * This class is used to deserialize <code>&lt;schema&gt;</code> elements into

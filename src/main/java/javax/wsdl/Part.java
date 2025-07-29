@@ -4,7 +4,7 @@
 
 package javax.wsdl;
 
-import javax.xml.namespace.*;
+import javax.xml.namespace.QName;
 
 /**
  * This interface represents a message part and contains the part's

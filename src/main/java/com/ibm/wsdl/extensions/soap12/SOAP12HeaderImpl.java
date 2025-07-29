@@ -4,9 +4,11 @@
 
 package com.ibm.wsdl.extensions.soap12;
 
-import java.util.*;
-import javax.wsdl.extensions.soap12.*;
-import javax.xml.namespace.*;
+import javax.wsdl.extensions.soap12.SOAP12Header;
+import javax.wsdl.extensions.soap12.SOAP12HeaderFault;
+import javax.xml.namespace.QName;
+import java.util.List;
+import java.util.Vector;
 
 /**
  * Based on com.ibm.wsdl.extensions.soap.SOAPHeaderImpl
