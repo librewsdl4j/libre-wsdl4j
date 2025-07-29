@@ -5,8 +5,6 @@
 package javax.wsdl.factory;
 
 import java.io.*;
-import java.security.AccessController;
-import java.security.PrivilegedAction;
 import java.util.*;
 import javax.wsdl.*;
 import javax.wsdl.extensions.*;
@@ -115,8 +113,8 @@ public abstract class WSDLFactory {
    */
   public abstract ExtensionRegistry newPopulatedExtensionRegistry();
 
-  private static PrivilegedAction<InputStream> getMetaInfServicesAsStream(String fileName) {
-    return (() -> WSDLFactory.class.getResourceAsStream(fileName));
+  private static InputStream getMetaInfServicesAsStream(String fileName) {
+    return WSDLFactory.class.getResourceAsStream(fileName);
   }
 
   private static String findFactoryImplName() {
@@ -125,7 +123,7 @@ public abstract class WSDLFactory {
     // First, check the META-INF/services property file.
     final String metaInfServicesPropFileName = getMetaInfFullPropertyFileName();
 
-    try (InputStream is = AccessController.doPrivileged(getMetaInfServicesAsStream(metaInfServicesPropFileName))) {
+    try (InputStream is = getMetaInfServicesAsStream(metaInfServicesPropFileName)) {
 
       if (is != null) {
         InputStreamReader isr = new InputStreamReader(is);
@@ -140,8 +138,7 @@ public abstract class WSDLFactory {
       if (factoryImplName != null) {
         return factoryImplName;
       }
-    } catch (IOException e) {
-      factoryImplName = null;
+    } catch (IOException ignored) {
     }
 
     // Second, check the system property.
@@ -151,15 +148,14 @@ public abstract class WSDLFactory {
       if (factoryImplName != null) {
         return factoryImplName;
       }
-    } catch (SecurityException e) {
-      factoryImplName = null;
+    } catch (SecurityException ignored) {
     }
 
     // Third, check the properties file.
     String propFileName = getFullPropertyFileName();
 
     if (propFileName != null) {
-      try (FileInputStream fis = new FileInputStream(new File(propFileName))) {
+      try (FileInputStream fis = new FileInputStream(propFileName)) {
         Properties properties = new Properties();
         properties.load(fis);
         factoryImplName = properties.getProperty(PROPERTY_NAME);
@@ -167,8 +163,7 @@ public abstract class WSDLFactory {
         if (factoryImplName != null) {
           return factoryImplName;
         }
-      } catch (IOException e) {
-        factoryImplName = null;
+      } catch (IOException ignored) {
       }
     }
 
