@@ -24,7 +24,7 @@ public class ImportImpl extends AbstractWSDLElement implements Import
     types of referenced documents.
   */
   protected Definition definition = null;  
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.IMPORT_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
@@ -82,7 +82,7 @@ public class ImportImpl extends AbstractWSDLElement implements Import
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

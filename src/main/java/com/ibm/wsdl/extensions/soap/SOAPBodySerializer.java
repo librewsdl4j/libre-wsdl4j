@@ -30,7 +30,8 @@ public class SOAPBodySerializer implements ExtensionSerializer,
 {
   public static final long serialVersionUID = 1;
 
-  public void marshall(Class parentType,
+  @SuppressWarnings("unchecked")
+  public void marshall(Class<?> parentType,
                        QName elementType,
                        ExtensibilityElement extension,
                        PrintWriter pw,
@@ -80,7 +81,8 @@ public class SOAPBodySerializer implements ExtensionSerializer,
     }
   }
 
-  public ExtensibilityElement unmarshall(Class parentType,
+  @SuppressWarnings("unchecked")
+  public ExtensibilityElement unmarshall(Class<?> parentType,
                                          QName elementType,
                                          Element el,
                                          Definition def,

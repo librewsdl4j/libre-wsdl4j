@@ -29,8 +29,8 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
 {
   protected QName name = null;
   protected PortType portType = null;
-  protected List bindingOperations = new Vector();
-  protected List nativeAttributeNames =
+  protected List<BindingOperation> bindingOperations = new Vector<>();
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.BINDING_ATTR_NAMES);
   protected boolean isUndefined = true;
 
@@ -276,7 +276,7 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
   /**
    * Get all the operation bindings defined here.
    */
-  public List getBindingOperations()
+  public List<BindingOperation> getBindingOperations()
   {
     return bindingOperations;
   }
@@ -369,7 +369,7 @@ public class BindingImpl extends AbstractWSDLElement implements Binding
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

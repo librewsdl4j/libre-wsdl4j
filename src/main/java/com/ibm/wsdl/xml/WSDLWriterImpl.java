@@ -593,6 +593,7 @@ public class WSDLWriterImpl implements WSDLWriter {
     }
   }
 
+  @SuppressWarnings("unchecked")
   protected void printExtensibilityAttributes(AttributeExtensible attrExt, Definition def, PrintWriter pw) throws WSDLException {
     Map<QName, Object> extensionAttributes = attrExt.getExtensionAttributes();
     for (Map.Entry<QName, Object> attribute : extensionAttributes.entrySet()) {

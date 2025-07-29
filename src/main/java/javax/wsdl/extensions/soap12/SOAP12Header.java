@@ -85,7 +85,7 @@ public interface SOAP12Header extends ExtensibilityElement, java.io.Serializable
    * 
    * @return a list of all SOAP header faults contained in this SOAP header.
    */
-  List getSOAP12HeaderFaults();
+  List<SOAP12HeaderFault> getSOAP12HeaderFaults();
 
   /**
    * Remove a SOAP header fault.

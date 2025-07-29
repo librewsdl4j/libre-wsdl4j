@@ -131,7 +131,7 @@ public class StringUtils {
     } catch (MalformedURLException e) {
       File tempFile = new File(spec);
       if (contextURL == null || tempFile.isAbsolute()) {
-        return tempFile.toURL();
+        return tempFile.toURI().toURL();
       }
 
       // only reach here if the contextURL !null, spec is relative path and

@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TypesImpl extends AbstractWSDLElement implements Types
 {
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.TYPES_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
@@ -43,7 +43,7 @@ public class TypesImpl extends AbstractWSDLElement implements Types
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

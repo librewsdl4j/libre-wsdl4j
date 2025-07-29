@@ -22,8 +22,8 @@ import java.util.Vector;
 public abstract class AbstractWSDLElement implements WSDLElement
 {  
   protected Element docEl;
-  protected List extElements = new Vector();
-  protected Map extensionAttributes = new HashMap();
+  protected List<ExtensibilityElement> extElements = new Vector<>();
+  protected Map<QName, Object> extensionAttributes = new HashMap<>();
 
   /**
    * Set the documentation element for this document. This dependency
@@ -82,7 +82,7 @@ public abstract class AbstractWSDLElement implements WSDLElement
   /**
    * Get all the extensibility elements defined here.
    */
-  public List getExtensibilityElements()
+  public List<ExtensibilityElement> getExtensibilityElements()
   {
     return extElements;
   }
@@ -147,7 +147,7 @@ public abstract class AbstractWSDLElement implements WSDLElement
    * @see #setExtensionAttribute
    * @see #getExtensionAttribute
    */
-  public Map getExtensionAttributes()
+  public Map<QName, Object> getExtensionAttributes()
   {
     return extensionAttributes;
   }

@@ -23,10 +23,10 @@ import java.util.Vector;
  */
 public class MessageImpl extends AbstractWSDLElement implements Message
 {
-  protected Map parts = new HashMap();
-  protected List additionOrderOfParts = new Vector();
+  protected Map<String, Part> parts = new HashMap<>();
+  protected List<String> additionOrderOfParts = new Vector<>();
   protected QName name = null;
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.MESSAGE_ATTR_NAMES);
   protected boolean isUndefined = true;
 
@@ -93,7 +93,7 @@ public class MessageImpl extends AbstractWSDLElement implements Message
   /**
    * Get all the parts defined here.
    */
-  public Map getParts()
+  public Map<String, Part> getParts()
   {
     return parts;
   }
@@ -107,9 +107,9 @@ public class MessageImpl extends AbstractWSDLElement implements Message
    * returned in the order in which they were added to the message.
    * @return the list of parts
    */
-  public List getOrderedParts(List partOrder)
+  public List<Part> getOrderedParts(List<String> partOrder)
   {
-    List orderedParts = new Vector();
+    List<Part> orderedParts = new Vector<>();
 
     if (partOrder == null)
     {
@@ -176,7 +176,7 @@ public class MessageImpl extends AbstractWSDLElement implements Message
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

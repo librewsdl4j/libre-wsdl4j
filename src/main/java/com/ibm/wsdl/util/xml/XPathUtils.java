@@ -66,14 +66,14 @@ public class XPathUtils
     return (node != null ? node.getNodeType() : -1);
   }
 
-  private static String getXPathFromVector(Vector path)
+  private static String getXPathFromVector(Vector<Node> path)
   {
     StringBuffer strBuf = new StringBuffer();
     int          length = path.size();
 
     for (int i = 0; i < length; i++)
     {
-      Node   tempNode    = (Node)path.elementAt(i);
+      Node   tempNode    = path.elementAt(i);
       short  nodeType    = getNodeType(tempNode);
       String targetValue = getValue(tempNode, nodeType);
       int    position    = 1;
@@ -153,9 +153,9 @@ public class XPathUtils
     return strBuf.toString();
   }
 
-  private static Vector getVectorPathFromNode(Node node)
+  private static Vector<Node> getVectorPathFromNode(Node node)
   {
-    Vector path = new Vector();
+    Vector<Node> path = new Vector<>();
 
     while (node != null)
     {

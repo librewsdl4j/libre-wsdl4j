@@ -19,7 +19,7 @@ import java.util.List;
 public class BindingOutputImpl extends AbstractWSDLElement implements BindingOutput
 {
   protected String name = null;
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.BINDING_OUTPUT_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
@@ -68,7 +68,7 @@ public class BindingOutputImpl extends AbstractWSDLElement implements BindingOut
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

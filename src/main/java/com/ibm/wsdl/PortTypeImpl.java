@@ -26,8 +26,8 @@ import java.util.Vector;
 public class PortTypeImpl extends AbstractWSDLElement implements PortType
 {
   protected QName name = null;
-  protected List operations = new Vector();
-  protected List nativeAttributeNames =
+  protected List<Operation> operations = new Vector<>();
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.PORT_TYPE_ATTR_NAMES);
   protected boolean isUndefined = true;
   
@@ -228,7 +228,7 @@ public class PortTypeImpl extends AbstractWSDLElement implements PortType
   /**
    * Get all the operations defined here.
    */
-  public List getOperations()
+  public List<Operation> getOperations()
   {
     return operations;
   }
@@ -286,7 +286,7 @@ public class PortTypeImpl extends AbstractWSDLElement implements PortType
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

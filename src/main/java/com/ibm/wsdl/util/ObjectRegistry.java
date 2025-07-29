@@ -20,13 +20,13 @@ import java.util.Map;
  * @author   Matthew J. Duftler
  */
 public class ObjectRegistry {
-  Hashtable      reg    = new Hashtable ();
+  Hashtable<String, Object>      reg    = new Hashtable<> ();
   ObjectRegistry parent = null;
 
   public ObjectRegistry () {
   }
   
-  public ObjectRegistry (Map initialValues) {
+  public ObjectRegistry (Map<String, String> initialValues) {
     if(initialValues != null)
     {
       Iterator itr = initialValues.keySet().iterator();

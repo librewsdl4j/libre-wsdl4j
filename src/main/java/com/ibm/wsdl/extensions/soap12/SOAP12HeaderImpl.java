@@ -22,7 +22,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
   protected String use = null;
   protected String encodingStyle = null;
   protected String namespaceURI = null;
-  protected List soapHeaderFaults = new Vector();
+  protected List<SOAP12HeaderFault> soapHeaderFaults = new Vector<>();
 
   public static final long serialVersionUID = 1;
 
@@ -175,7 +175,7 @@ public class SOAP12HeaderImpl implements SOAP12Header
       return null;
   }
 
-  public List getSOAP12HeaderFaults()
+  public List<SOAP12HeaderFault> getSOAP12HeaderFaults()
   {
     return soapHeaderFaults;
   }

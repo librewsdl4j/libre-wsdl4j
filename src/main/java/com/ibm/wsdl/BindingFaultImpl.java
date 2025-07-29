@@ -19,7 +19,7 @@ import java.util.List;
 public class BindingFaultImpl extends AbstractWSDLElement implements BindingFault
 {
   protected String name = null;
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.BINDING_FAULT_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
@@ -69,7 +69,7 @@ public class BindingFaultImpl extends AbstractWSDLElement implements BindingFaul
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

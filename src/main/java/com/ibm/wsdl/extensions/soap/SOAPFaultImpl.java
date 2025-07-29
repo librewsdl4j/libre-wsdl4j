@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * @author Matthew J. Duftler (duftler@us.ibm.com)
  */
+@SuppressWarnings("unchecked")
 public class SOAPFaultImpl implements SOAPFault
 {
   protected QName elementType = SOAPConstants.Q_ELEM_SOAP_FAULT;

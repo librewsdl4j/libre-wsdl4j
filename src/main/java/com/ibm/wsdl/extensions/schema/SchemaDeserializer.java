@@ -20,8 +20,6 @@ import javax.wsdl.extensions.schema.SchemaReference;
 import javax.wsdl.xml.WSDLLocator;
 import javax.xml.namespace.QName;
 import java.io.Serializable;
-import java.util.Hashtable;
-import java.util.Map;
 
 /**
  * This class is used to deserialize <code>&lt;schema&gt;</code> elements into
@@ -39,9 +37,7 @@ public class SchemaDeserializer implements ExtensionDeserializer, Serializable
   // extension registry which contains one of these
   public static final long serialVersionUID = 1;
 
-  private final Map allReferencedSchemas = new Hashtable();
-
-  private static final ThreadLocal wsdlLocator = new ThreadLocal();
+  private static final ThreadLocal<WSDLLocator> wsdlLocator = new ThreadLocal<>();
 
   /**
    * Set the WSDLLocator to be used by the deserializer on this thread.

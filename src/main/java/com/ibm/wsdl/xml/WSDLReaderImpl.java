@@ -14,6 +14,7 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 
@@ -84,7 +85,7 @@ public class WSDLReaderImpl implements WSDLReader {
 
   // Contains all schemas used by this wsdl, either in-line or nested
   // via wsdl imports or schema imports, includes or redefines
-  protected Map allSchemas = new Hashtable();
+  protected Map<String, Schema> allSchemas = new Hashtable<>();
 
   /**
    * Sets the specified feature to the specified value.
@@ -242,7 +243,7 @@ public class WSDLReaderImpl implements WSDLReader {
     return factoryImplName;
   }
 
-  protected Definition parseDefinitions(String documentBaseURI, Element defEl, Map importedDefs) throws WSDLException {
+  protected Definition parseDefinitions(String documentBaseURI, Element defEl, Map<String, Definition> importedDefs) throws WSDLException {
     checkElementName(defEl, Constants.Q_ELEM_DEFINITIONS);
 
     Definition def = getWSDLFactory().newDefinition();
@@ -256,7 +257,7 @@ public class WSDLReaderImpl implements WSDLReader {
     NamedNodeMap attrs = defEl.getAttributes();
 
     if (importedDefs == null) {
-      importedDefs = new Hashtable();
+      importedDefs = new Hashtable<>();
     }
 
     if (documentBaseURI != null) {
@@ -318,7 +319,7 @@ public class WSDLReaderImpl implements WSDLReader {
     return def;
   }
 
-  protected Import parseImport(Element importEl, Definition def, Map importedDefs) throws WSDLException {
+  protected Import parseImport(Element importEl, Definition def, Map<String, Definition> importedDefs) throws WSDLException {
     Import importDef = def.createImport();
 
     try {
@@ -349,14 +350,14 @@ public class WSDLReaderImpl implements WSDLReader {
                */
               String liu = loc.getLatestImportURI();
 
-              importedDef = (Definition) importedDefs.get(liu);
+              importedDef = importedDefs.get(liu);
 
               inputSource.setSystemId(liu);
             } else {
               URL contextURL = (contextURI != null) ? StringUtils.getURL(null, contextURI) : null;
 
               url = StringUtils.getURL(contextURL, locationURI);
-              importedDef = (Definition) importedDefs.get(url.toString());
+              importedDef = importedDefs.get(url.toString());
 
               if (importedDef == null) {
                 inputStream = StringUtils.getContentAsInputStream(url);
@@ -501,7 +502,7 @@ public class WSDLReaderImpl implements WSDLReader {
     return types;
   }
 
-  protected ExtensibilityElement parseSchema(Class parentType, Element el, Definition def) throws WSDLException {
+  protected ExtensibilityElement parseSchema(Class<?> parentType, Element el, Definition def) throws WSDLException {
     QName elementType = null;
     ExtensionRegistry extReg = null;
 
@@ -522,7 +523,8 @@ public class WSDLReaderImpl implements WSDLReader {
     }
   }
 
-  protected ExtensibilityElement parseSchema(Class parentType, Element el, Definition def, ExtensionRegistry extReg) throws WSDLException {
+  @SuppressWarnings("unchecked")
+  protected ExtensibilityElement parseSchema(Class<?> parentType, Element el, Definition def, ExtensionRegistry extReg) throws WSDLException {
     /*
      * This method returns ExtensibilityElement rather than Schema because we do not insist that a suitable XSD schema deserializer is registered. PopulatedExtensionRegistry registers SchemaDeserializer by default, but if the user chooses not to register a suitable deserializer then the
      * UnknownDeserializer will be used, returning an UnknownExtensibilityElement.
@@ -706,7 +708,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected Binding parseBinding(Element bindingEl, Definition def) throws WSDLException {
     Binding binding = null;
 
-    List remainingAttrs = DOMUtils.getAttributes(bindingEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(bindingEl);
     String name = DOMUtils.getAttribute(bindingEl, Constants.ATTR_NAME, remainingAttrs);
     QName portTypeName = getQualifiedAttributeValue(bindingEl, Constants.ATTR_TYPE, Constants.ELEM_BINDING, def, remainingAttrs);
 
@@ -766,7 +768,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected BindingOperation parseBindingOperation(Element bindingOperationEl, PortType portType, Definition def) throws WSDLException {
     BindingOperation bindingOperation = def.createBindingOperation();
 
-    List remainingAttrs = DOMUtils.getAttributes(bindingOperationEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(bindingOperationEl);
     String name = DOMUtils.getAttribute(bindingOperationEl, Constants.ATTR_NAME, remainingAttrs);
 
     if (name != null) {
@@ -847,7 +849,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected BindingInput parseBindingInput(Element bindingInputEl, Definition def) throws WSDLException {
     BindingInput bindingInput = def.createBindingInput();
 
-    List remainingAttrs = DOMUtils.getAttributes(bindingInputEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(bindingInputEl);
     String name = DOMUtils.getAttribute(bindingInputEl, Constants.ATTR_NAME, remainingAttrs);
 
     if (name != null) {
@@ -878,7 +880,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected BindingOutput parseBindingOutput(Element bindingOutputEl, Definition def) throws WSDLException {
     BindingOutput bindingOutput = def.createBindingOutput();
 
-    List remainingAttrs = DOMUtils.getAttributes(bindingOutputEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(bindingOutputEl);
     String name = DOMUtils.getAttribute(bindingOutputEl, Constants.ATTR_NAME, remainingAttrs);
 
     if (name != null) {
@@ -940,7 +942,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected Message parseMessage(Element msgEl, Definition def) throws WSDLException {
     Message msg = null;
 
-    List remainingAttrs = DOMUtils.getAttributes(msgEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(msgEl);
     String name = DOMUtils.getAttribute(msgEl, Constants.ATTR_NAME, remainingAttrs);
 
     if (name != null) {
@@ -1021,11 +1023,11 @@ public class WSDLReaderImpl implements WSDLReader {
     return part;
   }
 
-  protected void parseExtensibilityAttributes(Element el, Class parentType, AttributeExtensible attrExt, Definition def) throws WSDLException {
+  protected void parseExtensibilityAttributes(Element el, Class<?> parentType, AttributeExtensible attrExt, Definition def) throws WSDLException {
     if (attrExt == null)
       return;
 
-    List nativeAttributeNames = attrExt.getNativeAttributeNames();
+    List<String> nativeAttributeNames = attrExt.getNativeAttributeNames();
     NamedNodeMap nodeMap = el.getAttributes();
     int length = nodeMap.getLength();
 
@@ -1068,12 +1070,12 @@ public class WSDLReaderImpl implements WSDLReader {
     } else if (attrType == AttributeExtensible.LIST_OF_STRINGS_TYPE) {
       return StringUtils.parseNMTokens(attrValue);
     } else if (attrType == AttributeExtensible.LIST_OF_QNAMES_TYPE) {
-      List oldList = StringUtils.parseNMTokens(attrValue);
+      List<String> oldList = StringUtils.parseNMTokens(attrValue);
       int size = oldList.size();
-      List newList = new Vector(size);
+      List<QName> newList = new Vector<>(size);
 
       for (int i = 0; i < size; i++) {
-        String str = (String) oldList.get(i);
+        String str = oldList.get(i);
         QName qValue = DOMUtils.getQName(str, el, def);
 
         newList.add(qValue);
@@ -1145,7 +1147,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected Operation parseOperation(Element opEl, PortType portType, Definition def) throws WSDLException {
     Operation op = null;
 
-    List remainingAttrs = DOMUtils.getAttributes(opEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(opEl);
     String name = DOMUtils.getAttribute(opEl, Constants.ATTR_NAME, remainingAttrs);
     String parameterOrderStr = DOMUtils.getAttribute(opEl, Constants.ATTR_PARAMETER_ORDER, remainingAttrs);
 
@@ -1154,12 +1156,12 @@ public class WSDLReaderImpl implements WSDLReader {
     registerNSDeclarations(attrs, def);
 
     Element tempEl = DOMUtils.getFirstChildElement(opEl);
-    List messageOrder = new Vector();
+    List<String> messageOrder = new Vector<>();
     Element docEl = null;
     Input input = null;
     Output output = null;
-    List faults = new Vector();
-    List extElements = new Vector();
+    List<Fault> faults = new Vector<>();
+    List<ExtensibilityElement> extElements = new Vector<>();
     boolean retrieved = true;
 
     while (tempEl != null) {
@@ -1244,18 +1246,18 @@ public class WSDLReaderImpl implements WSDLReader {
     }
 
     if (faults.size() > 0) {
-      Iterator faultIterator = faults.iterator();
+      Iterator<Fault> faultIterator = faults.iterator();
 
       while (faultIterator.hasNext()) {
-        op.addFault((Fault) faultIterator.next());
+        op.addFault(faultIterator.next());
       }
     }
 
     if (extElements.size() > 0) {
-      Iterator eeIterator = extElements.iterator();
+      Iterator<ExtensibilityElement> eeIterator = extElements.iterator();
 
       while (eeIterator.hasNext()) {
-        op.addExtensibilityElement((ExtensibilityElement) eeIterator.next());
+        op.addExtensibilityElement(eeIterator.next());
       }
     }
 
@@ -1287,7 +1289,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected Service parseService(Element serviceEl, Definition def) throws WSDLException {
     Service service = def.createService();
 
-    List remainingAttrs = DOMUtils.getAttributes(serviceEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(serviceEl);
     String name = DOMUtils.getAttribute(serviceEl, Constants.ATTR_NAME, remainingAttrs);
 
     if (name != null) {
@@ -1320,7 +1322,7 @@ public class WSDLReaderImpl implements WSDLReader {
   protected Port parsePort(Element portEl, Definition def) throws WSDLException {
     Port port = def.createPort();
 
-    List remainingAttrs = DOMUtils.getAttributes(portEl);
+    List<Node> remainingAttrs = DOMUtils.getAttributes(portEl);
     String name = DOMUtils.getAttribute(portEl, Constants.ATTR_NAME, remainingAttrs);
     QName bindingStr = getQualifiedAttributeValue(portEl, Constants.ATTR_BINDING, Constants.ELEM_PORT, def, remainingAttrs);
 
@@ -1361,7 +1363,7 @@ public class WSDLReaderImpl implements WSDLReader {
     return port;
   }
 
-  protected ExtensibilityElement parseExtensibilityElement(Class parentType, Element el, Definition def) throws WSDLException {
+  protected ExtensibilityElement parseExtensibilityElement(Class<?> parentType, Element el, Definition def) throws WSDLException {
     QName elementType = QNameUtils.newQName(el);
 
     String namespaceURI = el.getNamespaceURI();
@@ -1400,7 +1402,7 @@ public class WSDLReaderImpl implements WSDLReader {
    * @return An instance of the default ExtensibilityElement as registered with the ExtensionRegistry
    * @throws WSDLException
    */
-  protected ExtensibilityElement parseExtensibilityElementAsDefaultExtensiblityElement(Class parentType, Element el, Definition def) throws WSDLException {
+  protected ExtensibilityElement parseExtensibilityElementAsDefaultExtensiblityElement(Class<?> parentType, Element el, Definition def) throws WSDLException {
     QName elementType = QNameUtils.newQName(el);
 
     String namespaceURI = el.getNamespaceURI();
@@ -1577,7 +1579,7 @@ public class WSDLReaderImpl implements WSDLReader {
   /**
    * This method should be used for elements that do not support extension attributes because it tracks unexpected remaining attributes.
    */
-  private static QName getQualifiedAttributeValue(Element el, String attrName, String elDesc, Definition def, List remainingAttrs) throws WSDLException {
+  private static QName getQualifiedAttributeValue(Element el, String attrName, String elDesc, Definition def, List<Node> remainingAttrs) throws WSDLException {
     try {
       return DOMUtils.getQualifiedAttributeValue(el, attrName, elDesc, false, def, remainingAttrs);
     } catch (WSDLException e) {
@@ -1720,7 +1722,7 @@ public class WSDLReaderImpl implements WSDLReader {
     }
   }
 
-  protected Definition readWSDL(String documentBaseURI, Element definitionsElement, Map importedDefs) throws WSDLException {
+  protected Definition readWSDL(String documentBaseURI, Element definitionsElement, Map<String, Definition> importedDefs) throws WSDLException {
     return parseDefinitions(documentBaseURI, definitionsElement, importedDefs);
   }
 

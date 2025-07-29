@@ -40,7 +40,7 @@ public class DOM2Writer
    */
   private static final String NS_URI_XML = "http://www.w3.org/XML/1998/namespace";
 
-  private static final Map xmlEncodingMap = new HashMap();
+  private static final Map<String, String> xmlEncodingMap = new HashMap<>();
 
   static
   {
@@ -72,14 +72,14 @@ public class DOM2Writer
    */
   public static String nodeToString(Node node)
   {
-    return nodeToString(node, new HashMap());
+    return nodeToString(node, new HashMap<>());
   }
   
   /**
    * Return a string containing this node serialized as XML.
    * The specified Map associates prefixes with namespace URLs.
    */
-  public static String nodeToString(Node node, Map namespaces)
+  public static String nodeToString(Node node, Map<String, String> namespaces)
   {
     StringWriter sw = new StringWriter();
 
@@ -94,14 +94,14 @@ public class DOM2Writer
    */
   public static void serializeElementAsDocument(Element el, Writer writer)
   {
-    serializeElementAsDocument(el, new HashMap(), writer);
+    serializeElementAsDocument(el, new HashMap<>(), writer);
   }
 
   /**
    * Print an XML declaration before serializing the element.
    * The specified Map associates prefixes with namespace URLs.
    */
-  public static void serializeElementAsDocument(Element el, Map namespaces, Writer writer)
+  public static void serializeElementAsDocument(Element el, Map<String, String> namespaces, Writer writer)
   {
     PrintWriter pw = new PrintWriter(writer);
     String javaEncoding = (writer instanceof OutputStreamWriter)
@@ -129,14 +129,14 @@ public class DOM2Writer
   */
   public static void serializeAsXML(Node node, Writer writer)
   {
-    serializeAsXML(node, new HashMap(), writer);
+    serializeAsXML(node, new HashMap<>(), writer);
   }
   
   /**
   * Serialize this node into the writer as XML.
   * The specified Map associates prefixes with namespace URLs.
   */
-  public static void serializeAsXML(Node node, Map namespaces, Writer writer)
+  public static void serializeAsXML(Node node, Map<String, String> namespaces, Writer writer)
   {
     ObjectRegistry namespaceStack = new ObjectRegistry(namespaces);
 

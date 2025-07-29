@@ -19,7 +19,7 @@ public class FaultImpl extends AbstractWSDLElement implements Fault
 {
   protected String name = null;
   protected Message message = null;
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.FAULT_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
@@ -62,7 +62,7 @@ public class FaultImpl extends AbstractWSDLElement implements Fault
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

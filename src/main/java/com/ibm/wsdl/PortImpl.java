@@ -21,7 +21,7 @@ public class PortImpl extends AbstractWSDLElement implements Port
 {
   protected String name = null;
   protected Binding binding = null;
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.PORT_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
@@ -96,7 +96,7 @@ public class PortImpl extends AbstractWSDLElement implements Port
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

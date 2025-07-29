@@ -19,7 +19,7 @@ import java.util.List;
 public class BindingInputImpl extends AbstractWSDLElement implements BindingInput
 {
   protected String name = null;
-  protected List nativeAttributeNames =
+  protected List<String> nativeAttributeNames =
     Arrays.asList(Constants.BINDING_INPUT_ATTR_NAMES);
 
   public static final long serialVersionUID = 1;
@@ -68,7 +68,7 @@ public class BindingInputImpl extends AbstractWSDLElement implements BindingInpu
    *
    * @return a List of Strings, one for each local attribute name
    */
-  public List getNativeAttributeNames()
+  public List<String> getNativeAttributeNames()
   {
     return nativeAttributeNames;
   }

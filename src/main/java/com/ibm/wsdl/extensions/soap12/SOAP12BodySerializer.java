@@ -30,6 +30,7 @@ public class SOAP12BodySerializer implements ExtensionSerializer,
 {
   public static final long serialVersionUID = 1;
 
+  @SuppressWarnings("unchecked")
   public void marshall(Class parentType,
                        QName elementType,
                        ExtensibilityElement extension,
@@ -80,6 +81,7 @@ public class SOAP12BodySerializer implements ExtensionSerializer,
     }
   }
 
+  @SuppressWarnings("unchecked")
   public ExtensibilityElement unmarshall(Class parentType,
                                          QName elementType,
                                          Element el,

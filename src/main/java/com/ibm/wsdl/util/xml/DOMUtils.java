@@ -34,9 +34,9 @@ public class DOMUtils {
    * @param el       Element whose attributes are returned
    * @return the List of Attr
    */
-  static public List getAttributes (Element el) {
+  static public List<Node> getAttributes (Element el) {
     String nodename, prefix = null;
-    List attrs = new Vector();
+    List<Node> attrs = new Vector<>();
     NamedNodeMap attrMap = el.getAttributes();
     for(int i = 0; i < attrMap.getLength(); i++)
     {
