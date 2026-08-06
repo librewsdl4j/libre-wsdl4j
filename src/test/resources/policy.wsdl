@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:tns="http://www.example.com/policy"
+                  targetNamespace="http://www.example.com/policy">
+
+  <wsp:Policy wsu:Id="IF__Notification_In"
+              xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All/>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.com/policy">
+      <xsd:element name="NotificationRequest" type="xsd:string"/>
+    </xsd:schema>
+  </wsdl:types>
+
+  <wsdl:message name="NotificationRequest">
+    <wsdl:part name="parameters" element="tns:NotificationRequest"/>
+  </wsdl:message>
+
+  <wsdl:portType name="Notification_In">
+    <wsdl:documentation>Port type carrying a policy reference.</wsdl:documentation>
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__Notification_In"/>
+    </wsp:Policy>
+    <wsdl:operation name="Notification_In">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__Notification_In"/>
+      </wsp:Policy>
+      <wsdl:input message="tns:NotificationRequest"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:binding name="NotificationBinding" type="tns:Notification_In">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__Notification_In"/>
+    </wsp:Policy>
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Notification_In">
+      <soap:operation soapAction="urn:Notification_In"/>
+      <wsdl:input>
+        <wsp:Policy>
+          <wsp:PolicyReference URI="#IN__Notification_In"/>
+        </wsp:Policy>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="NotificationService">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#SV__Notification_In"/>
+    </wsp:Policy>
+    <wsdl:port name="NotificationPort" binding="tns:NotificationBinding">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#PT__Notification_In"/>
+      </wsp:Policy>
+      <soap:address location="http://www.example.com/policy"/>
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>
