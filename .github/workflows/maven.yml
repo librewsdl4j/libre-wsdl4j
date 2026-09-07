@@ -19,7 +19,7 @@ jobs:
       matrix:
         # The last 3 LTS releases
         # Java 17 is run in codacy-coverage-reporter
-        java: [ 17, 21, 24, '25-ea' ]
+        java: [ 17, 21, 25, '27-ea' ]
     name: Java ${{matrix.java}}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
