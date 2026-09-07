@@ -748,9 +748,8 @@ public class WSDLWriterImpl implements WSDLWriter {
   }
 
   private static Document getDocument(InputSource inputSource, String desc) throws WSDLException {
-    DocumentBuilderFactory factory = SecureDocumentBuilderFactory.newInstance();
+    DocumentBuilderFactory factory = SecureDocumentBuilderFactory.newNSInstance();
 
-    factory.setNamespaceAware(true);
     factory.setValidating(false);
 
     try {

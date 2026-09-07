@@ -73,8 +73,7 @@ public class PolicyExtensibilityTest {
         String written = out.toString();
         assertTrue(written.contains("Policy"), "The written WSDL should still contain the policy elements");
 
-        DocumentBuilderFactory dbf = SecureDocumentBuilderFactory.newInstance();
-        dbf.setNamespaceAware(true);
+        DocumentBuilderFactory dbf = SecureDocumentBuilderFactory.newNSInstance();
         Document doc = dbf.newDocumentBuilder().parse(new InputSource(new StringReader(written)));
 
         Definition reread = factory.newWSDLReader().readWSDL(null, doc);
