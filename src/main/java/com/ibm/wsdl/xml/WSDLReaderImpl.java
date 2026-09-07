@@ -1605,9 +1605,7 @@ public class WSDLReaderImpl implements WSDLReader {
   }
 
   private static Document getDocument(InputSource inputSource, String desc, EntityResolver entityResolver) throws WSDLException {
-    DocumentBuilderFactory factory = SecureDocumentBuilderFactory.newInstance();
-
-    factory.setNamespaceAware(true);
+    DocumentBuilderFactory factory = SecureDocumentBuilderFactory.newNSInstance();
     factory.setValidating(false);
 
     try {
