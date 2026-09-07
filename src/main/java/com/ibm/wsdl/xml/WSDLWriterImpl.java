@@ -8,6 +8,7 @@ import com.ibm.wsdl.Constants;
 import com.ibm.wsdl.util.StringUtils;
 import com.ibm.wsdl.util.xml.DOM2Writer;
 import com.ibm.wsdl.util.xml.DOMUtils;
+import org.apache.commons.xml.secure.SecureDocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
@@ -747,7 +748,7 @@ public class WSDLWriterImpl implements WSDLWriter {
   }
 
   private static Document getDocument(InputSource inputSource, String desc) throws WSDLException {
-    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    DocumentBuilderFactory factory = SecureDocumentBuilderFactory.newInstance();
 
     factory.setNamespaceAware(true);
     factory.setValidating(false);
