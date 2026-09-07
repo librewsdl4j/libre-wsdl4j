@@ -10,6 +10,7 @@ import com.ibm.wsdl.util.StringUtils;
 import com.ibm.wsdl.util.xml.DOMUtils;
 import com.ibm.wsdl.util.xml.QNameUtils;
 import com.ibm.wsdl.util.xml.XPathUtils;
+import org.apache.commons.xml.secure.SecureDocumentBuilderFactory;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -1604,9 +1605,7 @@ public class WSDLReaderImpl implements WSDLReader {
   }
 
   private static Document getDocument(InputSource inputSource, String desc, EntityResolver entityResolver) throws WSDLException {
-    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-    factory.setNamespaceAware(true);
+    DocumentBuilderFactory factory = SecureDocumentBuilderFactory.newNSInstance();
     factory.setValidating(false);
 
     try {

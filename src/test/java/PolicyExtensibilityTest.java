@@ -1,3 +1,4 @@
+import org.apache.commons.xml.secure.SecureDocumentBuilderFactory;
 import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -72,8 +73,7 @@ public class PolicyExtensibilityTest {
         String written = out.toString();
         assertTrue(written.contains("Policy"), "The written WSDL should still contain the policy elements");
 
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        dbf.setNamespaceAware(true);
+        DocumentBuilderFactory dbf = SecureDocumentBuilderFactory.newNSInstance();
         Document doc = dbf.newDocumentBuilder().parse(new InputSource(new StringReader(written)));
 
         Definition reread = factory.newWSDLReader().readWSDL(null, doc);
